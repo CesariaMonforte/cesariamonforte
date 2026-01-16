@@ -12,10 +12,7 @@ function App() {
                 <p>Under Construction ! Stay tunned</p>
             </div>
 
-            <a
-                href='https://www.linkedin.com/in/cesariamonforte/'
-                target='_blank'
-                rel='noopener noreferrer'>
+            <a href='https://www.linkedin.com/in/cesariamonforte/'>
                 Lets connect
             </a>
         </>
