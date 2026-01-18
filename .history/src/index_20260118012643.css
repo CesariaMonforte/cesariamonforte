@@ -2,7 +2,7 @@
 
 a {
     font-weight: 500;
-    color:  #163C66;
+    color: var(--primary-900);
     text-decoration: inherit;
 }
 a:hover {

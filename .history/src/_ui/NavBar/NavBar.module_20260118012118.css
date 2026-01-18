@@ -1,0 +1,22 @@
+@media (max-width: 768px) {}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--white);
+}
+.navLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    font-size: var(--font-size-extra-small);
+}
+.logo {
+    width: 24px;
+    height: auto;
+}

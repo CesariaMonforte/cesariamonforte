@@ -1,12 +1,12 @@
 import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
 import "./App.css";
-import NavBar from "./_ui/NavBar/NavBar";
 
 function App() {
     return (
         <>
-        <NavBar />
-       
+            <img src='/' />
             <div>
                 <h1>Cesaria Jose Monforte</h1>
                 <p>Under Construction ! Stay tunned</p>
