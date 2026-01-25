@@ -17,7 +17,7 @@ function NavBar({}) {
                 <a href='/'>Home</a>
                 <a href='/'>Work</a>
                 <a href='/'>About</a>
-                <RegButton button_text={"Let's Connect"} />
+                <div>Lets connect</div>
             </div>
         </div>
     );

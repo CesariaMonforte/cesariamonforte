@@ -6,8 +6,6 @@ import Footer from "./_ui/Footer/Footer";
 import RegButton from "./_ui/RegButton/RegButton";
 
 function App() {
-    function handleConnect() {}
-
     return (
         <div>
             <NavBar />

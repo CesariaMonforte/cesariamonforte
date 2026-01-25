@@ -6,8 +6,6 @@ import Footer from "./_ui/Footer/Footer";
 import RegButton from "./_ui/RegButton/RegButton";
 
 function App() {
-    function handleConnect() {}
-
     return (
         <div>
             <NavBar />
@@ -17,10 +15,12 @@ function App() {
                 <p>Under Construction ! Stay tunned</p>
             </div>
 
-            <RegButton
-                button_text="Let's Connect"
-                onclick={handleConnect}
-            />
+            <a
+                href='https://www.linkedin.com/in/cesariamonforte/'
+                target='_blank'
+                rel='noopener noreferrer'>
+                Lets connect
+            </a>
 
             <Footer />
         </div>
