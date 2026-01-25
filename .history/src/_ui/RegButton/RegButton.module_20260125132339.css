@@ -1,0 +1,5 @@
+.button_reg {
+    background-color: var(--primary-900);
+    border-radius: var(--space-extra-small);
+    color: var(--white);
+}

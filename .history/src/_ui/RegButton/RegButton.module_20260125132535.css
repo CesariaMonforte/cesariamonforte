@@ -1,0 +1,9 @@
+.button_reg {
+    background-color: var(--primary-900);
+    border-radius: var(--space-extra-small);
+    color: var(--white);
+    font-size: var(--font-size-extra-small);
+    padding: var(--space-small);
+    width: fit-content;
+    height: auto;
+}
