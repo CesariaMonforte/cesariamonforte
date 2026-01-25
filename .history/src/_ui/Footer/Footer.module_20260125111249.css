@@ -3,9 +3,9 @@
     .footer_container {
         display: flex;
         flex-direction: row;
-
+        gap: var(--space-extra-small);
         align-items: flex-start;
-        justify-content: space-between;
+        justify-content: space-around;
         padding: 1rem;
         background-color: var(--primary-100);
     }
@@ -46,7 +46,7 @@
     .footer_container {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        gap: var(--space-extra-small);
         align-items: flex-start;
         padding: 1rem;
         background-color: var(--primary-100);
@@ -86,8 +86,8 @@
 @media (min-width: 900px) {
     .footer_container {
         display: flex;
-        justify-content: space-between;
         flex-direction: row;
+        gap: var(--space-extra-small);
         align-items: flex-start;
         padding: 1rem;
         background-color: var(--primary-100);

@@ -26,7 +26,7 @@ function Footer({}) {
                         className={styles.connection}
                     />
                     <img
-                        src='/TikTok.svg'
+                        src='/TikTok.png'
                         alt='logo'
                         className={styles.connection}
                     />

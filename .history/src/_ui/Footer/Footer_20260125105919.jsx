@@ -2,33 +2,33 @@ import styles from "./Footer.module.css";
 
 function Footer({}) {
     return (
-        <div className={styles.footer_container}>
-            <div className={styles.container_logo_connection}>
+        <div className={styles.navbar}>
+            <div>
                 <img
                     src='/Logo.svg'
                     alt='logo'
                     className={styles.logo}
                 />
-                <div className={styles.connection_links}>
+                <div>
                     <img
-                        src='/GitHub.svg'
+                        src='/Logo.svg'
                         alt='logo'
-                        className={styles.connection}
+                        className={styles.logo}
                     />
                     <img
-                        src='/Instagram.svg'
+                        src='/Logo.svg'
                         alt='logo'
-                        className={styles.connection}
+                        className={styles.logo}
                     />
                     <img
-                        src='/LinkedIn.svg'
+                        src='/Logo.svg'
                         alt='logo'
-                        className={styles.connection}
+                        className={styles.logo}
                     />
                     <img
-                        src='/TikTok.svg'
+                        src='/Logo.svg'
                         alt='logo'
-                        className={styles.connection}
+                        className={styles.logo}
                     />
                 </div>
             </div>
@@ -37,6 +37,7 @@ function Footer({}) {
                 <a href='/'>Home</a>
                 <a href='/'>Work</a>
                 <a href='/'>About</a>
+                <div>Lets connect</div>
             </div>
         </div>
     );

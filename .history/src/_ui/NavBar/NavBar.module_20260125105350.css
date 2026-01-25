@@ -75,7 +75,7 @@
 }
 
 /* Extra large Desktop Devices */
-@media (min-width: 1300) {
+@media (min-width: 900px) {
     .navbar {
         display: flex;
         flex-direction: row;

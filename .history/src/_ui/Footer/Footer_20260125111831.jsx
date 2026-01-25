@@ -21,12 +21,12 @@ function Footer({}) {
                         className={styles.connection}
                     />
                     <img
-                        src='/LinkedIn.svg'
+                        src='/LinkedIn.png'
                         alt='logo'
                         className={styles.connection}
                     />
                     <img
-                        src='/TikTok.svg'
+                        src='/TikTok.png'
                         alt='logo'
                         className={styles.connection}
                     />

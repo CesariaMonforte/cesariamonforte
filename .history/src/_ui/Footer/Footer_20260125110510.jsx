@@ -11,22 +11,22 @@ function Footer({}) {
                 />
                 <div className={styles.connection_links}>
                     <img
-                        src='/GitHub.svg'
+                        src='/Logo.svg'
                         alt='logo'
                         className={styles.connection}
                     />
                     <img
-                        src='/Instagram.svg'
+                        src='/Logo.svg'
                         alt='logo'
                         className={styles.connection}
                     />
                     <img
-                        src='/LinkedIn.svg'
+                        src='/Logo.svg'
                         alt='logo'
                         className={styles.connection}
                     />
                     <img
-                        src='/TikTok.svg'
+                        src='/Logo.svg'
                         alt='logo'
                         className={styles.connection}
                     />

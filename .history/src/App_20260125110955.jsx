@@ -6,7 +6,7 @@ import Footer from "./_ui/Footer/Footer";
 
 function App() {
     return (
-        <div>
+        <>
             <NavBar />
 
             <div>
@@ -22,8 +22,8 @@ function App() {
             </a>
 
             <Footer />
-        </div>
+        </>
     );
 }
 
-export default App;
+export default App();

@@ -6,7 +6,7 @@ import Footer from "./_ui/Footer/Footer";
 
 function App() {
     return (
-        <div>
+        <div className={styles.container}>
             <NavBar />
 
             <div>

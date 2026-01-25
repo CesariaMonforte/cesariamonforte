@@ -1,4 +1,27 @@
-/* Extra small devices  */
+@media (min-width: 600px) {
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        background-color: var(--white);
+    }
+    .navLinks {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--primary-900);
+        gap: 1rem;
+        font-size: var(--font-size-extra-small);
+    }
+    .logo {
+        width: 24px;
+        height: auto;
+    }
+}
+
 @media (min-width: 200px) {
     .navbar {
         display: flex;
@@ -23,59 +46,7 @@
     }
 }
 
-/* Regular iphone and tablet */
-
-@media (min-width: 600px) {
-    .navbar {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem;
-        background-color: var(--white);
-    }
-    .navLinks {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        color: var(--primary-900);
-        gap: 1rem;
-        font-size: var(--font-size-small);
-    }
-    .logo {
-        width: 24px;
-        height: auto;
-    }
-}
-
-/* Laptops Desktop Devices */
-@media (min-width: 900px) {
-    .navbar {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem;
-        background-color: var(--white);
-    }
-    .navLinks {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        color: var(--primary-900);
-        gap: 1rem;
-        font-size: var(--font-size-medium);
-    }
-    .logo {
-        width: 24px;
-        height: auto;
-    }
-}
-
-/* Extra large Desktop Devices */
-@media (min-width: 1300) {
+@media (min-width: 1000px) {
     .navbar {
         display: flex;
         flex-direction: row;

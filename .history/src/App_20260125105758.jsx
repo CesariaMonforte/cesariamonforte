@@ -6,7 +6,7 @@ import Footer from "./_ui/Footer/Footer";
 
 function App() {
     return (
-        <div>
+        <>
             <NavBar />
 
             <div>
@@ -20,9 +20,7 @@ function App() {
                 rel='noopener noreferrer'>
                 Lets connect
             </a>
-
-            <Footer />
-        </div>
+        </>
     );
 }
 
