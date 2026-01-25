@@ -20,6 +20,8 @@ function App() {
                 <p>Under Construction ! Stay tunned</p>
             </div>
 
+            <Tag />
+
             <ConnectBanner />
             <Footer />
         </div>

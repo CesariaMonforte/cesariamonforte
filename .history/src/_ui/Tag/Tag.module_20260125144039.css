@@ -1,0 +1,5 @@
+.tag_highlight_container {
+    background-color: var(--primary-100);
+    border-radius: var(--space-extra-small);
+    padding: var(--space-extra-small) var(--space-small);
+}

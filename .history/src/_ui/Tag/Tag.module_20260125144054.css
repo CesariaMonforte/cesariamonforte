@@ -1,0 +1,17 @@
+.tag_highlight_container {
+    background-color: var(--primary-100);
+    border-radius: var(--space-extra-small);
+    padding: var(--space-extra-small) var(--space-small);
+}
+
+.tag_regular_container {
+    background-color: var(--secondary-100);
+    border-radius: var(--space-extra-small);
+    padding: var(--space-extra-small) var(--space-small);
+}
+.tag_text {
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+    color: var(--black-500);
+    text-align: center;
+}

@@ -20,6 +20,11 @@ function App() {
                 <p>Under Construction ! Stay tunned</p>
             </div>
 
+            <Tag
+                tag_text='ui/ux Design'
+                type='regular'
+            />
+
             <ConnectBanner />
             <Footer />
         </div>

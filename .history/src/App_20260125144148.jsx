@@ -5,8 +5,8 @@ import NavBar from "./_ui/NavBar/NavBar";
 import Footer from "./_ui/Footer/Footer";
 import ConnectBanner from "./_ui/ConnectBanner/ConnectBanner";
 
-import Tag from "./_ui/Tag/Tag";
 import RegButton from "./_ui/RegButton/RegButton";
+import Tag from "./_ui/Tag/Tag";
 
 function App() {
     function handleConnect() {}
@@ -18,6 +18,7 @@ function App() {
             <div>
                 <h1>Cesaria Jose Monforte</h1>
                 <p>Under Construction ! Stay tunned</p>
+                <Tag type="Regular"}/>
             </div>
 
             <ConnectBanner />

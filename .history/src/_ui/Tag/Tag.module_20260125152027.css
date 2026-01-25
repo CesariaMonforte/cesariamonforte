@@ -1,0 +1,14 @@
+.tag_regular_container {
+    background-color: var(--white);
+    border-radius: var(--space-extra-small);
+    border: 1px solid var(--primary-500);
+    width: 77px;
+    height: auto;
+    padding: var(--space-extra-small) var(--space-small);
+}
+.tag_regular_text {
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-500);
+    text-align: center;
+}
