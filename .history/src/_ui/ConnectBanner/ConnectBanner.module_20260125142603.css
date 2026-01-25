@@ -1,0 +1,12 @@
+.banner_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--primary-900);
+}
+
+.banner_text {
+    font-size: var(--font-size-medium);
+    color: var(--back);
+    text-align: center;
+}

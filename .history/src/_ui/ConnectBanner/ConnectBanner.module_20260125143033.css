@@ -1,0 +1,16 @@
+.banner_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--primary-500);
+    padding: var(--space-small);
+    border-top-right-radius: var(--space-extra-small);
+    border-top-left-radius: var(--space-extra-small);
+}
+
+.banner_text {
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+    color: var(--white);
+    text-align: center;
+}

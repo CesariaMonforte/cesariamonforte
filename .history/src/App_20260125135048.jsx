@@ -3,8 +3,6 @@ import "./App.css";
 
 import NavBar from "./_ui/NavBar/NavBar";
 import Footer from "./_ui/Footer/Footer";
-import ConnectBanner from "./_ui/ConnectBanner/ConnectBanner";
-
 import RegButton from "./_ui/RegButton/RegButton";
 
 function App() {
@@ -19,7 +17,6 @@ function App() {
                 <p>Under Construction ! Stay tunned</p>
             </div>
 
-            <ConnectBanner />
             <Footer />
         </div>
     );

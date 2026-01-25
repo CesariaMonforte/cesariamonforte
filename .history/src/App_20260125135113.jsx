@@ -19,7 +19,6 @@ function App() {
                 <p>Under Construction ! Stay tunned</p>
             </div>
 
-            <ConnectBanner />
             <Footer />
         </div>
     );
