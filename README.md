@@ -1,4 +1,4 @@
-# 💫 About Me:
+# 💫 Hi I'm Cesaria !
 Building digital experiences that people relate to, reuse and return to.<br>💻  Frontend Development<br>📱 UI/UX Design<br>
 
 
