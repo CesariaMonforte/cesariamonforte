@@ -35,6 +35,30 @@
   overflow: hidden;
 }
 
+/* Filtering Styles */
+.filter_container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  gap: var(--space-small);
+}
+
+.section_title_container {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--space-medium);
+  width: 100%;
+  margin-bottom: var(--space-regular);
+}
+.section_filter_text {
+  font-size: var(--font-size-regular);
+  font-weight: 700;
+  color: var(--primary-900);
+}
+
 @keyframes float-up-down {
   0%,
   100% {

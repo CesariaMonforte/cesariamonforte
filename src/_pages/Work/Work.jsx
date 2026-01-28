@@ -6,6 +6,7 @@ import ProjectCard from "../../_ui/ProjectCard/ProjectCard";
 import NavBar from "../../_ui/NavBar/NavBar";
 import ConnectBanner from "../../_ui/ConnectBanner/ConnectBanner";
 import RegButton from "../../_ui/RegButton/RegButton";
+import Tag from "../../_ui/Tag/Tag";
 
 import _cardData from "../../_cardData/_cardData.json";
 
@@ -15,7 +16,14 @@ function Work() {
       <NavBar />
 
       <div className={styles.section_title_container}>
-        <h2 className={styles.section_title}>Featured Work</h2>
+        <h2 className={styles.section_title}>Work</h2>
+        <div className={styles.filter_container}>
+          <Tag tags={[" All"]} type="filter_active" />
+          <Tag
+            tags={["Frontend Development", "UI/UX", "Graphic Design"]}
+            type="filter_regular"
+          />
+        </div>
       </div>
 
       <div className={styles.projects_container}>
