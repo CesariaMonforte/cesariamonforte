@@ -1,5 +1,9 @@
+:root {
+    --font-family: "Bricolage Grotesque", sans-serif;
+}
+
 * {
-    font: var(--font-family);
+    font-family: var(--font-family);
 }
 a {
     font-weight: 500;
@@ -89,6 +93,8 @@ button:focus-visible {
     --orange-500: #ff6600;
     --red-500: #ff2f3d;
 
+    --box-shadow-white: 0 -2px 2px 0 rgba(22, 60, 102, 0.25) inset;
+
     /* ----- TYPE ----- */
     --font-family: "Bricolage Grotesque", sans-serif;
 
@@ -103,6 +109,10 @@ button:focus-visible {
 
     --font-style-normal: normal;
     --font-weight-bold: bold;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-light: 300;
+    --font-weight-extra-light: 200;
 
     --line-height-xxlarge: 100px;
     --line-height-large: 36px;
@@ -113,6 +123,7 @@ button:focus-visible {
     --space-extra-small: 4px;
     --space-small: 8px;
     --space-regular: 16px;
+    --space-extra-regular: 28px;
     --space-medium: 32px;
     --space-large: 48px;
     --space-extra-large: 140px;
