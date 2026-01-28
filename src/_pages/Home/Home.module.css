@@ -7,9 +7,15 @@
 }
 
 .header_phrase {
-  font-size: 9em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  font-size: 64px;
   color: var(--primary-500);
   font-weight: bold;
+  height: 80vh;
   margin-bottom: var(--space-small);
 }
 .header_explanation {
