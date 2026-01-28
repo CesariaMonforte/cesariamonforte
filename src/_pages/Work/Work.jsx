@@ -21,7 +21,7 @@ function Work() {
       <div className={styles.projects_container}>
         {_cardData.map((item) => (
           <ProjectCard
-            type={item.type}
+            type="vertical"
             project_title={item.project_title}
             project_description={item.project_description}
             project_image_src={item.project_image_src}
