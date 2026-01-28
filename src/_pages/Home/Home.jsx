@@ -22,7 +22,8 @@ function Home() {
             Vision to Interaction
             <br />
             <span className={styles.header_explanation}>
-              Creating Digital experiences that work for real people{" "}
+              Creating Digital experiences
+              <br /> that work for real people.
             </span>
           </h1>
         </div>
