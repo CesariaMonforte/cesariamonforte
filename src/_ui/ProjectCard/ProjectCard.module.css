@@ -14,6 +14,7 @@
 .project_card_horizontal_content {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   width: 100%;
   gap: var(--space-regular);
 }
@@ -50,5 +51,6 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding-top: var(--space-extra-large);
+
+  height: 100%;
 }
