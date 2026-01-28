@@ -11,9 +11,9 @@ function NavBar({}) {
       </div>
 
       <div className={styles.navLinks}>
-        <LinkButton button_text="Home" type="regular" />
-        <LinkButton button_text="Work" type="regular" />
-        <LinkButton button_text="About" type="regular" />
+        <LinkButton button_text="Home" type="regular" onclick={"/"} />
+        <LinkButton button_text="Work" type="regular" onclick={"/Work"} />
+        <LinkButton button_text="About" type="regular" onclick={"/About"} />
 
         <RegButton button_text={"Let's Connect"} type={"primary"} />
       </div>

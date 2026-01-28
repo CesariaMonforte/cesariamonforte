@@ -1,15 +1,19 @@
 import styles from "./LinkButton.module.css";
+import { useNavigate } from "react-router-dom";
 
 function LinkButton({ button_text, onclick }) {
-    return (
-        <>
-            <div
-                onClick={onclick}
-                className={styles.button_container}>
-                {button_text}
-            </div>
-        </>
-    );
+  const navigate = useNavigate();
+
+  return (
+    <>
+      <div
+        onClick={() => navigate(onclick)}
+        className={styles.button_container}
+      >
+        {button_text}
+      </div>
+    </>
+  );
 }
 
 export default LinkButton;
