@@ -69,7 +69,7 @@
         font-size: var(--font-size-medium);
     }
     .logo {
-        width: 24px;
+        width: var(--space-large);
         height: auto;
     }
 }
