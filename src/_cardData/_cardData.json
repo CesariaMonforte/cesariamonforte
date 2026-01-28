@@ -1,0 +1,18 @@
+[
+    {
+        "id": "forge",
+        "type": "horizontal",
+        "project_title": "Forge - Skills Trades Career Awareness and Simulation App",
+        "project_description": "Skills Trades Career  Awarness and Simulation App",
+        "project_image_src": "forge_cover.png",
+        "project_tags": "Figma"
+    },
+    {
+        "id": "mosaic",
+        "type": "horizontal",
+        "project_title": "Forge - Skills Trades Career Awareness and Simulation App",
+        "project_description": "Skills Trades Career  Awarness and Simulation App",
+        "project_image_src": "forge_cover.png",
+        "project_tags": "Figma"
+    }
+]

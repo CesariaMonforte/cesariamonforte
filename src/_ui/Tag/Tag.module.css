@@ -4,13 +4,13 @@
 
     background-color: var(--white);
     border-radius: var(--space-extra-small);
-    border: 1px solid var(--primary-500);
+    box-shadow: var(--box-shadow-white);
     width: fit-content;
-    height: 24px;
+    height: auto;
     padding: var(--space-extra-small);
 }
 .tag_regular_text {
-    font-size: var(--font-size-extra-extrtraa-small);
+    font-size: var(--font-size-regular);
     font-weight: var(--font-weight-bold);
     color: var(--primary-500);
     text-align: center;
@@ -22,14 +22,14 @@
 
     background-color: var(--white);
     border-radius: var(--space-extra-small);
-    border: 1px solid var(--primary-500);
+    box-shadow: var(--box-shadow-white);
     width: fit-content;
     height: 24px;
-    padding: var(--space-extra-small);
+    padding: 0px var(--space-extra-small);
 }
 .tag_highlighted_text {
-    font-size: var(--font-size-extra-extrtraa-small);
+    font-size: var(--font-size-regular);
     font-weight: var(--font-weight-bold);
-    color: var(--primary-500);
+    color: var(--primary-900);
     text-align: center;
 }
