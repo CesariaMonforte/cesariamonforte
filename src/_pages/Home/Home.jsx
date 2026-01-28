@@ -14,8 +14,10 @@ function Home() {
     <div>
       <NavBar />
 
-      <div>
-        <div>
+      <div className={styles.hero_container}>
+        <div className={styles.diamond_top_right}></div>
+        <div className={styles.diamond_bottom_left}></div>
+        <div className={styles.hero_text}>
           <h1 className={styles.header_phrase}>
             Vision to Interaction
             <br />
@@ -24,6 +26,11 @@ function Home() {
             </span>
           </h1>
         </div>
+        <RegButton button_text={"Check Out My Work"} type={"primary"} />
+      </div>
+
+      <div className={styles.section_title_container}>
+        <h2 className={styles.section_title}>Featured Work</h2>
       </div>
 
       <div className={styles.projects_container}>
