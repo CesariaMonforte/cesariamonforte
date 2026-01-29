@@ -14,9 +14,9 @@ function SectionCard({
     <>
       {type === "horizontal" && (
         <div className={styles.section_card_container}>
-          <h2 className={styles.section_card_title}>{section_title}</h2>
           <div className={styles.section_card_content}>
             <div className={styles.section_card_text}>
+              <h2 className={styles.section_card_title}>{section_title}</h2>
               {section_bullets && section_bullets.length > 0 && (
                 <ul className={styles.section_card_list}>
                   {section_bullets.map((item, index) => (

@@ -8,7 +8,7 @@ import SectionCard from "../../../_ui/SectionCard/SectionCard";
 
 function Forge() {
   return (
-    <div>
+    <div className={style.page_container}>
       <NavBar />
       <ProjectHero />
       <SectionCard

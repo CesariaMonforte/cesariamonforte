@@ -1,12 +1,15 @@
 import styles from "./NavBar.module.css";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 import RegButton from "../RegButton/RegButton";
 import LinkButton from "../LinkButton/LinkButton";
 
 function NavBar({}) {
+  const navigate = useNavigate();
   return (
     <div className={styles.navbar}>
-      <div>
+      <div onClick={() => navigate("/")}>
         <img src="/Logo.svg" alt="logo" className={styles.logo} />
       </div>
 
