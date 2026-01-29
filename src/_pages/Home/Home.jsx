@@ -57,9 +57,10 @@ function Home() {
           />
         ))}
       </div>
-
-      <ConnectBanner />
-      <Footer />
+      <div className={styles.footer_container}>
+        <ConnectBanner />
+        <Footer />
+      </div>
     </div>
   );
 }

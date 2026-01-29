@@ -10,7 +10,7 @@ function ProjectHero() {
         <div className={styles.hero_text_header}>
           <h2 className={styles.hero_text_title}>{_cardData[0].id}</h2>
           <p className={styles.hero_text_description}>
-            {_cardData[0].project_description}
+            {_cardData[0].project_overview}
           </p>
         </div>
         <div className={styles.hero_text_details}>

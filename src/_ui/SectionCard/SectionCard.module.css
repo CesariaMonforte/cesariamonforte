@@ -16,7 +16,7 @@
 }
 
 .section_card_image {
-  width: 584px;
+  width: 50%;
   height: auto;
   border-radius: var(--space-regular);
   box-shadow: var(--box-shadow-white);
@@ -34,4 +34,32 @@
   width: 894px;
   height: auto;
   border-radius: var(--space-regular);
+}
+
+.section_card_text {
+  text-align: justify;
+  width: 50%;
+}
+
+.section_card_list {
+  margin-top: var(--space-small);
+  padding-left: var(--space-regular);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-regular);
+  /* list-style-image: url("/Logo.svg"); */
+}
+
+.section_card_list li::marker {
+  content: "✦ ";
+  font-size: var(--font-size-regular);
+  color: var(--primary-500);
+}
+.section_card_list_item {
+  font-size: var(--font-size-medium);
+}
+
+.section_card_description {
+  font-size: var(--font-size-medium);
 }

@@ -16,6 +16,12 @@ function Forge() {
         section_description={
           "To ground Forge in real user needs, we developed two personas based on user research through survey data and online factual website. These personas represent students at different stages of their career exploration journey, helping guide decisions around tone, interaction, content depth, and accessibility."
         }
+        section_bullets={[
+          "Late Exposure to Trade Career Pathways",
+          "Complex and Overwhelming Trade Career Information",
+          "Stigma and Misconceptions Around Trade Careers",
+          "Lack of Engaging and Guided Exploration",
+        ]}
         section_image_src={"/Highschool_trade.png"}
         type={"horizontal"}
       />
