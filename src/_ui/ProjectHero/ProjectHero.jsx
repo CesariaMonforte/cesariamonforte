@@ -38,8 +38,8 @@ function ProjectHero() {
       <div className={styles.hero_image_container}>
         <img
           className={styles.hero_image}
-          src={_cardData[0].project_image_src}
-          alt={`${_cardData[0].id} Cover`}
+          src={_cardData[0].project_hero_src}
+          alt={`${_cardData[0].id} Hero`}
         />
       </div>
     </div>
