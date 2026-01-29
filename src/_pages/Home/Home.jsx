@@ -11,7 +11,7 @@ import _cardData from "../../_cardData/_cardData.json";
 
 function Home() {
   return (
-    <div>
+    <div className={styles.page_container}>
       <NavBar />
 
       <div className={styles.hero_container}>

@@ -2,16 +2,14 @@ import { useState } from "react";
 import styles from "./About.module.css";
 
 import Footer from "../../_ui/Footer/Footer";
-import ProjectCard from "../../_ui/ProjectCard/ProjectCard";
 import NavBar from "../../_ui/NavBar/NavBar";
 import ConnectBanner from "../../_ui/ConnectBanner/ConnectBanner";
-import RegButton from "../../_ui/RegButton/RegButton";
 
 import _cardData from "../../_cardData/_cardData.json";
 
 function About() {
   return (
-    <div>
+    <div className={styles.page_container}>
       <NavBar />
 
       <div className={styles.section_title_container}>

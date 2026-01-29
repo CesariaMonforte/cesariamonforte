@@ -33,7 +33,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    width: 100%;
     background-color: var(--white);
     box-shadow: var(--box-shadow-white);
     border-radius: var(--space-large);
@@ -60,8 +60,10 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     padding: 1rem;
     background-color: var(--white);
+    width: 1200px;
   }
   .navLinks {
     display: flex;
@@ -85,7 +87,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    width: 100%;
     background-color: var(--white);
     box-shadow: var(--box-shadow-white);
     border-radius: var(--space-large);

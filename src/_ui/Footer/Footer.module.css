@@ -6,7 +6,7 @@
 
     align-items: flex-start;
     justify-content: space-between;
-    padding: 1rem;
+    width: 100%;
     background-color: var(--primary-100);
   }
   .navLinks {

@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   background-color: var(--primary-500);
   padding: var(--space-small);
   border-top-right-radius: var(--space-extra-small);
