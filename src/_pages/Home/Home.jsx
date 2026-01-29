@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styles from "./Home.module.css";
 
 import Footer from "../../_ui/Footer/Footer";

@@ -36,9 +36,9 @@
 }
 
 .project_card_horizontal_tags {
-  display: flex;
-  flex-direction: row;
-  gap: var(--space-extra-small);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  gap: var(--space-regular);
 }
 
 .project_card_horizontal_image {
@@ -60,8 +60,8 @@
 .project_card_vertical_container {
   display: flex;
   flex-direction: column;
-  height: 638px;
-  padding: 16px;
+  height: 740px;
+  padding: var(--space-regular);
   align-items: center;
   gap: var(--space-extra-regular);
   align-self: stretch;

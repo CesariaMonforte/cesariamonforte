@@ -1,10 +1,12 @@
 [
   {
-    "id": "forge",
+    "id": "Forge",
     "type": "horizontal",
     "project_title": "Forge - Skills Trades Career Awareness and Simulation App",
-    "project_description": "Skills Trades Career  Awarness and Simulation App",
-    "project_image_src": "Forge_Cover.png",
+    "project_description": "Mosaic is a a portfolio creation guidance support and organization mobile app. It focuses on providing users with a platform to spark creativity through the generation of free portfolio project ideas and step by step guide on completing each portfolio project. It allows users to focus more on the project and spend time deciding on a project idea and an organized space to keep track of projects.",
+    "Role": " UI/UX Designer | Frontend Developer",
+    "Duration": " February 2024 - May 2024",
+    "project_image_src": "/Forge_Hero.png",
     "project_tags": ["Figma", "Figjam", "Adobe Illustrator"],
     "project_link": "/Projects/Forge/Forge"
   },
@@ -12,7 +14,7 @@
     "id": "Brewly",
     "type": "horizontal",
     "project_title": "Brewly - Beer Catalog Web Application",
-    "project_description": "A conceptual Canned Beverage brand inspired by contrast , resilient   moments.",
+    "project_description": "A conceptual Canned Beverage brand inspired by contrast , resilient  moments.",
     "project_image_src": "Brewly_Cover.png",
     "project_tags": ["React", "Next.js", "HTML5", "CSS", "Github"],
     "project_link": "/Projects/Brewly/Brewly"
