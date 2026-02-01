@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 import styles from "./Home.module.css";
 
 import Footer from "../../_ui/Footer/Footer";
@@ -15,6 +15,42 @@ const FILTER_OPTIONS = ["All", "Frontend Development", "UX/UI", "Graphic Design"
 
 function Home() {
   const [activeFilter, setActiveFilter] = useState("All");
+  const [mouse, setMouse] = useState({ x: 0, y: 0 });
+
+  const heroRef = useRef(null);
+  const aboutMeRef = useRef(null);
+  const featuredRef = useRef(null);
+  const filterRef = useRef(null);
+  const projectsRef = useRef(null);
+  const footerRef = useRef(null);
+
+  const sectionRefs = useMemo(
+    () => [heroRef, aboutMeRef, featuredRef, filterRef, projectsRef, footerRef],
+    []
+  );
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.inView);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -60px 0px" }
+    );
+    sectionRefs.forEach((ref) => {
+      if (ref.current) observer.observe(ref.current);
+    });
+    return () => sectionRefs.forEach((ref) => ref.current && observer.unobserve(ref.current));
+  }, [sectionRefs, activeFilter]);
+
+  const handleMouseMove = (e) => {
+    const x = (e.clientX / window.innerWidth - 0.5) * 18;
+    const y = (e.clientY / window.innerHeight - 0.5) * 18;
+    setMouse({ x, y });
+  };
 
   const filteredProjects = useMemo(() => {
     if (activeFilter === "All") return _cardData;
@@ -25,12 +61,29 @@ function Home() {
   }, [activeFilter]);
 
   return (
-    <div className={styles.page_container}>
+    <div
+      className={styles.page_container}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={() => setMouse({ x: 0, y: 0 })}
+    >
       <NavBar />
 
-      <div className={styles.hero_container}>
-        <div className={styles.diamond_top_right}></div>
-        <div className={styles.diamond_bottom_left}></div>
+      <div
+        ref={heroRef}
+        className={styles.hero_container}
+        style={
+          {
+            "--mouse-x": `${mouse.x}deg`,
+            "--mouse-y": `${mouse.y}deg`,
+          }
+        }
+      >
+        <div className={styles.diamond_wrapper_top}>
+          <div className={styles.diamond_inner} />
+        </div>
+        <div className={styles.diamond_wrapper_bottom}>
+          <div className={styles.diamond_inner} />
+        </div>
         <div className={styles.hero_text}>
           <h1 className={styles.header_phrase}>
             Vision to Interaction
@@ -46,15 +99,15 @@ function Home() {
         </div>
       </div>
 
-      <div className={styles.about_me_wrapper}>
+      <div ref={aboutMeRef} className={styles.about_me_wrapper}>
         <AboutMeCard imageSrc="/AboutMe_Profile.png" />
       </div>
 
-      <div className={styles.section_title_container}>
+      <div ref={featuredRef} className={styles.section_title_container}>
         <h2 className={styles.section_title}>Featured Work</h2>
       </div>
 
-      <div className={styles.section_title_container}>
+      <div ref={filterRef} className={styles.section_title_container}>
         <h2 className={styles.section_filter_text}>Select a category above</h2>
         <div className={styles.filter_container}>
           {FILTER_OPTIONS.map((option) => (
@@ -68,7 +121,7 @@ function Home() {
         </div>
       </div>
 
-      <div className={styles.projects_container}>
+      <div ref={projectsRef} className={styles.projects_container}>
         {filteredProjects.map((item) => (
           <ProjectCard
             key={item.id}
@@ -81,7 +134,7 @@ function Home() {
           />
         ))}
       </div>
-      <div className={styles.footer_container}>
+      <div ref={footerRef} className={styles.footer_container}>
         <ConnectBanner />
         <Footer />
       </div>

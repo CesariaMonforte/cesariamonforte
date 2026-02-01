@@ -56,7 +56,7 @@ function ProjectHero({ project }) {
             </div>
           </div>
         )}
-        {linkList.length > 0 && (
+{linkList.length > 0 && (
           <div className={styles.hero_links}>
             {linkList.map((link, index) =>
               link.external ? (

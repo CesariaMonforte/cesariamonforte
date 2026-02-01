@@ -91,6 +91,15 @@ body {
   --block-gap: var(--space-regular);
 }
 
+/* Connect banner + footer: no gap between them */
+.footer_section {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
 /* Responsive base */
 img,
 video {

@@ -8,6 +8,7 @@ import Mosaic from "./_pages/Projects/Mosaic/Mosaic";
 import Work from "./_pages/Work/Work";
 import About from "./_pages/About/About";
 import Brewly from "./_pages/Projects/Brewly/Brewly";
+import Tannacious from "./_pages/Projects/Tannacious/Tannacious";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -28,6 +29,7 @@ function App() {
         <Route path="/Projects/Forge/Forge" element={<Forge />} />
         <Route path="/Projects/Mosaic/Mosaic" element={<Mosaic />} />
         <Route path="/Projects/Brewly/Brewly" element={<Brewly />} />
+        <Route path="/Projects/Tannacious/Tannacious" element={<Tannacious />} />
       </Routes>
     </BrowserRouter>
   );

@@ -22,7 +22,7 @@
   gap: var(--block-gap);
   width: 100%;
   padding: var(--block-gap) 0;
-  text-align: center;
+  text-align: left;
 }
 
 .section_title {
@@ -30,7 +30,7 @@
   font-weight: var(--font-weight-bold);
   color: var(--primary-500);
   margin: 0;
-  text-align: center;
+  text-align: left;
 }
 
 .filter_container {

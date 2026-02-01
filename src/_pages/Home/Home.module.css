@@ -1,24 +1,9 @@
 /* Mobile first. Breakpoints: 600px tablet, 900px desktop */
 
-/* ---------- Entrance animations ---------- */
-@keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
+/* ---------- Scroll-triggered entrance (one at a time) ---------- */
 @keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -26,17 +11,18 @@
   .hero_button_wrapper,
   .about_me_wrapper,
   .section_title_container,
-  .page_container > .section_title_container:nth-child(4),
-  .page_container > .section_title_container:nth-child(5),
   .projects_container > *,
-  .footer_container,
-  .diamond_top_right,
-  .diamond_bottom_left {
-    animation: none !important;
+  .footer_container {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
-  .diamond_top_right,
-  .diamond_bottom_left {
-    opacity: 1;
+  .diamond_wrapper_top,
+  .diamond_wrapper_bottom {
+    transform: none !important;
+  }
+  .diamond_inner {
+    animation: none !important;
   }
 }
 
@@ -66,6 +52,7 @@
   position: relative;
   overflow: hidden;
   min-height: 40vh;
+  perspective: 1200px;
 }
 
 .hero_text {
@@ -73,6 +60,14 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.hero_container.inView .hero_text {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .header_phrase {
@@ -97,7 +92,14 @@
 .hero_button_wrapper {
   display: flex;
   justify-content: center;
-  animation: fade-in-up 0.6s ease-out 0.35s both;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease-out 0.25s, transform 0.5s ease-out 0.25s;
+}
+
+.hero_container.inView .hero_button_wrapper {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .hero_button_wrapper > * {
@@ -110,7 +112,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: fade-in-up 0.65s ease-out 0.2s both;
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.55s ease-out, transform 0.55s ease-out;
+}
+
+.about_me_wrapper.inView {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .section_title_container {

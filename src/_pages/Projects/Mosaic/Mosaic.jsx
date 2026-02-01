@@ -288,8 +288,10 @@ const handleCode = () => {
         </>
       )}
 
-      <ConnectBanner />
-      <Footer />
+      <div className="footer_section">
+        <ConnectBanner />
+        <Footer />
+      </div>
     </div>
   );
 }

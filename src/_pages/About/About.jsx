@@ -18,8 +18,10 @@ function About() {
         <AboutMeCard imageSrc="/AboutMe_Profile.png" />
       </div>
 
-      <ConnectBanner />
-      <Footer />
+      <div className="footer_section">
+        <ConnectBanner />
+        <Footer />
+      </div>
     </div>
   );
 }

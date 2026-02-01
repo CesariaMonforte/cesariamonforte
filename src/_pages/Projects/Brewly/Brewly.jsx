@@ -301,8 +301,10 @@ const handleKeyDown = (e) => {
           <SectionDescriptionBox title={"The Reflection"} items={project_reflection} />
         </div>
 
+      <div className="footer_section">
       <connectBanner />
       <Footer />
+      </div>
     </div>
   );
 }

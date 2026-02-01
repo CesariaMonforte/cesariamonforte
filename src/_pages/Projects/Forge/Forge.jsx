@@ -16,8 +16,10 @@ function Forge() {
       <div className={style.under_construction}>
         <h2 className={style.under_construction_header}>Forge is under construction</h2>
       </div>
-      <ConnectBanner />
-      <Footer />
+      <div className="footer_section">
+        <ConnectBanner />
+        <Footer />
+      </div>
     </div>
   );
 }
