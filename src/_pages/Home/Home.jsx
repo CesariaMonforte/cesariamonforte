@@ -27,7 +27,9 @@ function Home() {
             </span>
           </h1>
         </div>
-        <RegButton button_text={"Check Out My Work"} type={"primary"} />
+        <div className={styles.hero_button_wrapper}>
+          <RegButton button_text={"Check Out My Work"} type={"primary"} />
+        </div>
       </div>
 
       <div className={styles.section_title_container}>

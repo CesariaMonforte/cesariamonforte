@@ -107,4 +107,30 @@
     background: var(--white);
     box-shadow: var(--box-shadow-white);
   }
+
+  .filter_tag_active_text {
+    font-size: var(--font-size-extra-small);
+    font-weight: var(--font-weight-regular);
+    color: var(--white);
+    text-align: center;
+  }
+
+  .filter_tag_active_underline {
+    width: 100%;
+    height: 1px;
+    background: var(--white);
+  }
+
+  .filter_tag_regular_text {
+    font-size: var(--font-size-extra-small);
+    font-weight: var(--font-weight-regular);
+    color: var(--primary-500);
+    text-align: center;
+  }
+
+  .filter_tag_regular_underline {
+    width: 100%;
+    height: 1px;
+    background: var(--primary-500);
+  }
 }
