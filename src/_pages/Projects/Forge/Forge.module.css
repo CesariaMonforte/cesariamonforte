@@ -1,7 +1,52 @@
+/* Mobile first. Breakpoints: 600px tablet, 900px desktop */
 .page_container {
   display: flex;
   flex-direction: column;
+  gap: var(--section-gap);
   align-items: center;
   width: 100%;
-  padding: var(--space-regular);
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: var(--page-padding-mobile);
+}
+
+.page_container > * {
+  width: 100%;
+  max-width: 100%;
+}
+
+.under_construction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: var(--section-gap) var(--block-gap);
+  min-height: 40vh;
+}
+
+.under_construction_header {
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-medium);
+  color: var(--primary-500);
+  margin: 0;
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+  .page_container {
+    padding: var(--page-padding-desktop);
+  }
+  .under_construction_header {
+    font-size: var(--font-size-large);
+  }
+}
+
+@media (max-width: 480px) {
+  .page_container {
+    padding: var(--space-small);
+  }
+  .under_construction_header {
+    font-size: var(--font-size-regular);
+  }
 }

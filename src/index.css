@@ -4,7 +4,7 @@
 
 * {
   font-family: var(--font-family);
-  align-items: center;
+  box-sizing: border-box;
 }
 
 p,
@@ -82,6 +82,13 @@ body {
   --space-extra-large: 140px;
 
   /* ----- BREAKPOINTS (use in media queries: 600px = tablet, 900px = desktop) ----- */
+
+  /* ----- LAYOUT (consistent page alignment) ----- */
+  --page-max-width: 1200px;
+  --page-padding-mobile: var(--space-regular);
+  --page-padding-desktop: var(--space-extra-regular);
+  --section-gap: var(--space-large);
+  --block-gap: var(--space-regular);
 }
 
 /* Responsive base */

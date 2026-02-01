@@ -2,12 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-regular);
+  gap: var(--block-gap);
   width: 100%;
   max-width: 100%;
-  box-sizing: border-box;
   background-color: var(--primary-500);
-  padding: var(--space-regular);
+  padding: var(--block-gap);
   border-top-right-radius: var(--space-extra-small);
   border-top-left-radius: var(--space-extra-small);
 }
@@ -29,7 +28,7 @@
 
 .banner_button_wrapper > * {
   max-width: 220px;
-  width: auto;
+  width: 100%;
 }
 
 /* Tablet and up */

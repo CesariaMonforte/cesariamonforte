@@ -86,18 +86,41 @@
     padding: var(--space-extra-regular) var(--space-medium);
     justify-content: center;
     flex-direction: column;
+    font-size: var(--font-size-regular);
   }
   .overlay_name {
     font-size: var(--font-size-extra-medium);
   }
+  .description {
+    font-size: var(--font-size-regular);
+  }
 }
 
 @media (min-width: 900px) {
+  .card {
+    max-width: var(--page-max-width);
+  }
+  .image_wrapper {
+    width: 48%;
+    max-width: 520px;
+    min-height: 360px;
+  }
+  .image_overlay {
+    padding: var(--space-extra-regular) var(--space-medium);
+  }
   .overlay_name {
     font-size: var(--font-size-large);
   }
+  .overlay_subtitle {
+    font-size: var(--font-size-medium);
+  }
   .content {
-    padding: var(--space-medium);
+    padding: var(--space-medium) var(--space-large);
+    font-size: var(--font-size-regular);
+  }
+  .description {
+    font-size: var(--font-size-medium);
+    line-height: 1.6;
   }
 }
 
@@ -109,6 +132,9 @@
     font-size: var(--font-size-regular);
   }
   .overlay_subtitle {
+    font-size: var(--font-size-small);
+  }
+  .description {
     font-size: var(--font-size-small);
   }
   .description {
