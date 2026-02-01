@@ -4,6 +4,7 @@ import styles from "./About.module.css";
 import Footer from "../../_ui/Footer/Footer";
 import NavBar from "../../_ui/NavBar/NavBar";
 import ConnectBanner from "../../_ui/ConnectBanner/ConnectBanner";
+import AboutMeCard from "../../_ui/AboutMeCard/AboutMeCard";
 
 import _cardData from "../../_cardData/_cardData.json";
 
@@ -13,7 +14,8 @@ function About() {
       <NavBar />
 
       <div className={styles.section_title_container}>
-        <h2 className={styles.section_title}>Featured Work</h2>
+        <h2 className={styles.section_title}>About Me</h2>
+        <AboutMeCard imageSrc="/AboutMe_Profile.png" />
       </div>
 
       <ConnectBanner />
