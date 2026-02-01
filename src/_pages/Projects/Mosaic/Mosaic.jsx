@@ -32,34 +32,66 @@ function Mosaic() {
 
   const FormAndStateCodeSnippet = [
     {
-      label: "Login.jsx",
-      code: `function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
+      label: "PopUp.js",
+      code: `
+"use client";
 
-  return (
-    <div className={styles.login_container}>
-      <input
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Email"
-      />
-      <input
-        type={showPassword ? "text" : "password"}
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        placeholder="Password"
-      />
-      <RegButton
-        button_text="Log in"
-        type="primary"
-        onClick={() => {}}
-      />
-    </div>
-  );
-}`,
+
+import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
+import styles from "./PopUp.module.css";
+import Button from "../Button/Button";
+
+
+export default function PopUp({
+   onClose,
+   children,
+   buttonText = "Ok",
+   buttonType = "primary",
+   secondaryButtonText,
+   secondaryButtonType = "orange",
+   onSecondaryButtonClick,
+}) {
+   const [mounted, setMounted] = useState(false);
+
+
+   useEffect(() => {
+       setMounted(true);
+       return () => setMounted(false);
+   }, []);
+
+
+   if (!mounted) return null;
+
+
+   return createPortal(
+       <>
+           <div
+               className={styles.popup_overlay}
+               onClick={onClose}
+           />
+           <div className={styles.popup}>
+               {children}
+               <div className={styles.popup_buttons}>
+                   {secondaryButtonText && (
+                       <Button
+                           value={secondaryButtonText}
+                           type={secondaryButtonType}
+                           onClick={onSecondaryButtonClick}
+                       />
+                   )}
+                   <Button
+                       value={buttonText}
+                       type={buttonType}
+                       onClick={onClose}
+                   />
+               </div>
+           </div>
+       </>,
+       document.body,
+   );
+}
+`,
     },
   ];
 
@@ -71,29 +103,65 @@ function Mosaic() {
 
   const DynamicStylingCodeSnippet = [
     {
-      label: "DotComponent.jsx",
-      code: `function DotComponent() {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [color, setColor] = useState("blue");
+      label: "Description_Box.js",
+      code: `// Description_Box.js — Layout by useCase
+const DescriptionClasses = classNames(styles.project_primary, {
+   [styles.conditions]: useCase === "conditions",
+   [styles.project_secondary]: useCase === "secondary",
+});
 
-  useEffect(() => {
-    // Fetch dot data from API or context
-  }, []);
 
-  return (
-    <div
-      className={styles.dot}
-      style={{
-        left: position.x,
-        top: position.y,
-        backgroundColor: color,
-      }}
-    />
-  );
-}`,
-    },
+return <div className={DescriptionClasses}>...</div>;
+      `
+    }
   ];
 
+  const ProfileCreation = [
+    "LocalStorage update once to avoid redundancy",
+    "Use functional `setState` so you always work with the latest list.",
+    " Guard against duplicates and case-insensitive duplicate collection names.",
+  
+  ];
+  const ProfileCreationCodeSnippet = [
+    {
+      label: "SignIn.js",
+      code: `const [Email, setEmail] = useState("");
+const [showIncompleteProfilePopup, setShowIncompleteProfilePopup] =
+   useState(false);
+
+
+const handleCode = () => {
+   if (!Email) {
+       setShowIncompleteProfilePopup(true);
+       return;
+   } else {
+       router.replace("/SignIn/VerificationCode");
+   }
+};
+`,
+    },{
+      label: "CreateProfile.js",
+      code: `const handleSave = () => {
+   if (
+       !firstName ||
+       !lastName ||
+       !username ||
+       !aboutMe ||
+       !location ||
+       selectedInterests.length === 0 ||
+       !selectedAvatar
+   ) {
+       setShowIncompleteProfilePopup(true);
+       return;
+   } else {
+       saveProfileData();
+       setShowSavePopup(true);
+   }
+};
+
+      `
+    }
+  ];
   const EndGoals = [
     "Persistent profile data via LocalStorage so the user’s Mosaic survives page refreshes..",
     "Reusable UI components (StatusBar, Button, PopUp, SingleInput, InterestChip, etc.) that keep the interface consistent and maintainable.",
@@ -161,8 +229,16 @@ function Mosaic() {
           items={FormAndState}
         />
       </div>
+      {/* Profile Creation and Local Storage */}
+      <div className={styles.section_container_reverse}>
+        <CodeSnippetBox tabs={ProfileCreationCodeSnippet} />
+        <SectionDescriptionBox
+          title="Profile Creation and Local Storage"
+          items={ProfileCreation}
+        />
+      </div>
 
-      {/* Location, States and Local Storage in Action */}
+      {/* Validation, States and Local Storage in Action */}
       <div className={styles.standalone_section}>
         <h2 className={styles.section_heading}>Validation, States and Local Storage in Action</h2>
         <div className={styles.placeholder_mockup} aria-hidden="true">
