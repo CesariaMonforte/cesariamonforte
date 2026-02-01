@@ -22,16 +22,22 @@
   {
     "id": "Mosaic",
     "type": "horizontal",
-    "categories": ["UX/UI", "Frontend Development"],
-    "project_title": "Mosaic -  Portfolio Project Guidance and Generation Apps",
-    "project_description": "Portfolio Project Guidance and Generation Apps",
-    "project_overview": "",
-    "Role": "",
-    "Duration": "",
+    "categories": ["UX/UI", "Graphic Design"],
+    "project_title": "Mosaic - Portfolio Project Guidance and Generation Apps",
+    "project_description": "Mosaic is a portfolio creation guidance support and organization mobile app.",
+    "project_overview": "Mosaic is a portfolio creation guidance support and organization mobile app. It focuses on providing users with a platform to spark creativity through the generation of free portfolio project ideas and step by step guide on completing each portfolio project.",
+    "Role": "Frontend Developer | UI Designer",
+    "Team": "3 Designers.",
+    "Duration": "February 2024 - May 2024.",
     "project_image_src": "Mosaic_Cover.png",
-    "project_hero_src": "",
-    "project_tags": ["Figma", "Github"],
-    "project_link": "/Projects/Mosaic/Mosaic"
+    "project_hero_src": "/Mosaic_Hero.png",
+    "project_tags": ["HTML", "CSS", "JavaScript", "Next.js", "React", "Classnames", "Figma", "FigJam", "Adobe Photoshop", "Adobe Illustrator"],
+    "project_link": "/Projects/Mosaic/Mosaic",
+    "project_links": [
+      { "label": "View Full WebApp", "url": "#", "external": true },
+      { "label": "View Github Repository", "url": "#", "external": true },
+      { "label": "View Documentation", "url": "#", "external": true }
+    ]
   },
   {
     "id": "Forge",

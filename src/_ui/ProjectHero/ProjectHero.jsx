@@ -10,6 +10,7 @@ function ProjectHero({ project }) {
     id,
     project_overview,
     Role,
+    Team,
     Duration,
     project_tags,
     project_hero_src,
@@ -31,6 +32,12 @@ function ProjectHero({ project }) {
           <div className={styles.hero_text_details}>
             <h3 className={styles.hero_text_details_header}>Role</h3>
             <p className={styles.hero_text_details_content}>{Role}</p>
+          </div>
+        )}
+        {Team != null && Team !== "" && (
+          <div className={styles.hero_text_details}>
+            <h3 className={styles.hero_text_details_header}>Team</h3>
+            <p className={styles.hero_text_details_content}>{Team}</p>
           </div>
         )}
         {Duration != null && Duration !== "" && (
