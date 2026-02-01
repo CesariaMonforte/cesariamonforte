@@ -1,20 +1,9 @@
 [
-  {
-    "id": "Forge",
-    "type": "horizontal",
-    "project_title": "Forge - Skills Trades Career Awareness and Simulation App",
-    "project_description": "Skills Trades Career  Awarness and Simulation App",
-    "project_overview": "Forge is a AI skilled trades career simulation app that empowers students through creating and enhances awareness of careers in skilled trades. It focuses on key aspects including career pathways, skills, finances and stages of skilled trades careers to support students in their decision making process.",
-    "Role": " UI/UX Designer",
-    "Duration": " February 2024 - May 2024",
-    "project_image_src": "/Forge_Cover.png",
-    "project_hero_src": "/Forge_Hero.png",
-    "project_tags": ["Figma", "Figjam", "Adobe Illustrator"],
-    "project_link": "/Projects/Forge/Forge"
-  },
+  
   {
     "id": "Brewly",
     "type": "horizontal",
+    "categories": ["Frontend Development"],
     "project_title": "Brewly - Beer Catalog Web Application",
     "project_description": "A conceptual Canned Beverage brand inspired by contrast , resilient  moments.",
     "project_overview": "Brewly is a mobile-first web application prototype that helps users discover, track, and manage their favorite beers.",
@@ -33,6 +22,7 @@
   {
     "id": "Mosaic",
     "type": "horizontal",
+    "categories": ["UI/UX", "Frontend Development"],
     "project_title": "Mosaic -  Portfolio Project Guidance and Generation Apps",
     "project_description": "Portfolio Project Guidance and Generation Apps",
     "project_overview": "",
@@ -42,5 +32,20 @@
     "project_hero_src": "",
     "project_tags": ["Figma", "Github"],
     "project_link": "/Projects/Mosaic/Mosaic"
+  },
+  {
+    "id": "Forge",
+    "type": "horizontal",
+    "categories": ["UI/UX"],
+    "project_title": "Forge - Skills Trades Career Awareness and Simulation App",
+    "project_description": "Skills Trades Career  Awarness and Simulation App",
+    "project_overview": "Forge is a AI skilled trades career simulation app that empowers students through creating and enhances awareness of careers in skilled trades. It focuses on key aspects including career pathways, skills, finances and stages of skilled trades careers to support students in their decision making process.",
+    "Role": " UI/UX Designer",
+    "Duration": " February 2024 - May 2024",
+    "project_image_src": "/Forge_Cover.png",
+    "project_hero_src": "/Forge_Hero.png",
+    "project_tags": ["Figma", "Figjam", "Adobe Illustrator"],
+    "project_link": "/Projects/Forge/Forge"
   }
+ 
 ]

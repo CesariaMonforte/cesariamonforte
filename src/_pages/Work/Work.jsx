@@ -1,3 +1,4 @@
+import { useState, useMemo } from "react";
 import styles from "./Work.module.css";
 
 import Footer from "../../_ui/Footer/Footer";
@@ -9,24 +10,40 @@ import Tag from "../../_ui/Tag/Tag";
 
 import _cardData from "../../_cardData/_cardData.json";
 
+const FILTER_OPTIONS = ["All", "Frontend Development", "UI/UX", "Graphic Design"];
+
 function Work() {
+  const [activeFilter, setActiveFilter] = useState("All");
+
+  const filteredProjects = useMemo(() => {
+    if (activeFilter === "All") return _cardData;
+    return _cardData.filter((project) => {
+      const cats = project.categories || (project.category ? [project.category] : []);
+      return cats.includes(activeFilter);
+    });
+  }, [activeFilter]);
+
   return (
     <div className={styles.page_container}>
       <NavBar />
       <div className={styles.section_title_container}>
           <h2 className={styles.section_title}>Work</h2>
           <div className={styles.filter_container}>
-            <Tag tags={[" All"]} type="filter_active" />
-            <Tag
-              tags={["Frontend Development", "UI/UX", "Graphic Design"]}
-              type="filter_regular"
-            />
+            {FILTER_OPTIONS.map((option) => (
+              <Tag
+                key={option}
+                tags={[option]}
+                type={activeFilter === option ? "filter_active" : "filter_regular"}
+                onClick={setActiveFilter}
+              />
+            ))}
           </div>
         </div>
 
         <div className={styles.projects_container}>
-        {_cardData.map((item) => (
+        {filteredProjects.map((item) => (
           <ProjectCard
+            key={item.id}
             type="vertical"
             project_title={item.project_title}
             project_description={item.project_description}

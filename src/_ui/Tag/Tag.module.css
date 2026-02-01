@@ -44,9 +44,9 @@
   height: auto;
   width: fit-content;
   padding: var(--space-extra-small) var(--space-regular);
-
   border-radius: var(--space-small);
   background: var(--primary-500);
+  cursor: pointer;
 }
 
 .filter_tag_active_text {
@@ -69,8 +69,8 @@
   height: auto;
   width: fit-content;
   padding: var(--space-extra-small) var(--space-regular);
-
   border-radius: var(--space-small);
+  cursor: pointer;
 }
 
 @media (min-width: 200px) {
