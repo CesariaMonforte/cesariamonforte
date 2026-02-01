@@ -7,8 +7,9 @@
   align-items: center;
 }
 
-p {
-  font-size: var(--font-size-medium);
+p,
+body {
+  font-size: var(--font-size-regular);
 }
 
 /* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */

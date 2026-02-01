@@ -28,7 +28,7 @@
 }
 
 .project_card_horizontal_description {
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-regular);
   font-style: normal;
   text-align: left;
   color: var(--gray-700);
@@ -141,7 +141,7 @@
     font-size: var(--font-size-small);
   }
   .project_card_horizontal_description {
-    font-size: var(--font-size-extra-small);
+    font-size: var(--font-size-regular);
   }
   .project_card_horizontal_tags {
     grid-template-columns: 1fr;

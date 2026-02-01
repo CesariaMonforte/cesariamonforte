@@ -236,9 +236,23 @@ const handleKeyDown = (e) => {
           <SectionDescriptionBox title={"API Fetching and Beer Card Integration"} items={project_api_fetching_and_beer_card_integration} />
           <CodeSnippetBox tabs={project_code_snippets} />
         </div>
+        <div className={styles.project_api_fetching_and_beer_card_integration_video_container}>
+          <h2 className={styles.project_api_fetching_and_beer_card_integration_video_title}>Video Demonstration</h2>
+  <video
+            src="/Api_Beercard_Vid.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            controls
+            title="Brewly - API Fetching and Beer Card Integration"
+          />
+</div>
         <div className={styles.project_goals_container}>
           <SectionDescriptionBox title={"End Goals"} items={project_end_goals} />
         </div>
+
+
         {/* Search and Filter Functionality */}
         <div className={styles.project_API_Fetching_container}>
         <CodeSnippetBox tabs={search_and_filter_functionality_code_snippets} />

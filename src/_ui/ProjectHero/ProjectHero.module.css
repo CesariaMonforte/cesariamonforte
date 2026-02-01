@@ -16,14 +16,14 @@
 .hero_text_title {
   font-size: var(--font-size-medium);
   font-weight: bold;
-  color: var(--primary-900);
+  color: var(--primary-500);
   margin: 0 0 var(--space-small);
   line-height: 1.2;
 }
 
 .hero_text_description {
   margin: 0 0 var(--space-small);
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-regular);
   line-height: 1.4;
   color: var(--gray-700);
 }
@@ -51,6 +51,7 @@
 
 .hero_text_details_header {
   font-weight: bold;
+  color: var(--primary-500);
   margin: 0 0 var(--space-extra-small);
 }
 
@@ -130,7 +131,7 @@
     font-size: var(--font-size-regular);
   }
   .hero_text_description {
-    font-size: var(--font-size-extra-small);
+    font-size: var(--font-size-regular);
   }
   .hero_text_details_content_tags {
     grid-template-columns: 1fr;
