@@ -65,6 +65,13 @@
   width: auto;
 }
 
+.about_me_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: var(--space-regular) 0;
+}
+
 .section_title {
   font-size: var(--font-size-regular);
   font-weight: var(--font-weight-bold);

@@ -10,7 +10,7 @@ import Tag from "../../_ui/Tag/Tag";
 
 import _cardData from "../../_cardData/_cardData.json";
 
-const FILTER_OPTIONS = ["All", "Frontend Development", "UI/UX", "Graphic Design"];
+const FILTER_OPTIONS = ["All", "Frontend Development", "UX/UI", "Graphic Design"];
 
 function Work() {
   const [activeFilter, setActiveFilter] = useState("All");

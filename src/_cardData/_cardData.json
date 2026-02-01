@@ -22,7 +22,7 @@
   {
     "id": "Mosaic",
     "type": "horizontal",
-    "categories": ["UI/UX", "Frontend Development"],
+    "categories": ["UX/UI", "Frontend Development"],
     "project_title": "Mosaic -  Portfolio Project Guidance and Generation Apps",
     "project_description": "Portfolio Project Guidance and Generation Apps",
     "project_overview": "",
@@ -36,11 +36,11 @@
   {
     "id": "Forge",
     "type": "horizontal",
-    "categories": ["UI/UX"],
+    "categories": ["UX/UI"],
     "project_title": "Forge - Skills Trades Career Awareness and Simulation App",
     "project_description": "Skills Trades Career  Awarness and Simulation App",
     "project_overview": "Forge is a AI skilled trades career simulation app that empowers students through creating and enhances awareness of careers in skilled trades. It focuses on key aspects including career pathways, skills, finances and stages of skilled trades careers to support students in their decision making process.",
-    "Role": " UI/UX Designer",
+    "Role": " UX/UI Designer",
     "Duration": " February 2024 - May 2024",
     "project_image_src": "/Forge_Cover.png",
     "project_hero_src": "/Forge_Hero.png",

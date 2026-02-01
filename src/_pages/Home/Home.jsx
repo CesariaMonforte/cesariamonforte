@@ -7,10 +7,11 @@ import NavBar from "../../_ui/NavBar/NavBar";
 import ConnectBanner from "../../_ui/ConnectBanner/ConnectBanner";
 import RegButton from "../../_ui/RegButton/RegButton";
 import Tag from "../../_ui/Tag/Tag";
+import AboutMeCard from "../../_ui/AboutMeCard/AboutMeCard";
 
 import _cardData from "../../_cardData/_cardData.json";
 
-const FILTER_OPTIONS = ["All", "Frontend Development", "UI/UX", "Graphic Design"];
+const FILTER_OPTIONS = ["All", "Frontend Development", "UX/UI", "Graphic Design"];
 
 function Home() {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -43,6 +44,10 @@ function Home() {
         <div className={styles.hero_button_wrapper}>
           <RegButton button_text={"Check Out My Work"} type={"primary"} onClick={"/Work"}/>
         </div>
+      </div>
+
+      <div className={styles.about_me_wrapper}>
+        <AboutMeCard imageSrc="/AboutMe_Profile.png" />
       </div>
 
       <div className={styles.section_title_container}>
