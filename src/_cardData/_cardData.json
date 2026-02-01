@@ -55,6 +55,20 @@
   },
   
   {
+    "id": "Paris to Rome Brochure",
+    "type": "horizontal",
+    "categories": ["Graphic Design"],
+    "project_title": "Paris to Rome Brochure",
+    "project_description": "A travel guide capturing the essence of Paris and Rome to inspire people to explore new cultures.",
+    "project_overview": "How do you capture the essence of Paris and Rome in a travel guide, inspiring people to explore new cultures? This project involved moodboarding, illustration, and brochure design for a Paris-to-Rome travel guide.",
+    "Role": "Graphic Designer, Illustrator, Researcher",
+    "Duration": "2 Weeks",
+    "project_image_src": "/ParisToRome_Mock3.png",
+    "project_hero_src": "/ParisToRome_Mock3.png",
+    "project_tags": ["Figma", "Illustrator", "InDesign", "Photoshop"],
+    "project_link": "/Projects/ParisToRomeBrochure/ParisToRomeBrochure"
+  },
+  {
     "id": "Tannacious",
     "type": "horizontal",
     "categories": ["Graphic Design"],
