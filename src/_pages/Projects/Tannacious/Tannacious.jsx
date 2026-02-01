@@ -6,10 +6,10 @@ import ConnectBanner from "../../../_ui/ConnectBanner/ConnectBanner";
 import _cardData from "../../../_cardData/_cardData.json";
 
 const IMAGERY_DESCRIPTION =
-  "The imagery for Tannacious was chosen to evoke summer and natural warmth—from scenic landscapes to tropical sunsets—reinforcing the summertan beverage identity and target audience.";
+  "The imagery choice of Tannacious  was purely was on the idea of adventure and the feeling that comes with memories. Weather that be in a calming beach or skying from a cold mountain peak. ";
 
 const DIELINES_DESCRIPTION =
-  "Dielines were created in Illustrator to define the exact cut, fold, and print areas for the can packaging. Each variant (earth, sunset, and ice) has a corresponding flat dieline showing nutrition facts, branding, and graphic placement for production.";
+  "Once the imagery was established and the information was iterated to clearly communicate Tannacious’s values and credibility, the final dieline was produced, ensuring consistency across all packaging variations.";
 
 function Tannacious() {
   const project = _cardData.find((p) => p.id === "Tannacious");
