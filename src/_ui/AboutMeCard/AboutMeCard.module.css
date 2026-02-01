@@ -1,9 +1,10 @@
+/* Mobile first. Breakpoints: 600px tablet, 900px desktop */
 .card {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   width: 100%;
-  max-width: 900px;
+  max-width: 100%;
   background: var(--white);
   border-radius: var(--space-regular);
   box-shadow: var(--box-shadow-white);
@@ -68,29 +69,26 @@
   font-weight: var(--font-weight-bold);
 }
 
-/* Tablet and up: image left, text right */
 @media (min-width: 600px) {
   .card {
     flex-direction: row;
     align-items: stretch;
+    max-width: 900px;
   }
-
   .image_wrapper {
     width: 45%;
     max-width: 420px;
     aspect-ratio: 3 / 4;
     min-height: 280px;
   }
-
   .content {
     flex: 1;
     padding: var(--space-extra-regular) var(--space-medium);
     justify-content: center;
     flex-direction: column;
   }
-
-  .description {
-    font-size: var(--font-size-regular);
+  .overlay_name {
+    font-size: var(--font-size-extra-medium);
   }
 }
 
@@ -98,8 +96,22 @@
   .overlay_name {
     font-size: var(--font-size-large);
   }
-
   .content {
     padding: var(--space-medium);
+  }
+}
+
+@media (max-width: 480px) {
+  .image_wrapper {
+    min-height: 200px;
+  }
+  .overlay_name {
+    font-size: var(--font-size-regular);
+  }
+  .overlay_subtitle {
+    font-size: var(--font-size-small);
+  }
+  .description {
+    font-size: var(--font-size-small);
   }
 }

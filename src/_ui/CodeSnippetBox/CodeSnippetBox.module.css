@@ -110,7 +110,7 @@
   --code-text: #e2e8f0;
 }
 
-/* Tablet and up */
+/* Mobile first. Breakpoints: 600px tablet, 900px desktop */
 @media (min-width: 600px) {
   .code_snippet_pre {
     font-size: var(--font-size-regular);
@@ -121,7 +121,6 @@
   }
 }
 
-/* Small mobile */
 @media (max-width: 480px) {
   .code_snippet_tabs {
     padding: var(--space-extra-small);

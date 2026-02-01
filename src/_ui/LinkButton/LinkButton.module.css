@@ -1,18 +1,22 @@
-.button_container{
-display: inline-flex;
-padding: var(--space-regular);
-justify-content: center;
-align-items: center;
-color: var(--primary-900);
-
-
+.button_container {
+  display: inline-flex;
+  padding: var(--space-regular);
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-900);
+  font-size: var(--font-size-regular);
+  cursor: pointer;
 }
-.button_container:hover{
-display: inline-flex;
-padding: var(--space-regular);
-justify-content: center;
-align-items: center;
 
-border-radius: var(--space-extra-small);
-background: var(--primary-500);
+.button_container:hover {
+  border-radius: var(--space-extra-small);
+  background: var(--primary-500);
+  color: var(--white);
+}
+
+@media (max-width: 480px) {
+  .button_container {
+    padding: var(--space-small);
+    font-size: var(--font-size-small);
+  }
 }

@@ -80,4 +80,14 @@ body {
   --space-medium: 32px;
   --space-large: 48px;
   --space-extra-large: 140px;
+
+  /* ----- BREAKPOINTS (use in media queries: 600px = tablet, 900px = desktop) ----- */
+}
+
+/* Responsive base */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }

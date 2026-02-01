@@ -1,14 +1,14 @@
 .project_card_horizontal_container {
   display: flex;
-  height: 400px;
+  min-height: 280px;
   padding: var(--space-regular);
   align-items: center;
   gap: var(--space-extra-regular);
   align-self: stretch;
-
   border-radius: var(--space-extra-small);
   background: var(--white);
   box-shadow: var(--box-shadow-white);
+  box-sizing: border-box;
 }
 
 .project_card_horizontal_content {
@@ -31,14 +31,15 @@
   font-size: var(--font-size-regular);
   font-style: normal;
   text-align: left;
-  color: var(--gray-700);
+  color: var(--black-400);
   margin: 0;
 }
 
 .project_card_horizontal_tags {
   display: grid;
-  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
   gap: var(--space-regular);
+  width: 100%;
 }
 
 .project_card_horizontal_image_container {
@@ -59,8 +60,8 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
-
-  height: 100%;
+  margin-top: auto;
+  padding-top: var(--space-small);
 }
 
 /* :vertical  */
@@ -79,26 +80,10 @@
   box-shadow: var(--box-shadow-white);
 }
 
-/* Tablet and below */
-@media (max-width: 1024px) {
-  .project_card_horizontal_container {
-    height: auto;
-    min-height: 320px;
-  }
-  .project_card_horizontal_image_container {
-    max-width: 320px;
-  }
-  .project_card_vertical_container {
-    height: auto;
-    min-height: 520px;
-  }
-}
-
-/* Mobile: stack horizontal card, smaller typography */
+/* Mobile first. Breakpoints: 600px tablet, 900px desktop */
 @media (max-width: 768px) {
   .project_card_horizontal_container {
     flex-direction: column;
-    height: auto;
     min-height: unset;
     padding: var(--space-regular);
   }
@@ -110,7 +95,6 @@
   .project_card_horizontal_image {
     width: 100%;
     max-width: 100%;
-    margin-right: 0;
   }
   .project_card_horizontal_content {
     width: 100%;
@@ -122,15 +106,13 @@
     font-size: var(--font-size-small);
   }
   .project_card_horizontal_tags {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
   }
   .project_card_vertical_container {
     min-height: unset;
-    height: auto;
   }
 }
 
-/* Small mobile */
 @media (max-width: 480px) {
   .project_card_horizontal_container,
   .project_card_vertical_container {
@@ -138,12 +120,18 @@
     gap: var(--space-regular);
   }
   .project_card_horizontal_title {
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-regular);
   }
   .project_card_horizontal_description {
     font-size: var(--font-size-regular);
   }
   .project_card_horizontal_tags {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  .project_card_horizontal_image {
+    max-width: 578px;
   }
 }

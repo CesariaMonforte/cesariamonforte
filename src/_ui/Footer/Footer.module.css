@@ -18,7 +18,7 @@
 }
 
 .logo {
-  width: 24px;
+  width: var(--space-medium);
   height: auto;
   display: block;
 }
@@ -91,18 +91,5 @@
   }
   .container_logo_connection {
     gap: var(--space-small);
-  }
-}
-
-/* Large desktop */
-@media (min-width: 1300px) {
-  .footer_container {
-    padding: var(--space-regular) 2rem;
-  }
-  .navLinks {
-    gap: var(--space-extra-regular);
-  }
-  .navLinks a {
-    font-size: var(--font-size-regular);
   }
 }

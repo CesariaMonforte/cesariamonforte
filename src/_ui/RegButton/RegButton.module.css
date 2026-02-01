@@ -8,7 +8,7 @@
   align-items: center;
   gap: var(--space-regular);
   border-radius: var(--space-regular);
-  color: white;
+  color: var(--white);
   border: 1px solid var(--white);
   box-shadow: var(--box-shadow-white);
   background: var(--primary-900);
@@ -44,19 +44,10 @@
   box-sizing: border-box;
 }
 
-/* Tablet and below: full width in narrow containers */
-@media (max-width: 768px) {
-  .button_reg,
-  .button_secondary_reg {
-    max-width: 100%;
-    padding: var(--space-regular);
-  }
-}
-
-/* Small mobile: tighter padding */
 @media (max-width: 480px) {
   .button_reg,
   .button_secondary_reg {
+    max-width: 100%;
     padding: var(--space-small);
     min-width: 100px;
   }

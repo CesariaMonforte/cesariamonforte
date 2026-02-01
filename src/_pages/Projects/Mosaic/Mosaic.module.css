@@ -1,8 +1,10 @@
+/* Mobile first. Breakpoints: 600px tablet, 900px desktop */
 .page_container {
   display: flex;
   flex-direction: column;
   gap: var(--space-regular);
   width: 100%;
+  box-sizing: border-box;
 }
 
 .filter_section {
@@ -14,7 +16,7 @@
 }
 
 .filter_label {
-  font-size: var(--font-size-regular);
+  font-size: var(--font-size-small);
   font-weight: var(--font-weight-bold);
   color: var(--primary-900);
   margin: 0;
@@ -48,7 +50,7 @@
 }
 
 .case_study_coming_soon_header {
-  font-size: var(--font-size-large);
+  font-size: var(--font-size-medium);
   font-weight: var(--font-weight-medium);
   color: var(--primary-500);
   margin: 0;
@@ -108,14 +110,6 @@
   box-sizing: border-box;
 }
 
-.classnames_image {
-  width: 100%;
-  max-width: 420px;
-  height: auto;
-  object-fit: contain;
-  border-radius: var(--space-small);
-  background: var(--white);
-}
 
 .components_box {
   display: flex;
@@ -161,7 +155,7 @@
 }
 
 .section_heading {
-  font-size: var(--font-size-large);
+  font-size: var(--font-size-medium);
   font-weight: var(--font-weight-medium);
   color: var(--primary-500);
   margin: 0;
@@ -194,15 +188,17 @@
 
 .components_image {
   width: 100%;
-  max-width: 900px;
+  max-width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: var(--space-regular);
   box-shadow: var(--box-shadow-white);
 }
 
-/* Tablet and up: side-by-side layout */
 @media (min-width: 600px) {
+  .classnames_image {
+    max-width: 420px;
+  }
   .section_container {
     flex-direction: row;
     align-items: flex-start;
@@ -245,6 +241,31 @@
     font-size: var(--font-size-extra-medium);
   }
   .case_study_coming_soon_header {
-    font-size: var(--font-size-extra-medium);
+    font-size: var(--font-size-large);
+  }
+  .section_heading {
+    font-size: var(--font-size-large);
+  }
+  .classnames_title {
+    font-size: var(--font-size-large);
+  }
+  .components_image {
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter_label {
+    font-size: var(--font-size-extra-small);
+  }
+  .case_study_coming_soon_header {
+    font-size: var(--font-size-regular);
+  }
+  .section_heading {
+    font-size: var(--font-size-regular);
+  }
+  .placeholder_mockup {
+    min-height: 280px;
+    font-size: var(--font-size-small);
   }
 }

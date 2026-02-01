@@ -1,3 +1,4 @@
+/* Mobile first. Breakpoints: 600px tablet, 900px desktop */
 .section_description_box {
   display: flex;
   flex-direction: column;
@@ -42,30 +43,27 @@
   line-height: 1.5;
 }
 
-/* Tablet and up */
 @media (min-width: 600px) {
   .section_description_box_header {
-    font-size: var(--font-size-extra-medium);
-  }
-  .section_description_box_item_text {
-    font-size: var(--font-size-regular);
+    font-size: var(--font-size-large);
   }
 }
 
-/* Desktop: constrain width for readability */
 @media (min-width: 900px) {
   .section_description_box {
     max-width: 85%;
   }
+  .section_description_box_header {
+    font-size: var(--font-size-extra-medium);
+  }
 }
 
-/* Small mobile */
 @media (max-width: 480px) {
   .section_description_box {
     gap: var(--space-small);
   }
   .section_description_box_header {
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-regular);
   }
   .section_description_box_list {
     gap: var(--space-small);
@@ -74,6 +72,6 @@
     padding: var(--space-small);
   }
   .section_description_box_item_text {
-    font-size: var(--font-size-regular);
+    font-size: var(--font-size-small);
   }
 }

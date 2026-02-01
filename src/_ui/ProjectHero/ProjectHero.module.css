@@ -15,7 +15,7 @@
 
 .hero_text_title {
   font-size: var(--font-size-medium);
-  font-weight: bold;
+  font-weight: var(--font-weight-bold);
   color: var(--primary-500);
   margin: 0 0 var(--space-small);
   line-height: 1.2;
@@ -25,7 +25,7 @@
   margin: 0 0 var(--space-small);
   font-size: var(--font-size-regular);
   line-height: 1.4;
-  color: var(--gray-700);
+  color: var(--black-400);
 }
 
 .hero_text {
@@ -45,12 +45,12 @@
 .hero_text_details {
   text-align: left;
   font-size: var(--font-size-small);
-  color: var(--black);
+  color: var(--black-500);
   margin-bottom: var(--space-small);
 }
 
 .hero_text_details_header {
-  font-weight: bold;
+  font-weight: var(--font-weight-bold);
   color: var(--primary-500);
   margin: 0 0 var(--space-extra-small);
 }
@@ -82,8 +82,8 @@
   object-fit: cover;
 }
 
-/* Tablet: side-by-side layout */
-@media (min-width: 768px) {
+/* Mobile first. Breakpoints: 600px tablet, 900px desktop */
+@media (min-width: 600px) {
   .hero_container {
     flex-direction: row;
     align-items: flex-start;
@@ -99,15 +99,16 @@
   .hero_text_title {
     font-size: var(--font-size-large);
   }
-  .hero_text_description {
-    font-size: var(--font-size-regular);
-  }
   .hero_text_details {
     font-size: var(--font-size-regular);
   }
   .hero_text_details_content_tags {
-    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: var(--space-regular);
+  }
+  .hero_links {
+    flex-direction: row;
+    justify-content: flex-end;
   }
   .hero_image_container {
     flex-shrink: 0;
@@ -115,22 +116,20 @@
     max-width: 50%;
   }
   .hero_image {
-    max-width: 394px;
+    max-width: 100%;
   }
 }
 
-/* Desktop: larger image */
-@media (min-width: 1024px) {
+@media (min-width: 900px) {
   .hero_container {
     padding: var(--space-extra-regular);
     gap: var(--space-large);
   }
   .hero_image {
-    max-width: 694px;
+    max-width: 500px;
   }
 }
 
-/* Small mobile */
 @media (max-width: 480px) {
   .hero_container {
     padding: var(--space-small);
@@ -140,7 +139,7 @@
     font-size: var(--font-size-regular);
   }
   .hero_text_description {
-    font-size: var(--font-size-regular);
+    font-size: var(--font-size-small);
   }
   .hero_text_details_content_tags {
     grid-template-columns: 1fr;

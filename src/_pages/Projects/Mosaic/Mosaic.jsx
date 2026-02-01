@@ -17,21 +17,20 @@ function Mosaic() {
   const [activeFilter, setActiveFilter] = useState("Frontend Development");
 
   const majorChallenges = [
-    "Efficiently rendering dynamic content and components from JSON data.",
-    "Implementing dynamic styling and class names based on user interaction and data.",
-    "Managing and persisting complex user data and application state across different components and sessions.",
+    "Build the App using React component-based structure that is modular and scalable",
+    "Manage form fields and modal visibility with useState.",
+    "Integrate validation before submit and show feedback via PopUp","Eliminate Javascript component code redundancy by incorporating CSS",
   ];
 
-  const componentTags = ["Button", "Input", "Card", "Alert", "Modal", "Tooltip", "Dropdown"];
 
-  const dynamicStylingSolutions = [
-    "Custom hooks and context API for centralized state management.",
-    "CSS Modules and styled-components for dynamic styling.",
-    "Conditional rendering to display components based on application state.",
-    "Efficient data fetching and updates to ensure a smooth user experience.",
+  const FormAndState = [
+    "Use of useState for every piece of UI and form data that can change",
+    "Validate on submit and check if required fields are missing to return back error message",
+    "Organize Validation logic in the same place location as submit handler so behaviour is predictable",
+  
   ];
 
-  const loginCodeSnippet = [
+  const FormAndStateCodeSnippet = [
     {
       label: "Login.jsx",
       code: `function Login() {
@@ -64,13 +63,13 @@ function Mosaic() {
     },
   ];
 
-  const skillTreesItems = [
-    "Skill trees are rendered with a library (e.g. D3.js) for interactive visualizations.",
-    "Each skill node is a component that dynamically renders its content based on fetched data.",
-    "Users can interact with skill nodes to view more details or mark them as completed.",
+  const DynamicStylingItems = [
+    "Use the `classnames` utility library library to apply one base class plus conditional variants",
+    "Keeping components readable and styles predictable with `classnames` utility library.",
+    "Layout changes with a useCase rather then creating two separate components",
   ];
 
-  const dotComponentSnippet = [
+  const DynamicStylingCodeSnippet = [
     {
       label: "DotComponent.jsx",
       code: `function DotComponent() {
@@ -95,15 +94,15 @@ function Mosaic() {
     },
   ];
 
-  const userFlows = [
-    "Personalized Learning Path Creation and Progress Tracking.",
-    "Interactive Skill Tree Navigation and Content Consumption.",
-    "User Profile Management, Notifications, and Settings Configuration.",
+  const EndGoals = [
+    "Persistent profile data via LocalStorage so the user’s Mosaic survives page refreshes..",
+    "Reusable UI components (StatusBar, Button, PopUp, SingleInput, InterestChip, etc.) that keep the interface consistent and maintainable.",
+    " Client-side validation so users see clear messages (e.g. “Please fill out all fields”) before data is saved or navigation happens.",
   ];
 
-  const finalResult = [
-    "The platform delivers a functional and visual experience including personalized learning paths, progress tracking, interactive skill trees, Firebase integration, and a responsive user experience.",
-    "The project demonstrates dynamic component rendering, state management, and API integration, serving as a strong portfolio piece for frontend and UX/UI development.",
+  const Reflection = [
+    "Using libraries to keep code consistent and efficient : When i used conditional styling via `classnames` , it kept components such as the  Button and DescriptionBox simple and predictable; adding new variants (e.g. `terciary`, `warning`) was straightforward. It reduced supported in reusability. However a key thing that made an impact was naming convention which supported inp providing a cross-functional team.",
+    "State and validation:Using `useState` for form fields and popup visibility, and validating before submit, gave clear feedback (“Please fill out all fields”) and kept invalid data from being saved or causing navigation. ",
   ];
 
   const classnamesDescription = [
@@ -156,16 +155,16 @@ function Mosaic() {
 
       {/* Dynamic Styling and State Management */}
       <div className={styles.section_container_reverse}>
-        <CodeSnippetBox tabs={loginCodeSnippet} />
+        <CodeSnippetBox tabs={FormAndStateCodeSnippet} />
         <SectionDescriptionBox
-          title="Dynamic Styling and State Management"
-          items={dynamicStylingSolutions}
+          title="Form Validation and State Management"
+          items={FormAndState}
         />
       </div>
 
       {/* Location, States and Local Storage in Action */}
       <div className={styles.standalone_section}>
-        <h2 className={styles.section_heading}>Location, States and Local Storage in Action</h2>
+        <h2 className={styles.section_heading}>Validation, States and Local Storage in Action</h2>
         <div className={styles.placeholder_mockup} aria-hidden="true">
           <span>Phone mockup</span>
         </div>
@@ -176,8 +175,8 @@ function Mosaic() {
 
       {/* Dynamic Skill Trees in Action */}
       <div className={styles.section_container}>
-        <SectionDescriptionBox title="Dynamic Skill Trees in Action" items={skillTreesItems} />
-        <CodeSnippetBox tabs={dotComponentSnippet} />
+        <SectionDescriptionBox title="Dynamic Styling with classnames utility" items={DynamicStylingItems} />
+        <CodeSnippetBox tabs={DynamicStylingCodeSnippet} />
       </div>
 
       {/* Dynamic Classnames in Action */}
@@ -187,7 +186,7 @@ function Mosaic() {
           <span>Phone mockup</span>
         </div>
         <div className={styles.view_study_wrapper}>
-          <RegButton button_text="View Full Study" type="primary" onClick="/" />
+          <RegButton button_text="View Full WebMockup" type="primary" onClick="/" />
         </div>
       </div>
 
@@ -197,18 +196,18 @@ function Mosaic() {
         <img
           className={styles.components_image}
           src="/Mosaic_Components.png"
-          alt="Mosaic UI components and design system"
+          alt="Dynamic Styling with Classnames Utility"
         />
       </div>
 
       {/* User Flows */}
       <div className={styles.section_single}>
-        <SectionDescriptionBox title="User Flows" items={userFlows} />
+        <SectionDescriptionBox title="End Goals" items={EndGoals} />
       </div>
 
       {/* The Final Result */}
       <div className={styles.section_single}>
-        <SectionDescriptionBox title="The Final Result" items={finalResult} />
+        <SectionDescriptionBox title="Reflection" items={Reflection} />
       </div>
         </>
       )}

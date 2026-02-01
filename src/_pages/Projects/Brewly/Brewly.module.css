@@ -19,8 +19,12 @@
   width: 100%;
 }
 
-.brewly_api_image {
+/* Mobile first. Breakpoints: 600px tablet, 900px desktop */
+.brewly_api_image,
+.project_architecture_image,
+.project_components_image {
   width: 100%;
+  max-width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: var(--space-extra-small);
@@ -49,7 +53,7 @@
 }
 
 .project_api_fetching_and_beer_card_integration_video_title {
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-regular);
   font-weight: var(--font-weight-medium);
   text-align: left;
   color: var(--primary-500);
@@ -98,15 +102,9 @@
   gap: var(--space-large);
   width: 100%;
 }
-.project_architecture_title {
-  font-size: var(--font-size-large);
-  font-weight: var(--font-weight-medium);
-  text-align: left;
-  color: var(--primary-500);
-}
-
+.project_architecture_title,
 .project_components_title {
-  font-size: var(--font-size-large);
+  font-size: var(--font-size-medium);
   font-weight: var(--font-weight-medium);
   text-align: left;
   color: var(--primary-500);
@@ -120,34 +118,31 @@
     align-self: flex-start;
     height: fit-content;
   }
-  .brewly_api_image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: var(--space-extra-small);
-    box-shadow: var(--box-shadow-white);
-  }
-
-  .project_API_Fetching_container{
+  .project_API_Fetching_container {
     flex-direction: row;
   }
-
   .project_architecture_and_components_container {
     flex-direction: row;
     gap: var(--space-large);
   }
-
-  .project_architecture_title {
-    font-size: var(--font-size-large);
-    font-weight: var(--font-weight-medium);
-    text-align: left;
-    color: var(--primary-500);
-  }
-
+  .project_architecture_title,
   .project_components_title {
     font-size: var(--font-size-large);
-    font-weight: var(--font-weight-medium);
-    text-align: left;
-    color: var(--primary-500);
+  }
+}
+
+@media (min-width: 900px) {
+  .project_api_fetching_and_beer_card_integration_video_title {
+    font-size: var(--font-size-medium);
+  }
+}
+
+@media (max-width: 480px) {
+  .project_api_fetching_and_beer_card_integration_video_title {
+    font-size: var(--font-size-small);
+  }
+  .project_architecture_title,
+  .project_components_title {
+    font-size: var(--font-size-regular);
   }
 }
