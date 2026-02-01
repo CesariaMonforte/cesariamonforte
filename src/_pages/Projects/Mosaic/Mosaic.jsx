@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styles from "./Mosaic.module.css";
 import ProjectHero from "../../../_ui/ProjectHero/ProjectHero";
 import NavBar from "../../../_ui/NavBar/NavBar";
@@ -7,9 +8,13 @@ import SectionDescriptionBox from "../../../_ui/SectionDescriptionBox/SectionDes
 import _cardData from "../../../_cardData/_cardData.json";
 import CodeSnippetBox from "../../../_ui/CodeSnippetBox/CodeSnippetBox";
 import RegButton from "../../../_ui/RegButton/RegButton";
+import Tag from "../../../_ui/Tag/Tag";
+
+const MOSAIC_FILTER_OPTIONS = ["Frontend Development", "UX/UI"];
 
 function Mosaic() {
   const project = _cardData.find((p) => p.id === "Mosaic");
+  const [activeFilter, setActiveFilter] = useState("Frontend Development");
 
   const majorChallenges = [
     "Efficiently rendering dynamic content and components from JSON data.",
@@ -110,6 +115,27 @@ function Mosaic() {
       <NavBar />
       <ProjectHero project={project} />
 
+      {/* Filter */}
+      <div className={styles.filter_section}>
+        <p className={styles.filter_label}>Select a category</p>
+        <div className={styles.filter_container}>
+          {MOSAIC_FILTER_OPTIONS.map((option) => (
+            <Tag
+              key={option}
+              tags={[option]}
+              type={activeFilter === option ? "filter_active" : "filter_regular"}
+              onClick={setActiveFilter}
+            />
+          ))}
+        </div>
+      </div>
+
+      {activeFilter === "UX/UI" ? (
+        <div className={styles.case_study_coming_soon}>
+          <h2 className={styles.case_study_coming_soon_header}>Case Study Available soon</h2>
+        </div>
+      ) : (
+        <>
       {/* Major Challenges and classnames - Utility library */}
       <div className={styles.section_container}>
         <div className={styles.major_challenges_column}>
@@ -184,6 +210,8 @@ function Mosaic() {
       <div className={styles.section_single}>
         <SectionDescriptionBox title="The Final Result" items={finalResult} />
       </div>
+        </>
+      )}
 
       <ConnectBanner />
       <Footer />
