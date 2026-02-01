@@ -128,9 +128,4 @@
     text-align: center;
   }
 
-  .filter_tag_regular_underline {
-    width: 100%;
-    height: 1px;
-    background: var(--primary-500);
-  }
 }

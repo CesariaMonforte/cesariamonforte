@@ -5,12 +5,15 @@ import NavBar from "../../../_ui/NavBar/NavBar";
 import Footer from "../../../_ui/Footer/Footer";
 import connectBanner from "../../../_ui/ConnectBanner/ConnectBanner";
 import SectionCard from "../../../_ui/SectionCard/SectionCard";
+import _cardData from "../../../_cardData/_cardData.json";
 
 function Forge() {
+  const project = _cardData.find((p) => p.id === "Forge");
+
   return (
     <div className={style.page_container}>
       <NavBar />
-      <ProjectHero />
+      <ProjectHero project={project} />
       <SectionCard
         section_title={"Determining the Backbone Behind Forge"}
         section_description={

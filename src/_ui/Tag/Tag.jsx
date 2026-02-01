@@ -23,7 +23,6 @@ export default function Tag({ tags, type }) {
         tagList.map((tag, index) => (
           <div key={index} className={styles.filter_tag_regular_container}>
             <p className={styles.filter_tag_regular_text}>{tag}</p>
-            <div className={styles.filter_tag_regular_underline}></div>
           </div>
         ))}
       {type === "filter_active" &&
