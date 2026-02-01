@@ -41,7 +41,7 @@ function Home() {
           </h1>
         </div>
         <div className={styles.hero_button_wrapper}>
-          <RegButton button_text={"Check Out My Work"} type={"primary"} />
+          <RegButton button_text={"Check Out My Work"} type={"primary"} onClick={"/Work"}/>
         </div>
       </div>
 

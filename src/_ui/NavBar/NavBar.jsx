@@ -18,7 +18,7 @@ function NavBar({}) {
         <LinkButton button_text="Work" type="regular" onclick={"/Work"} />
         <LinkButton button_text="About" type="regular" onclick={"/About"} />
 
-        <RegButton button_text={"Let's Connect"} type={"primary"} />
+        <RegButton button_text={"Let's Connect"} type={"primary"} onClick={"https://www.linkedin.com/in/cesariamonforte/"} />
       </div>
     </div>
   );

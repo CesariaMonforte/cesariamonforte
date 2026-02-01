@@ -9,7 +9,7 @@ function ConnectBanner() {
         Let’s build meaningful work together
       </h1>
       <div className={styles.banner_button_wrapper}>
-        <RegButton button_text="Let's Connect" type="primary" />
+        <RegButton button_text="Let's Connect" type="primary" onClick="https://www.linkedin.com/in/cesariamonforte/" />
       </div>
     </div>
   );
