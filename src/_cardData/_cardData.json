@@ -22,7 +22,7 @@
   {
     "id": "Mosaic",
     "type": "horizontal",
-    "categories": ["UX/UI", "Graphic Design"],
+    "categories": ["UX/UI", "Frontend Development"],
     "project_title": "Mosaic - Portfolio Project Guidance and Generation Apps",
     "project_description": "Mosaic is a portfolio creation guidance support and organization mobile app.",
     "project_overview": "Mosaic is a portfolio creation guidance support and organization mobile app. It focuses on providing users with a platform to spark creativity through the generation of free portfolio project ideas and step by step guide on completing each portfolio project.",
