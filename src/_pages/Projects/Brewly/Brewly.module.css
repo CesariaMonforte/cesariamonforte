@@ -1,0 +1,55 @@
+.project_overview_container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-regular);
+  width: 100%;
+}
+
+.project_overview_content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-regular);
+  width: 100%;
+}
+
+.brewly_api_image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--space-extra-small);
+  box-shadow: var(--box-shadow-white);
+}
+
+.api_fetching_and_beer_card_integration_content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-regular);
+  width: 100%;
+}
+
+.project_API_Fetching_container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-regular);
+  width: 100%;
+}
+@media (min-width: 600px) {
+  .project_overview_container {
+    flex-direction: row;
+  }
+  .project_overview_container .project_overview_content:last-child {
+    align-self: flex-start;
+    height: fit-content;
+  }
+  .brewly_api_image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--space-extra-small);
+    box-shadow: var(--box-shadow-white);
+  }
+
+  .project_API_Fetching_container{
+    flex-direction: row;
+  }
+}
