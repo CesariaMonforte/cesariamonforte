@@ -17,13 +17,18 @@
     "type": "horizontal",
     "project_title": "Brewly - Beer Catalog Web Application",
     "project_description": "A conceptual Canned Beverage brand inspired by contrast , resilient  moments.",
-    "project_overview": "Brewly is a mobile-first web application prototype  that helps users discover, track, and manage their favorite beers. ",
+    "project_overview": "Brewly is a mobile-first web application prototype that helps users discover, track, and manage their favorite beers.",
     "Role": "Frontend Developer | UI Designer",
     "Duration": "October 2025 - November 2025",
     "project_image_src": "Brewly_Cover.png",
     "project_hero_src": "/Brewly_Hero.png",
-    "project_tags": ["React", "Next.js", "HTML5", "CSS", "Github"],
-    "project_link": "/Projects/Brewly/Brewly"
+    "project_tags": ["HTML", "CSS", "JavaScript", "React", "Vite", "Visual Studio Code", "Node.js", "RestAPI", "ReactRouter"],
+    "project_link": "/Projects/Brewly/Brewly",
+    "project_links": [
+      { "label": "View Full WebApp", "url": "https://app-brewly.vercel.app/", "external": true },
+      { "label": "View Github Repository", "url": "https://github.com/app-brewly/app-brewly", "external": true },
+      { "label": "View Documentation", "url": "/", "external": true }
+    ]
   },
   {
     "id": "Mosaic",

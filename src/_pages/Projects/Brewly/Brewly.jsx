@@ -6,6 +6,7 @@ import connectBanner from "../../../_ui/ConnectBanner/ConnectBanner";
 import SectionDescriptionBox from "../../../_ui/SectionDescriptionBox/SectionDescriptionBox";
 import _cardData from "../../../_cardData/_cardData.json";
 import CodeSnippetBox from "../../../_ui/CodeSnippetBox/CodeSnippetBox";
+import RegButton from "../../../_ui/RegButton/RegButton";
 
 function Brewly() {
   const project = _cardData.find((p) => p.id === "Brewly");
@@ -215,6 +216,13 @@ const handleKeyDown = (e) => {
     },
   ];
 
+  // Project reflection
+  const project_reflection = [
+    "Modular Designing is essential for reusability. Splitting our UI into logical and reusable components is crucial for maintainability. It allows for easier updates, and promotes a clear project structure. It ensures that any changes to the UI are reflected consistently throughout the application.",
+    "Error Handling and UX go hand in hand. Paying careful attention to error states and user experience is vital. Robust error handling ensures a smooth and intuitive user experience. It involves anticipating potential issues and providing clear feedback to users when they occur.",
+    "API Fetching optimization. Implementing efficient API fetching techniques, such as caching and debouncing, significantly improves performance and responsiveness. It reduces unnecessary network requests, making the application faster and more user-friendly.",
+    "SCSS Management. Organizing SCSS files efficiently, utilizing variables, mixins, and nesting, streamlines styling. It promotes consistency, reduces redundancy, and simplifies maintenance, allowing for quick and easy updates to the application's visual design.",
+  ];
 
   return (
     <div className={styles.page_container}>
@@ -247,6 +255,13 @@ const handleKeyDown = (e) => {
             controls
             title="Brewly - API Fetching and Beer Card Integration"
           />
+          <div className={styles.project_api_fetching_and_beer_card_integration_video_button_container}>
+            <RegButton
+              type="primary"
+              button_text="Explore demo"
+              onclick={"/"}
+            />
+          </div>
 </div>
         <div className={styles.project_goals_container}>
           <SectionDescriptionBox title={"End Goals"} items={project_end_goals} />
@@ -273,6 +288,19 @@ const handleKeyDown = (e) => {
           <SectionDescriptionBox title={"Modal Components"} items={project_modal_components} />
          
         </div>
+
+        <div className={styles.project_architecture_and_components_container}>
+          <div className={styles.project_architecture_container}><h2 className={styles.project_architecture_title}>Architecture</h2>
+          <img className={styles.project_architecture_image} src="/Brewly_Architecture.png" alt="Brewly Architecture" /></div>
+
+          <div className={styles.project_components_container}><h2 className={styles.project_components_title}>Components</h2><img className={styles.project_components_image} src="/Brewly_Components.png" alt="Brewly Components" /></div>
+        </div>
+
+        {/* Reflection */}
+        <div className={styles.project_reflection_container}>
+          <SectionDescriptionBox title={"The Reflection"} items={project_reflection} />
+        </div>
+
       <connectBanner />
       <Footer />
     </div>

@@ -1,6 +1,7 @@
 import styles from "./ProjectHero.module.css";
 
 import Tag from "../Tag/Tag";
+import RegButton from "../RegButton/RegButton";
 
 function ProjectHero({ project }) {
   if (!project) return null;
@@ -12,7 +13,10 @@ function ProjectHero({ project }) {
     Duration,
     project_tags,
     project_hero_src,
+    project_links,
   } = project;
+
+  const linkList = Array.isArray(project_links) ? project_links : [];
 
   return (
     <div className={styles.hero_container}>
@@ -43,6 +47,27 @@ function ProjectHero({ project }) {
                 <Tag key={index} tags={tag} type="highlighted" />
               ))}
             </div>
+          </div>
+        )}
+        {linkList.length > 0 && (
+          <div className={styles.hero_links}>
+            {linkList.map((link, index) =>
+              link.external ? (
+                <RegButton
+                  key={index}
+                  type="primary"
+                  button_text={link.label}
+                  onclick={() => window.open(link.url, "_blank", "noopener,noreferrer")}
+                />
+              ) : (
+                <RegButton
+                  key={index}
+                  type="secondary"
+                  button_text={link.label}
+                  onclick={link.url}
+                />
+              )
+            )}
           </div>
         )}
       </div>

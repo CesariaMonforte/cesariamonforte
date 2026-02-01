@@ -33,7 +33,7 @@
   align-items: center;
   gap: var(--space-regular);
   border-radius: var(--space-regular);
-  color: var(--primary-900);
+  color: var(--white);
   background: var(--primary-500);
   box-shadow: var(--box-shadow-white);
   cursor: pointer;
