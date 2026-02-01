@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useEffect } from "react";
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
 import Home from "./_pages/Home/Home";
 import Forge from "./_pages/Projects/Forge/Forge";
@@ -9,9 +9,18 @@ import Work from "./_pages/Work/Work";
 import About from "./_pages/About/About";
 import Brewly from "./_pages/Projects/Brewly/Brewly";
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
+
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Work" element={<Work />} />
