@@ -72,3 +72,39 @@
 
   border-radius: var(--space-small);
 }
+
+@media (min-width: 200px) {
+  .filter_tag_regular_container {
+    width: 200px;
+  }
+  .filter_tag_active_container {
+    width: 200px;
+  }
+
+  .tag_regular_text {
+    font-size: var(--font-size-extra-small);
+    font-weight: var(--font-weight-regular);
+    color: var(--primary-500);
+    text-align: center;
+  }
+
+  .tag_highlighted_text {
+    font-size: var(--font-size-extra-small);
+    font-weight: var(--font-weight-regular);
+    color: var(--primary-900);
+    text-align: center;
+  }
+
+  .tag_highlighted_container {
+    display: flex;
+    height: var(--space-regular);
+    padding: var(--space-extra-small);
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-extra-small);
+  
+    border-radius: var(--space-small);
+    background: var(--white);
+    box-shadow: var(--box-shadow-white);
+  }
+}

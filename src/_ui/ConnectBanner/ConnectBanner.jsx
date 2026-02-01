@@ -8,7 +8,9 @@ function ConnectBanner() {
       <h1 className={styles.banner_text}>
         Let’s build meaningful work together
       </h1>
-      <RegButton button_text="Let's Connect" type="primary" />
+      <div className={styles.banner_button_wrapper}>
+        <RegButton button_text="Let's Connect" type="primary" />
+      </div>
     </div>
   );
 }

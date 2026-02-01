@@ -9,6 +9,7 @@
     background-color: var(--white);
     box-shadow: var(--box-shadow-white);
     border-radius: var(--space-large);
+    width: 100%;
   }
   .navLinks {
     display: flex;

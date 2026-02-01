@@ -1,25 +1,22 @@
 .button_reg {
   display: flex;
-  width: 304px;
-  padding: 16px;
+  width: 100%;
+  max-width: 304px;
+  min-width: 120px;
+  padding: var(--space-regular);
   justify-content: center;
   align-items: center;
-  gap: 16px;
-  border-radius: 24px;
+  gap: var(--space-regular);
+  border-radius: var(--space-regular);
   color: white;
   border: 1px solid var(--white);
   box-shadow: var(--box-shadow-white);
   background: var(--primary-900);
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s, border-color 0.2s;
 }
 
 .button_reg:hover {
-  display: flex;
-  width: 304px;
-  padding: 16px;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  border-radius: var(--space-regular);
   color: var(--primary-900);
   border: 1px solid var(--primary-900);
   background: var(--white);
@@ -28,8 +25,10 @@
 
 .button_secondary_reg {
   display: flex;
-  width: 304px;
-  padding: 16px;
+  width: 100%;
+  max-width: 304px;
+  min-width: 120px;
+  padding: var(--space-regular);
   justify-content: center;
   align-items: center;
   gap: var(--space-regular);
@@ -37,4 +36,24 @@
   color: var(--primary-900);
   background: var(--primary-500);
   box-shadow: var(--box-shadow-white);
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+}
+
+/* Tablet and below: full width in narrow containers */
+@media (max-width: 768px) {
+  .button_reg,
+  .button_secondary_reg {
+    max-width: 100%;
+    padding: var(--space-regular);
+  }
+}
+
+/* Small mobile: tighter padding */
+@media (max-width: 480px) {
+  .button_reg,
+  .button_secondary_reg {
+    padding: var(--space-small);
+    min-width: 100px;
+  }
 }
