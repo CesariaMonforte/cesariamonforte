@@ -246,15 +246,9 @@ const handleKeyDown = (e) => {
         </div>
         <div className={styles.project_api_fetching_and_beer_card_integration_video_container}>
           <h2 className={styles.project_api_fetching_and_beer_card_integration_video_title}>Video Demonstration</h2>
-  <video
-            src="/Api_Beercard_Vid.mp4"
-            autoPlay
-            muted
-            loop
-            playsInline
-            controls
-            title="Brewly - API Fetching and Beer Card Integration"
-          />
+          <div className={styles.placeholder_mockup} aria-hidden="true">
+            <span>Video placeholder</span>
+          </div>
           <div className={styles.project_api_fetching_and_beer_card_integration_video_button_container}>
             <RegButton
               type="primary"

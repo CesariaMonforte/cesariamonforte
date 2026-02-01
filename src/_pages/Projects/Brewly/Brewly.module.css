@@ -67,6 +67,20 @@
   color: var(--primary-500);
 }
 
+.placeholder_mockup {
+  width: 100%;
+  max-width: 640px;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-100);
+  border-radius: var(--space-regular);
+  color: var(--primary-700);
+  font-size: var(--font-size-regular);
+  margin: 0;
+}
+
 .project_api_fetching_and_beer_card_integration_video_button_container {
   display: flex;
   justify-content: flex-end;
@@ -119,5 +133,9 @@
   .project_architecture_title,
   .project_components_title {
     font-size: var(--font-size-regular);
+  }
+  .placeholder_mockup {
+    min-height: 280px;
+    font-size: var(--font-size-small);
   }
 }

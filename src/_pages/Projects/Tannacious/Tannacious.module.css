@@ -27,6 +27,7 @@
 .section_title {
   font-size: var(--font-size-medium);
   font-weight: var(--font-weight-bold);
+  text-align: left;
   color: var(--primary-500);
   margin: 0 0 var(--space-small);
   line-height: 1.2;
