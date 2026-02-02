@@ -95,7 +95,11 @@ function Home() {
           </h1>
         </div>
         <div className={styles.hero_button_wrapper}>
-          <RegButton button_text={"Check Out My Work"} type={"primary"} onClick={"/Work"}/>
+          <RegButton
+            button_text="Check Out My Work"
+            type="secondary"
+            onClick={() => featuredRef.current?.scrollIntoView({ behavior: "smooth" })}
+          />
         </div>
       </div>
 
@@ -133,6 +137,9 @@ function Home() {
             project_link={item.project_link}
           />
         ))}
+      </div>
+      <div className={styles.view_all_projects_wrapper}>
+        <RegButton button_text="View all projects" type="secondary" onclick="/Work" />
       </div>
       <div ref={footerRef} className={styles.footer_container}>
         <ConnectBanner />

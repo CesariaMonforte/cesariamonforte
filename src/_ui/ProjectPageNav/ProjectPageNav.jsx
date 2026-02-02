@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import RegButton from "../RegButton/RegButton";
 import styles from "./ProjectPageNav.module.css";
 
 function ProjectPageNav({ currentProjectId, projects = [] }) {
@@ -10,12 +10,8 @@ function ProjectPageNav({ currentProjectId, projects = [] }) {
 
   return (
     <nav className={styles.project_page_nav} aria-label="Project navigation">
-      <Link to="/" className={styles.project_page_nav_link}>
-        Return Home
-      </Link>
-      <Link to={nextLink} className={styles.project_page_nav_link}>
-        View Similar Case Study
-      </Link>
+      <RegButton button_text="Return Home" type="secondary" onclick="/" />
+      <RegButton button_text="View Similar Case Study" type="secondary" onclick={nextLink} />
     </nav>
   );
 }

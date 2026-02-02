@@ -5,9 +5,8 @@
   align-items: stretch;
   width: 100%;
   max-width: 100%;
-  background: var(--white);
-  border-radius: var(--space-regular);
-  box-shadow: var(--box-shadow-white);
+  background: var(--primary-50);
+  border-radius: var(--space-medium);
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -86,13 +85,16 @@
     padding: var(--space-extra-regular) var(--space-medium);
     justify-content: center;
     flex-direction: column;
-    font-size: var(--font-size-regular);
   }
   .overlay_name {
-    font-size: var(--font-size-extra-medium);
+    font-size: var(--font-size-large);
+  }
+  .overlay_subtitle {
+    font-size: var(--font-size-medium);
   }
   .description {
-    font-size: var(--font-size-regular);
+    font-size: var(--font-size-medium);
+    line-height: 1.55;
   }
 }
 
@@ -112,14 +114,13 @@
     font-size: var(--font-size-large);
   }
   .overlay_subtitle {
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-extra-medium);
   }
   .content {
     padding: var(--space-medium) var(--space-large);
-    font-size: var(--font-size-regular);
   }
   .description {
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-extra-medium);
     line-height: 1.6;
   }
 }

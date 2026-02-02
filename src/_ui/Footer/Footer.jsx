@@ -38,6 +38,8 @@ function Footer({}) {
                 <a href='/'>Work</a>
                 <a href='/'>About</a>
             </div>
+
+            <p className={styles.copyright}>All rights reserved © 2024</p>
         </div>
     );
 }
