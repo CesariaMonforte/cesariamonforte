@@ -2,7 +2,8 @@ import styles from "./Brewly.module.css";
 import ProjectHero from "../../../_ui/ProjectHero/ProjectHero";
 import NavBar from "../../../_ui/NavBar/NavBar";
 import Footer from "../../../_ui/Footer/Footer";
-import connectBanner from "../../../_ui/ConnectBanner/ConnectBanner";
+import ConnectBanner from "../../../_ui/ConnectBanner/ConnectBanner";
+import ProjectPageNav from "../../../_ui/ProjectPageNav/ProjectPageNav";
 import SectionDescriptionBox from "../../../_ui/SectionDescriptionBox/SectionDescriptionBox";
 import _cardData from "../../../_cardData/_cardData.json";
 import CodeSnippetBox from "../../../_ui/CodeSnippetBox/CodeSnippetBox";
@@ -296,8 +297,9 @@ const handleKeyDown = (e) => {
         </div>
 
       <div className="footer_section">
-      <connectBanner />
-      <Footer />
+        <ProjectPageNav currentProjectId="Brewly" projects={_cardData} />
+        <ConnectBanner />
+        <Footer />
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import ProjectHero from "../../../_ui/ProjectHero/ProjectHero";
 import NavBar from "../../../_ui/NavBar/NavBar";
 import Footer from "../../../_ui/Footer/Footer";
 import ConnectBanner from "../../../_ui/ConnectBanner/ConnectBanner";
+import ProjectPageNav from "../../../_ui/ProjectPageNav/ProjectPageNav";
 import _cardData from "../../../_cardData/_cardData.json";
 
 const MOODBOARD_DESCRIPTION =
@@ -104,6 +105,7 @@ function ParisToRomeBrochure() {
       </section>
 
       <div className="footer_section">
+        <ProjectPageNav currentProjectId="Paris to Rome Brochure" projects={_cardData} />
         <ConnectBanner />
         <Footer />
       </div>

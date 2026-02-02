@@ -1,0 +1,27 @@
+.project_page_nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  padding: var(--space-regular) 0;
+  gap: var(--space-regular);
+}
+
+.project_page_nav_link {
+  font-size: var(--font-size-regular);
+  font-weight: var(--font-weight-regular);
+  color: var(--primary-700);
+  text-decoration: none;
+}
+
+.project_page_nav_link:hover {
+  text-decoration: underline;
+  color: var(--primary-900);
+}
+
+.project_page_nav_link:focus-visible {
+  outline: 2px solid var(--primary-500);
+  outline-offset: 2px;
+}

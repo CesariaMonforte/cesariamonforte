@@ -40,21 +40,6 @@
     ]
   },
   {
-    "id": "Forge",
-    "type": "horizontal",
-    "categories": ["UX/UI"],
-    "project_title": "Forge - Skills Trades Career Awareness and Simulation App",
-    "project_description": "Skills Trades Career  Awarness and Simulation App",
-    "project_overview": "Forge is a AI skilled trades career simulation app that empowers students through creating and enhances awareness of careers in skilled trades. It focuses on key aspects including career pathways, skills, finances and stages of skilled trades careers to support students in their decision making process.",
-    "Role": " UX/UI Designer",
-    "Duration": " February 2024 - May 2024",
-    "project_image_src": "/Forge_Cover.png",
-    "project_hero_src": "/Forge_Hero.png",
-    "project_tags": ["Figma", "Figjam", "Adobe Illustrator"],
-    "project_link": "/Projects/Forge/Forge"
-  },
-  
-  {
     "id": "Paris to Rome Brochure",
     "type": "horizontal",
     "categories": ["Graphic Design"],
@@ -81,5 +66,19 @@
     "project_hero_src": "/Tannacious_Cover.png",
     "project_tags": ["Illustrator", "Photoshop", "InDesign"],
     "project_link": "/Projects/Tannacious/Tannacious"
+  },
+  {
+    "id": "Forge",
+    "type": "horizontal",
+    "categories": ["UX/UI"],
+    "project_title": "Forge - Skills Trades Career Awareness and Simulation App",
+    "project_description": "Skills Trades Career  Awarness and Simulation App",
+    "project_overview": "Forge is a AI skilled trades career simulation app that empowers students through creating and enhances awareness of careers in skilled trades. It focuses on key aspects including career pathways, skills, finances and stages of skilled trades careers to support students in their decision making process.",
+    "Role": " UX/UI Designer",
+    "Duration": " February 2024 - May 2024",
+    "project_image_src": "/Forge_Cover.png",
+    "project_hero_src": "/Forge_Hero.png",
+    "project_tags": ["Figma", "Figjam", "Adobe Illustrator"],
+    "project_link": "/Projects/Forge/Forge"
   }
 ]
