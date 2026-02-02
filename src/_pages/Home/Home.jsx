@@ -102,7 +102,6 @@ function Home() {
         <div className={styles.hero_text}>
           <h1 className={styles.header_phrase}>
             <span className={styles.header_phrase_title}>Vision to Interaction</span>
-            <br />
             <span className={styles.header_explanation}>
               {typedText.split("\n").map((line, i) => (
                 <span key={i}>

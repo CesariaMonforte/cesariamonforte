@@ -85,11 +85,13 @@
   color: var(--primary-500);
   font-weight: var(--font-weight-bold);
   margin: 0 0 var(--space-small);
-  line-height: 1.15;
+  line-height: 1.1;
+  gap: 0;
 }
 
 .header_phrase_title {
   display: inline-block;
+  margin-bottom: 0;
 }
 
 .hero_container.inView .header_phrase_title {
@@ -108,10 +110,13 @@
 }
 
 .header_explanation {
+  display: block;
   font-weight: var(--font-weight-bold);
   color: var(--primary-200);
+  margin-top: 0.1em;
   margin-bottom: var(--space-small);
   font-size: var(--font-size-regular);
+  line-height: 1.25;
 }
 
 .typewriter_cursor {
@@ -324,7 +329,6 @@
   }
   .header_phrase {
     font-size: var(--font-size-extra-large);
-    min-height: 80vh;
   }
   .header_explanation {
     font-size: inherit;
