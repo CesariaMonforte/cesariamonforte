@@ -17,6 +17,12 @@
     transform: none !important;
     transition: none !important;
   }
+  .header_phrase_title {
+    animation: none !important;
+  }
+  .typewriter_cursor {
+    animation: none !important;
+  }
   .diamond_wrapper_top,
   .diamond_wrapper_bottom {
     transform: none !important;
@@ -82,11 +88,41 @@
   line-height: 1.15;
 }
 
+.header_phrase_title {
+  display: inline-block;
+}
+
+.hero_container.inView .header_phrase_title {
+  animation: hero_zoom_out 0.75s ease-out both;
+}
+
+@keyframes hero_zoom_out {
+  from {
+    transform: scale(1.35);
+    opacity: 0.6;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .header_explanation {
   font-weight: var(--font-weight-bold);
   color: var(--primary-200);
   margin-bottom: var(--space-small);
   font-size: var(--font-size-regular);
+}
+
+.typewriter_cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: cursor_blink 0.9s step-end infinite;
+}
+
+@keyframes cursor_blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 .hero_button_wrapper {

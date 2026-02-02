@@ -12,10 +12,14 @@ import AboutMeCard from "../../_ui/AboutMeCard/AboutMeCard";
 import _cardData from "../../_cardData/_cardData.json";
 
 const FILTER_OPTIONS = ["All", "Frontend Development", "UX/UI", "Graphic Design"];
+const TYPEWRITER_TEXT = "Creating Digital experiences\n that work for real people.";
 
 function Home() {
   const [activeFilter, setActiveFilter] = useState("All");
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
+  const [typedText, setTypedText] = useState("");
+  const [typewriterDone, setTypewriterDone] = useState(false);
+  const [startTypewriter, setStartTypewriter] = useState(false);
 
   const heroRef = useRef(null);
   const aboutMeRef = useRef(null);
@@ -45,6 +49,17 @@ function Home() {
     });
     return () => sectionRefs.forEach((ref) => ref.current && observer.unobserve(ref.current));
   }, [sectionRefs, activeFilter]);
+
+  useEffect(() => {
+    if (typedText.length >= TYPEWRITER_TEXT.length) {
+      setTypewriterDone(true);
+      return;
+    }
+    const t = setTimeout(() => {
+      setTypedText(TYPEWRITER_TEXT.slice(0, typedText.length + 1));
+    }, 55);
+    return () => clearTimeout(t);
+  }, [typedText]);
 
   const handleMouseMove = (e) => {
     const x = (e.clientX / window.innerWidth - 0.5) * 18;
@@ -86,11 +101,16 @@ function Home() {
         </div>
         <div className={styles.hero_text}>
           <h1 className={styles.header_phrase}>
-            Vision to Interaction
+            <span className={styles.header_phrase_title}>Vision to Interaction</span>
             <br />
             <span className={styles.header_explanation}>
-              Creating Digital experiences
-              <br /> that work for real people.
+              {typedText.split("\n").map((line, i) => (
+                <span key={i}>
+                  {i > 0 && <br />}
+                  {line}
+                </span>
+              ))}
+              {!typewriterDone && <span className={styles.typewriter_cursor} aria-hidden>|</span>}
             </span>
           </h1>
         </div>
