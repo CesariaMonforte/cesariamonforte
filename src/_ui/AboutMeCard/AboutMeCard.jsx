@@ -1,6 +1,6 @@
 import styles from "./AboutMeCard.module.css";
 
-const DEFAULT_HIGHLIGHTS = ["Cesaria", "Frontend Developer", "UX/UI Designer"];
+const DEFAULT_HIGHLIGHTS = ["Cesaria", "Frontend Developer", "UX/UI Designer", "Graphic Designer"];
 
 function highlightText(text, words = DEFAULT_HIGHLIGHTS) {
   if (!text) return null;
@@ -21,8 +21,8 @@ function highlightText(text, words = DEFAULT_HIGHLIGHTS) {
 function AboutMeCard({
   imageSrc = "/AboutMe_Profile.png",
   name = "Cesaria Monforte",
-  subtitle = "Frontend Developer and UX/UI Designer",
-  description = "Hi! I'm Cesaria! I'm a digital Frontend Developer and UX/UI Designer based in Vancouver, British Columbia.",
+  subtitle = "Frontend Developer, UX/UI Designer, and Graphic Designer",
+  description = "Hi! I'm Cesaria! I'm a Frontend Developer, UX/UI Designer, and Graphic Designer professional based in Vancouver, British Columbia.",
   highlightWords = DEFAULT_HIGHLIGHTS,
 }) {
   return (
