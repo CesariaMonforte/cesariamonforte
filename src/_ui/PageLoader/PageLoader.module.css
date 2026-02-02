@@ -1,0 +1,68 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+}
+
+.overlay.fade_out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.diamonds {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.diamond_dark,
+.diamond_light {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 72px;
+  height: 72px;
+  background-color: var(--primary-800);
+  transform: rotate(-25deg);
+  animation: diamond_rotate 3s linear infinite;
+}
+
+.diamond_light {
+  width: 56px;
+  height: 56px;
+  background-color: var(--primary-100);
+  border-top-left-radius: var(--space-small);
+  border-bottom-right-radius: var(--space-small);
+  animation: diamond_rotate_reverse 2.5s linear infinite;
+}
+
+@keyframes diamond_rotate {
+  from {
+    transform: rotate(-10deg);
+  }
+  to {
+    transform: rotate(335deg);
+  }
+}
+
+@keyframes diamond_rotate_reverse {
+  from {
+    transform: rotate(-10deg);
+  }
+  to {
+    transform: rotate(-385deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .diamond_dark,
+  .diamond_light {
+    animation: none;
+  }
+}

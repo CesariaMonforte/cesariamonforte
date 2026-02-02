@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
@@ -10,6 +10,7 @@ import About from "./_pages/About/About";
 import Brewly from "./_pages/Projects/Brewly/Brewly";
 import Tannacious from "./_pages/Projects/Tannacious/Tannacious";
 import ParisToRomeBrochure from "./_pages/Projects/ParisToRomeBrochure/ParisToRomeBrochure";
+import PageLoader from "./_ui/PageLoader/PageLoader";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -19,9 +20,19 @@ function ScrollToTop() {
   return null;
 }
 
-function App() {
+function AppContent() {
+  const { pathname } = useLocation();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true);
+    const t = setTimeout(() => setLoading(false), 550);
+    return () => clearTimeout(t);
+  }, [pathname]);
+
   return (
-    <BrowserRouter>
+    <>
+      {loading && <PageLoader />}
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -33,6 +44,14 @@ function App() {
         <Route path="/Projects/Tannacious/Tannacious" element={<Tannacious />} />
         <Route path="/Projects/ParisToRomeBrochure/ParisToRomeBrochure" element={<ParisToRomeBrochure />} />
       </Routes>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <AppContent />
     </BrowserRouter>
   );
 }
