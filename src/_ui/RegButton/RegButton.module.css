@@ -9,7 +9,6 @@
   gap: var(--space-regular);
   border-radius: var(--space-regular);
   color: var(--white);
-  border: 1px solid var(--white);
   box-shadow: var(--box-shadow-white);
   background: var(--primary-900);
   cursor: pointer;
