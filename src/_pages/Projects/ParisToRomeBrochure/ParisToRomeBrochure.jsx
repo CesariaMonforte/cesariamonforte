@@ -46,6 +46,22 @@ function ParisToRomeBrochure() {
           />
         </div>
       </section>
+      <section className={styles.section}>
+  <h2 className={styles.section_title}>Interactive Brochure</h2>
+  <p className={styles.section_description}>
+    Explore the full Paris to Rome brochure in an interactive flipbook format.
+  </p>
+
+  <div className={styles.flipbook_wrapper}>
+    <iframe
+      src="https://heyzine.com/flip-book/77df553c09.htmls"
+      title="Paris to Rome Flipbook"
+      className={styles.flipbook_iframe}
+      frameBorder="0"
+      allowFullScreen
+    />
+  </div>
+</section>
 
       <section className={styles.section}>
         <h2 className={styles.section_title}>Illustration and Design</h2>

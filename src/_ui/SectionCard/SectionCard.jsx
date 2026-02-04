@@ -8,6 +8,7 @@ function SectionCard({
   section_title,
   section_description,
   section_image_src,
+  Children,
   type,
 }) {
   return (
@@ -24,7 +25,10 @@ function SectionCard({
 
       {type === "reverse_horizontal" && (
         <div className={styles.section_card_container}>
-         
+          <h1 className={styles.section_card_title}>
+          {section_title}
+         </h1>
+          {Children}
         </div>
       )}
       {type === "collection" && (

@@ -15,23 +15,9 @@
   max-width: 100%;
 }
 
-.under_construction {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: var(--section-gap) var(--block-gap);
-  min-height: 40vh;
-}
 
-.under_construction_header {
-  font-size: var(--font-size-medium);
-  font-weight: var(--font-weight-medium);
-  color: var(--primary-500);
-  margin: 0;
-  text-align: center;
-}
+
+
 
 @media (min-width: 900px) {
   .page_container {
