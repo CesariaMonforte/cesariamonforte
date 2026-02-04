@@ -2,13 +2,15 @@
 .tag_regular_container,
 .tag_highlighted_container {
   display: flex;
-  padding: var(--space-small) var(--space-regular);
+  padding: var(--space-small);
   justify-content: center;
   align-items: center;
   min-width: 0;
   border-radius: var(--space-small);
-  background: var(--white);
-  box-shadow: var(--box-shadow-white);
+  border: 2px solid var(--primary-500);
+  
+ 
+
 }
 
 .tag_regular_text,
@@ -19,10 +21,11 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+    
 }
 
 .tag_regular_text {
-  color: var(--primary-500);
+  color: var(--primary-900);
 }
 
 .tag_highlighted_text {
@@ -72,12 +75,15 @@
 @media (min-width: 600px) {
   .tag_regular_container,
   .tag_highlighted_container {
-    padding: var(--space-extra-small) var(--space-regular);
+     padding: var(--space-extra-small);
+    border: 2px solid var(--primary-500);
+   
   }
   .tag_regular_text,
   .tag_highlighted_text {
-    font-size: var(--font-size-regular);
+    font-size: var(--font-size-small);
     font-weight: var(--font-weight-bold);
+   color: var(--primary-900);
   }
   .filter_tag_active_text,
   .filter_tag_regular_text {

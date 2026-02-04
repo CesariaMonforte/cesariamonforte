@@ -10,6 +10,7 @@ import _cardData from "../../../_cardData/_cardData.json";
 import CodeSnippetBox from "../../../_ui/CodeSnippetBox/CodeSnippetBox";
 import RegButton from "../../../_ui/RegButton/RegButton";
 import Tag from "../../../_ui/Tag/Tag";
+import SectionCard from "../../../_ui/SectionCard/SectionCard";
 
 const MOSAIC_FILTER_OPTIONS = ["Frontend Development", "UX/UI"];
 
@@ -178,6 +179,17 @@ const handleCode = () => {
     "Used throughout Mosaic to integrate readable code and support reusability through minor changes in styling.",
   ];
 
+  const mosaic_backbone =[
+    "Time–consuming research for portfolio project ideas ",
+    "Finding projects that correlate to your goals and skills required "]
+ const UsabilityTesting=[
+    "User feedback noted hidden features, unclear save states, and confusing terminology.",
+    "Users found the design clear, navigation intuitive, and visuals engaging yet easy on the eyes.","Key changes included reorganizing features, standardizing terminology, and improving save-state visibility with condition-based popups."]
+   const MosaicReflection=[
+    "Start with a base thats factual to get factual results: Using “Lorem ipsum” initially was a key mistake, as it hindered usability testing—users couldn’t relate to Mosaic’s function. Providing factual content is essential in UX research.",
+    "Small Decisions have a big impact on UX: Creating Mosaic taught me that small details—like placement, color, and sizing—greatly impact user experience, and focusing on them makes larger tasks easier for users.","Collaboration involves cohesiveness: While creating Mosaic, team ideas often differed, but keeping the user as the main focus helped me collaborate effectively and prioritize user needs."]
+  
+
   return (
     <div className={styles.page_container}>
       <NavBar />
@@ -199,8 +211,28 @@ const handleCode = () => {
       </div>
 
       {activeFilter === "UX/UI" ? (
-        <div className={styles.case_study_coming_soon}>
-          <h2 className={styles.case_study_coming_soon_header}>Case Study Available soon</h2>
+        <div className={styles.ux_section_container}>
+             <SectionDescriptionBox title={"The Backbone Behind Mosaic"} items={mosaic_backbone} /> 
+             <SectionCard type="horizontal" section_title="Who is mosaic for?" section_image_src={"/Mosaic_Persona's.png"} section_description="Mosaic is for current college students and transitions professionals who are currently at the stage of building valuable projects." /> 
+            <SectionCard type="horizontal" section_title="User Flow" section_image_src={"/Mosaic_UserFlow.png"} /> 
+             <SectionCard type="horizontal" section_title="Low- Fidelity Prototype" section_image_src={"/Mosaic_LoFi.png"} section_description="After defining the problem and solution, we replaced confusing *Lorem ipsum* placeholder text with real content in the initial prototype to improve clarity and usability during testing."/> 
+               <div className={styles.section_container}>
+        <div className={styles.major_challenges_column}>
+          <SectionDescriptionBox title="Usability Testing" items={UsabilityTesting} />
+        </div>
+        <div className={styles.classnames_image_wrapper}>
+          <img
+            className={styles.classnames_image}
+            src="/Mosaic_UsabilityTesting.png"
+            alt="Classnames - A simple JavaScript utility for conditionally joining classNames together."
+          />
+        </div>
+      </div>
+
+        <SectionCard type="horizontal" section_title="High - Fidelity Prototype" section_image_src={"/Mosaic_Styleguide.png"} section_description="People change, processes change and understanding of the visual representation may change. With that in mind, further testing was conducted to reach this final goal."/> 
+               <div className={styles.major_challenges_column}>
+          <SectionDescriptionBox title="The Reflection" items={MosaicReflection} />
+        </div>
         </div>
       ) : (
         <>
@@ -209,7 +241,6 @@ const handleCode = () => {
         <div className={styles.major_challenges_column}>
           <SectionDescriptionBox title="Major Challenges" items={majorChallenges} />
           <div className={styles.classnames_section}>
-           
             <SectionDescriptionBox title="Classnames - Utility library" items={classnamesDescription} />
           </div>
         </div>
@@ -219,6 +250,20 @@ const handleCode = () => {
             src="/ClassNames_Image.png"
             alt="Classnames - A simple JavaScript utility for conditionally joining classNames together."
           />
+        </div>
+      </div>
+       {/* Dynamic Classnames in Action */}
+      <div className={styles.standalone_section}>
+        <h2 className={styles.section_heading}>Dynamic Classnames in Action</h2>
+        <div className={styles.placeholder_mockup} aria-hidden="true">
+ <video autoPlay muted playsInline loop preload="auto">
+  <source src="/APIandBeerCard.mov" type="video/quicktime" />
+  </video>
+
+
+        </div>
+        <div className={styles.view_study_wrapper}>
+          <RegButton button_text="View Full WebMockup" type="primary" onClick="/" />
         </div>
       </div>
 
@@ -239,24 +284,7 @@ const handleCode = () => {
         />
       </div>
 
-      {/* Validation, States and Local Storage in Action */}
-      <div className={styles.standalone_section}>
-        <h2 className={styles.section_heading}>Validation, States and Local Storage in Action</h2>
-        <div className={styles.placeholder_mockup} aria-hidden="true">
-          <span>Phone mockup</span>
-        </div>
-        <div className={styles.view_study_wrapper}>
-          <RegButton button_text="View Full Study" type="primary" onClick="/" />
-        </div>
-      </div>
-
-      {/* Dynamic Skill Trees in Action */}
-      <div className={styles.section_container}>
-        <SectionDescriptionBox title="Dynamic Styling with classnames utility" items={DynamicStylingItems} />
-        <CodeSnippetBox tabs={DynamicStylingCodeSnippet} />
-      </div>
-
-      {/* Dynamic Classnames in Action */}
+        {/* Dynamic Classnames in Action */}
       <div className={styles.standalone_section}>
         <h2 className={styles.section_heading}>Dynamic Classnames in Action</h2>
         <div className={styles.placeholder_mockup} aria-hidden="true">
@@ -266,6 +294,14 @@ const handleCode = () => {
           <RegButton button_text="View Full WebMockup" type="primary" onClick="/" />
         </div>
       </div>
+
+      {/* Dynamic Skill Trees in Action */}
+      <div className={styles.section_container}>
+        <SectionDescriptionBox title="Dynamic Styling with classnames utility" items={DynamicStylingItems} />
+        <CodeSnippetBox tabs={DynamicStylingCodeSnippet} />
+      </div>
+
+ 
 
       {/* Components */}
       <div className={styles.standalone_section}>

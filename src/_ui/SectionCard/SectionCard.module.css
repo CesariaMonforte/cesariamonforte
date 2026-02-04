@@ -14,16 +14,25 @@
 }
 
 .section_card_title {
-  font-size: var(--font-size-medium);
+   font-size: var(--font-size-large);
+  font-weight: var(--font-weight-medium);
   color: var(--primary-500);
+  margin: 0 0 var(--space-extra-small);
+  text-align: left;
+  line-height: 1.3;
+}
+
+.section_card_description{
+    font-size: var(--font-size-regular);
+  font-weight: var(--font-weight-regular);
+  color: var(--black-500);
+  text-align: left;
+  line-height: 1.5;
 }
 
 .section_card_image {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  border-radius: var(--space-regular);
-  box-shadow: var(--box-shadow-white);
+    width: 50%;
+    max-width: 50%;
 }
 
 .section_card_content_vertical {
@@ -34,37 +43,11 @@
   gap: var(--space-regular);
 }
 
-.section_card_image_vertical {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  border-radius: var(--space-regular);
-}
 
-.section_card_text {
-  text-align: justify;
-  width: 100%;
-}
 
-.section_card_list {
-  margin-top: var(--space-small);
-  padding-left: var(--space-regular);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--space-regular);
-}
 
-.section_card_list li::marker {
-  content: "✦ ";
-  font-size: var(--font-size-regular);
-  color: var(--primary-500);
-}
 
-.section_card_list_item,
-.section_card_description {
-  font-size: var(--font-size-regular);
-}
+
 
 @media (min-width: 600px) {
   .section_card_content {

@@ -16,7 +16,7 @@
     "project_links": [
       { "label": "View Full WebApp", "url": "https://app-brewly.vercel.app/", "external": true },
       { "label": "View Github Repository", "url": "https://github.com/app-brewly/app-brewly", "external": true },
-      { "label": "View Documentation", "url": "/", "external": true }
+      { "label": "View Documentation", "url": "https://github.com/app-brewly/app-brewly/blob/main/README.md", "external": true }
     ]
   },
   {

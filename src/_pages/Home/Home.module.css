@@ -81,7 +81,7 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-large);
   color: var(--primary-500);
   font-weight: var(--font-weight-bold);
   margin: 0 0 var(--space-small);
@@ -115,7 +115,7 @@
   color: var(--primary-200);
   margin-top: 0.1em;
   margin-bottom: var(--space-small);
-  font-size: var(--font-size-regular);
+  font-size: var(--font-size-large);
   line-height: 1.25;
 }
 
