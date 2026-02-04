@@ -1,46 +1,32 @@
 import styles from "./Footer.module.css";
 
-function Footer({}) {
-    return (
-        <div className={styles.footer_container}>
-            <div className={styles.container_logo_connection}>
-                <img
-                    src='/Logo.svg'
-                    alt='logo'
-                    className={styles.logo}
-                />
-                <div className={styles.connection_links}>
-                    <img
-                        src='/GitHub.svg'
-                        alt='logo'
-                        className={styles.connection}
-                    />
-                    <img
-                        src='/Instagram.svg'
-                        alt='logo'
-                        className={styles.connection}
-                    />
-                    <img
-                        src='/LinkedIn.svg'
-                        alt='logo'
-                        className={styles.connection}
-                    />
-                    <img
-                        src='/TikTok.svg'
-                        alt='logo'
-                        className={styles.connection}
-                    />
-                </div>
-            </div>
-
-            <div className={styles.navLinks}>
-                <a href='/'>Home</a>
-                <a href='/'>Work</a>
-                <a href='/'>About</a>
-            </div>
-
-            <p className={styles.copyright}>All rights reserved © 2024</p>
+function Footer() {
+  return (
+    <footer className={styles.footer_container}>
+      <div className={styles.footer_inner}>
+        <div className={styles.footer_left}>
+          <img src="/Logo.svg" alt="logo" className={styles.logo} />
         </div>
-    );
+
+        <div className={styles.footer_right}>
+          <nav className={styles.navLinks}>
+            <a href="/">Home</a>
+            <a href="/Work">Work</a>
+            <a href="/About">About</a>
+          </nav>
+
+          <div className={styles.connection_links}>
+            <img src="/GitHub.svg" alt="GitHub" className={styles.connection} />
+            <img src="/Instagram.svg" alt="Instagram" className={styles.connection} />
+            <img src="/LinkedIn.svg" alt="LinkedIn" className={styles.connection} />
+            <img src="/TikTok.svg" alt="TikTok" className={styles.connection} />
+          </div>
+
+          <p className={styles.copyright}>All rights reserved © 2024</p>
+        </div>
+      </div>
+    </footer>
+  );
 }
+
 export default Footer;

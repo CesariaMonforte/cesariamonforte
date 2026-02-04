@@ -257,6 +257,14 @@
   align-items: center;
 }
 
+.standalone_section_blue {
+  width: 100%;
+  padding: var(--space-extra-regular) var(--block-gap);
+  border-radius: var(--space-regular);
+  background-color: var(--primary-50);
+  box-sizing: border-box;
+}
+
 .section_heading {
   font-size: var(--font-size-medium);
   font-weight: var(--font-weight-medium);

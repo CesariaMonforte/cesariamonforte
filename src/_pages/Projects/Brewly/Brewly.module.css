@@ -58,19 +58,21 @@
   flex-direction: column;
   gap: var(--space-regular);
   width: 100%;
+  align-items: center;
 }
 
 .project_api_fetching_and_beer_card_integration_video_title {
   font-size: var(--font-size-regular);
   font-weight: var(--font-weight-medium);
-  text-align: left;
+  text-align: center;
   color: var(--primary-500);
+  margin: 0;
 }
 
 .placeholder_mockup {
   width: 100%;
-  max-width: 640px;
-  min-height: 360px;
+  max-width: 320px;
+  min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,13 +81,39 @@
   color: var(--primary-700);
   font-size: var(--font-size-regular);
   margin: 0;
+  overflow: hidden;
+}
+
+.placeholder_mockup video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.brewly_video_section {
+  padding: var(--space-extra-regular) var(--block-gap);
+  border-radius: var(--space-regular);
+  background-color: var(--primary-50);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.brewly_video_mockup {
+  max-width: 260px;
+  min-height: 360px;
+}
+
+.brewly_video_mockup video {
+  transform: scale(1.03);
 }
 
 .project_api_fetching_and_beer_card_integration_video_button_container {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  height: 100px;
+  max-width: 900px;
 }
 
 .project_architecture_and_components_container {

@@ -294,16 +294,18 @@ const handleCode = () => {
           />
         </div>
       </div>
-       {/* Dynamic Classnames in Action */}
-      <div className={styles.standalone_section}>
-        <h2 className={styles.section_heading}>Login Flow in Action</h2>
-        <div className={styles.placeholder_mockup}>
-          <video autoPlay muted playsInline loop preload="auto">
-            <source src="/login.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <div className={styles.view_study_wrapper}>
-          <RegButton button_text="View Full Login Flow" type="primary" onClick="/" />
+      {/* Dynamic Classnames in Action */}
+      <div className={styles.standalone_section_blue}>
+        <div className={styles.standalone_section}>
+          <h2 className={styles.section_heading}>Login Flow in Action</h2>
+          <div className={`${styles.placeholder_mockup} ${styles.connects_mockup}`}>
+            <video autoPlay muted playsInline loop preload="auto">
+              <source src="/login.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div className={styles.view_study_wrapper}>
+            <RegButton button_text="View Full Login Flow" type="primary" onClick="/" />
+          </div>
         </div>
       </div>
 
@@ -325,36 +327,21 @@ const handleCode = () => {
       </div>
 
       {/* Dashboard View in Action */}
-      <div className={styles.standalone_section}>
-        <h2 className={styles.section_heading}>Dashboard View in Action</h2>
-        <div className={styles.placeholder_mockup}>
-          <video autoPlay muted playsInline loop preload="auto">
-            <source src="/Mosaic_DashboardToQuestionnaire.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <div className={styles.view_study_wrapper}>
-          <RegButton button_text="View Full Dashboard" type="primary" onClick="/" />
-        </div>
-      </div>
-
-      {/* Questionnaire Flow in Action */}
-      <div className={styles.standalone_section}>
-        <h2 className={styles.section_heading}>Questionnaire Flow in Action</h2>
-        <div className={styles.placeholder_mockup}>
-          <video autoPlay muted playsInline loop preload="auto">
-            <source src="/Mosaic_Questionnaire.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <div className={styles.view_study_wrapper}>
-          <RegButton button_text="View Full Questionnaire" type="primary" onClick="/" />
+      <div className={styles.standalone_section_blue}>
+        <div className={styles.standalone_section}>
+          <h2 className={styles.section_heading}>Dashboard View in Action</h2>
+          <div className={`${styles.placeholder_mockup} ${styles.connects_mockup}`}>
+            <video autoPlay muted playsInline loop preload="auto">
+              <source src="/Mosaic_DashboardToQuestionnaire.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div className={styles.view_study_wrapper}>
+            <RegButton button_text="View Full Dashboard" type="primary" onClick="/" />
+          </div>
         </div>
       </div>
 
-      {/* Dynamic Skill Trees in Action */}
-      <div className={styles.section_container}>
-        <SectionDescriptionBox title="Dynamic Styling with classnames utility" items={DynamicStylingItems} />
-        <CodeSnippetBox tabs={DynamicStylingCodeSnippet} />
-      </div>
+    
 
  
 

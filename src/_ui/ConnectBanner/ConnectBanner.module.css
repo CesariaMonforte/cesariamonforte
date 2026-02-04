@@ -3,12 +3,14 @@
   flex-direction: column;
   align-items: center;
   gap: var(--block-gap);
-  width: 100%;
-  max-width: 100%;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   background-color: var(--primary-500);
   padding: var(--block-gap);
   border-top-right-radius: var(--space-extra-small);
   border-top-left-radius: var(--space-extra-small);
+  box-sizing: border-box;
 }
 
 .banner_text {
