@@ -212,27 +212,69 @@ const handleCode = () => {
 
       {activeFilter === "UX/UI" ? (
         <div className={styles.ux_section_container}>
-             <SectionDescriptionBox title={"The Backbone Behind Mosaic"} items={mosaic_backbone} /> 
-             <SectionCard type="horizontal" section_title="Who is mosaic for?" section_image_src={"/Mosaic_Persona's.png"} section_description="Mosaic is for current college students and transitions professionals who are currently at the stage of building valuable projects." /> 
-            <SectionCard type="horizontal" section_title="User Flow" section_image_src={"/Mosaic_UserFlow.png"} /> 
-             <SectionCard type="horizontal" section_title="Low- Fidelity Prototype" section_image_src={"/Mosaic_LoFi.png"} section_description="After defining the problem and solution, we replaced confusing *Lorem ipsum* placeholder text with real content in the initial prototype to improve clarity and usability during testing."/> 
-               <div className={styles.section_container}>
-        <div className={styles.major_challenges_column}>
-          <SectionDescriptionBox title="Usability Testing" items={UsabilityTesting} />
-        </div>
-        <div className={styles.classnames_image_wrapper}>
-          <img
-            className={styles.classnames_image}
-            src="/Mosaic_UsabilityTesting.png"
-            alt="Classnames - A simple JavaScript utility for conditionally joining classNames together."
-          />
-        </div>
-      </div>
+          <SectionDescriptionBox title={"The Backbone Behind Mosaic"} items={mosaic_backbone} />
 
-        <SectionCard type="horizontal" section_title="High - Fidelity Prototype" section_image_src={"/Mosaic_Styleguide.png"} section_description="People change, processes change and understanding of the visual representation may change. With that in mind, further testing was conducted to reach this final goal."/> 
-               <div className={styles.major_challenges_column}>
-          <SectionDescriptionBox title="The Reflection" items={MosaicReflection} />
-        </div>
+          <SectionDescriptionBox
+            title={"How Mosaic connects with users"}
+            items={[]}
+          />
+          <section className={styles.connects_section}>
+            <div className={styles.connects_row}>
+              <p className={styles.connects_label}>AI Generated customizable project briefs</p>
+              <div className={`${styles.placeholder_mockup} ${styles.connects_mockup}`}>
+                <video autoPlay muted playsInline loop preload="auto">
+                  <source src="/login.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </section>
+
+          <section className={styles.connects_section_plain}>
+            <div className={`${styles.connects_row} ${styles.connects_row_reverse}`}>
+              <p className={styles.connects_label}>Projects Tracking Dashboard</p>
+              <div className={`${styles.placeholder_mockup} ${styles.connects_mockup}`}>
+                <video autoPlay muted playsInline loop preload="auto">
+                  <source src="/Mosaic_DashboardToQuestionnaire.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </section>
+
+          <SectionCard
+            type="horizontal"
+            section_title="Who is mosaic for?"
+            section_image_src={"/Mosaic_Persona's.png"}
+            section_description="Mosaic is for current college students and transitions professionals who are currently at the stage of building valuable projects."
+          />
+          <SectionCard type="horizontal" section_title="User Flow" section_image_src={"/Mosaic_UserFlow.png"} />
+          <SectionCard
+            type="horizontal"
+            section_title="Low- Fidelity Prototype"
+            section_image_src={"/Mosaic_LoFi.png"}
+            section_description="After defining the problem and solution, we replaced confusing *Lorem ipsum* placeholder text with real content in the initial prototype to improve clarity and usability during testing."
+          />
+          <div className={styles.section_container}>
+            <div className={styles.major_challenges_column}>
+              <SectionDescriptionBox title="Usability Testing" items={UsabilityTesting} />
+            </div>
+            <div className={styles.classnames_image_wrapper}>
+              <img
+                className={styles.classnames_image}
+                src="/Mosaic_UsabilityTesting.png"
+                alt="Classnames - A simple JavaScript utility for conditionally joining classNames together."
+              />
+            </div>
+          </div>
+
+          <SectionCard
+            type="horizontal"
+            section_title="High - Fidelity Prototype"
+            section_image_src={"/Mosaic_Styleguide.png"}
+            section_description="People change, processes change and understanding of the visual representation may change. With that in mind, further testing was conducted to reach this final goal."
+          />
+          <div className={styles.major_challenges_column}>
+            <SectionDescriptionBox title="The Reflection" items={MosaicReflection} />
+          </div>
         </div>
       ) : (
         <>
@@ -254,16 +296,14 @@ const handleCode = () => {
       </div>
        {/* Dynamic Classnames in Action */}
       <div className={styles.standalone_section}>
-        <h2 className={styles.section_heading}>Dynamic Classnames in Action</h2>
-        <div className={styles.placeholder_mockup} aria-hidden="true">
- <video autoPlay muted playsInline loop preload="auto">
-  <source src="/APIandBeerCard.mov" type="video/quicktime" />
-  </video>
-
-
+        <h2 className={styles.section_heading}>Login Flow in Action</h2>
+        <div className={styles.placeholder_mockup}>
+          <video autoPlay muted playsInline loop preload="auto">
+            <source src="/login.mp4" type="video/mp4" />
+          </video>
         </div>
         <div className={styles.view_study_wrapper}>
-          <RegButton button_text="View Full WebMockup" type="primary" onClick="/" />
+          <RegButton button_text="View Full Login Flow" type="primary" onClick="/" />
         </div>
       </div>
 
@@ -284,14 +324,29 @@ const handleCode = () => {
         />
       </div>
 
-        {/* Dynamic Classnames in Action */}
+      {/* Dashboard View in Action */}
       <div className={styles.standalone_section}>
-        <h2 className={styles.section_heading}>Dynamic Classnames in Action</h2>
-        <div className={styles.placeholder_mockup} aria-hidden="true">
-          <span>Phone mockup</span>
+        <h2 className={styles.section_heading}>Dashboard View in Action</h2>
+        <div className={styles.placeholder_mockup}>
+          <video autoPlay muted playsInline loop preload="auto">
+            <source src="/Mosaic_DashboardToQuestionnaire.mp4" type="video/mp4" />
+          </video>
         </div>
         <div className={styles.view_study_wrapper}>
-          <RegButton button_text="View Full WebMockup" type="primary" onClick="/" />
+          <RegButton button_text="View Full Dashboard" type="primary" onClick="/" />
+        </div>
+      </div>
+
+      {/* Questionnaire Flow in Action */}
+      <div className={styles.standalone_section}>
+        <h2 className={styles.section_heading}>Questionnaire Flow in Action</h2>
+        <div className={styles.placeholder_mockup}>
+          <video autoPlay muted playsInline loop preload="auto">
+            <source src="/Mosaic_Questionnaire.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div className={styles.view_study_wrapper}>
+          <RegButton button_text="View Full Questionnaire" type="primary" onClick="/" />
         </div>
       </div>
 
