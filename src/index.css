@@ -47,7 +47,7 @@ body {
   --red-500: #ff2f3d;
 
   --box-shadow-white: 0 -2px 2px 0 rgba(22, 60, 102, 0.25) inset;
-
+--box-shadow-primary-500: 0 -2px 2px 0 var(--primary-500) inset;
   /* ----- TYPE ----- */
   --font-family: "Bricolage Grotesque", sans-serif;
 

@@ -122,6 +122,10 @@ function Home() {
         </div>
       </div>
 
+      <div className={styles.under_construction_container}>
+        <h1 className={styles.under_construction_text}>thanks for scrolling - please note this site is still under construction</h1>
+      </div>
+
       <div ref={aboutMeRef} className={styles.about_me_wrapper}>
         <AboutMeCard imageSrc="/AboutMe_Profile.png" />
       </div>

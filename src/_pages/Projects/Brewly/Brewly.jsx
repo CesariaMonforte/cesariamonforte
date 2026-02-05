@@ -239,10 +239,13 @@ const handleKeyDown = (e) => {
             <img className={styles.brewly_api_image} src={"/Brewly_Api.png"} alt={"BrewBuddy - API Integration"} />
             </div>
         </div>
+            <div className={styles.project_goals_container}>
+          <SectionDescriptionBox title={"End Goals"} items={project_end_goals} />
+        </div>
 
         {/* API Fetching and Beer Card Integration */}
         <div className={`${styles.project_api_fetching_and_beer_card_integration_video_container} ${styles.brewly_video_section}`}>
-          <h2 className={styles.project_api_fetching_and_beer_card_integration_video_title}>Video Demonstration</h2>
+          {/* <h2 className={styles.project_api_fetching_and_beer_card_integration_video_title}>Video Demonstration</h2> */}
           <div className={`${styles.placeholder_mockup} ${styles.brewly_video_mockup}`}>
             <video autoPlay muted playsInline loop preload="auto">
               <source src="/Brewly_APIandBeerCard.mp4" type="video/mp4" />
@@ -250,8 +253,8 @@ const handleKeyDown = (e) => {
           </div>
           <div className={styles.project_api_fetching_and_beer_card_integration_video_button_container}>
             <RegButton
-              type="primary"
-              button_text="Explore demo"
+              type="secondary"
+              button_text="Explore WebApp"
               onclick={"/"}
             />
           </div>
@@ -262,14 +265,12 @@ const handleKeyDown = (e) => {
           <CodeSnippetBox tabs={project_code_snippets} />
         </div>
       
-        <div className={styles.project_goals_container}>
-          <SectionDescriptionBox title={"End Goals"} items={project_end_goals} />
-        </div>
+    
 
 
         {/* Search and Filter Functionality */}
         <div className={`${styles.project_api_fetching_and_beer_card_integration_video_container} ${styles.brewly_video_section}`}>
-          <h2 className={styles.project_api_fetching_and_beer_card_integration_video_title}>Video Demonstration</h2>
+          {/* <h2 className={styles.project_api_fetching_and_beer_card_integration_video_title}>Video Demonstration</h2> */}
           <div className={`${styles.placeholder_mockup} ${styles.brewly_video_mockup}`}>
             <video autoPlay muted playsInline loop preload="auto">
               <source src="/Brewly_SearchAndFilter.mp4" type="video/mp4" />
@@ -277,7 +278,7 @@ const handleKeyDown = (e) => {
           </div>
           <div className={styles.project_api_fetching_and_beer_card_integration_video_button_container}>
             <RegButton
-              type="primary"
+              type="secondary"
               button_text="Explore demo"
               onclick={"/"}
             />
@@ -290,7 +291,7 @@ const handleKeyDown = (e) => {
 
 {/* Creating and Storing Beer Collections */}
 <div className={`${styles.project_api_fetching_and_beer_card_integration_video_container} ${styles.brewly_video_section}`}>
-          <h2 className={styles.project_api_fetching_and_beer_card_integration_video_title}>Video Demonstration</h2>
+       
           <div className={`${styles.placeholder_mockup} ${styles.brewly_video_mockup}`}>
             <video autoPlay muted playsInline loop preload="auto">
               <source src="/Brewly_CreateCollection.mp4" type="video/mp4" />
@@ -298,7 +299,7 @@ const handleKeyDown = (e) => {
           </div>
           <div className={styles.project_api_fetching_and_beer_card_integration_video_button_container}>
             <RegButton
-              type="primary"
+              type="secondary"
               button_text="Explore demo"
               onclick={"/"}
             />
@@ -312,7 +313,7 @@ const handleKeyDown = (e) => {
 
         {/* Modal Components */}
         <div className={`${styles.project_api_fetching_and_beer_card_integration_video_container} ${styles.brewly_video_section}`}>
-          <h2 className={styles.project_api_fetching_and_beer_card_integration_video_title}>Video Demonstration</h2>
+         
           <div className={`${styles.placeholder_mockup} ${styles.brewly_video_mockup}`}>
             <video autoPlay muted playsInline loop preload="auto">
               <source src="/Brewly_ModalView.mp4" type="video/mp4" />
@@ -320,7 +321,7 @@ const handleKeyDown = (e) => {
           </div>
           <div className={styles.project_api_fetching_and_beer_card_integration_video_button_container}>
             <RegButton
-              type="primary"
+              type="secondary"
               button_text="Explore demo"
               onclick={"/"}
             />
@@ -329,7 +330,7 @@ const handleKeyDown = (e) => {
         <div className={styles.project_API_Fetching_container}>
         <CodeSnippetBox tabs={modal_components_code_snippets} />
           <SectionDescriptionBox title={"Modal Components"} items={project_modal_components} />
-         
+
         </div>
 
         <div className={styles.project_architecture_and_components_container}>

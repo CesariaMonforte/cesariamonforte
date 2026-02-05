@@ -132,7 +132,7 @@
 
 .hero_button_wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.5s ease-out 0.25s, transform 0.5s ease-out 0.25s;
@@ -144,7 +144,6 @@
 }
 
 .hero_button_wrapper > * {
-  max-width: 220px;
   width: 100%;
 }
 
@@ -253,6 +252,14 @@
   animation: fade-in 0.6s ease-out 0.5s both;
 }
 
+/*under construction*/
+  .under_construction_container{
+    background-color: var(--primary-100);
+  }
+  .under_construction_text{
+    font-size: var(--font-size-small);
+  }
+
 /* Diamonds */
 .diamond_top_right,
 .diamond_bottom_left {
@@ -300,7 +307,7 @@
     min-height: 50vh;
   }
   .header_explanation {
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-regular);
   }
   .section_title {
     font-size: var(--font-size-medium);
@@ -315,6 +322,9 @@
   .diamond_bottom_left {
     width: 140px;
     height: 143px;
+  }
+  .hero_button_wrapper {
+    justify-content: flex-end;
   }
 }
 
@@ -331,7 +341,7 @@
     font-size: var(--font-size-extra-large);
   }
   .header_explanation {
-    font-size: inherit;
+    font-size: var(--font-size-large);
   }
   .section_title {
     font-size: var(--font-size-large);
@@ -351,6 +361,12 @@
     top: auto;
     right: auto;
   }
+  .under_construction_container{
+    background-color: var(--primary-100);
+  }
+  .under_construction_text{
+    font-size: var(--font-size-medium);
+  }
 }
 
 @media (max-width: 480px) {
@@ -364,7 +380,7 @@
     padding: var(--space-small) 0;
   }
   .header_phrase {
-    font-size: var(--font-size-regular);
+    font-size: var(--font-size-large);
   }
   .section_title {
     font-size: var(--font-size-regular);

@@ -7,7 +7,8 @@
   align-items: center;
   min-width: 0;
   border-radius: var(--space-small);
-  border: 2px solid var(--primary-500);
+  /* border: 2px solid var(--primary-500); */
+  box-shadow: var(--box-shadow-white);
   
  
 
@@ -76,12 +77,12 @@
   .tag_regular_container,
   .tag_highlighted_container {
      padding: var(--space-extra-small);
-    border: 2px solid var(--primary-500);
-   
+    /* border: 2px solid var(--primary-500); */
+    box-shadow: var(--box-shadow-white);
   }
   .tag_regular_text,
   .tag_highlighted_text {
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-extra-small);
     font-weight: var(--font-weight-bold);
    color: var(--primary-900);
   }

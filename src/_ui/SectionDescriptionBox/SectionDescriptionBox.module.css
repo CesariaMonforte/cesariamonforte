@@ -48,7 +48,7 @@
 
 @media (min-width: 900px) {
   .section_description_box {
-    max-width: 85%;
+    max-width: 100%;
   }
   .section_description_box_header {
     font-size: var(--font-size-extra-medium);
