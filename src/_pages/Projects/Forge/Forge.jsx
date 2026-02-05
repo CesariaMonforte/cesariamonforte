@@ -198,7 +198,7 @@ function Forge() {
           <div className={style.two_column_section_inner}>
             <div>
               <img
-                src="/Forge_UsabilityTable.png"
+                src="/Forge_UsabilityTesting.png"
                 alt="Usability testing task flow and notes"
                 className={style.wide_image}
               />
@@ -227,7 +227,7 @@ function Forge() {
         <section className={style.wide_section}>
           <h2 className={style.section_heading}>High‑Fidelity Prototype</h2>
           <img
-            src="/Forge_HighFi.png"
+            src="/Forge_HiFi.png"
             alt="Forge high‑fidelity screens"
             className={style.wide_image}
           />
