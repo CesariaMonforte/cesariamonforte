@@ -27,17 +27,22 @@ function AboutMeCard({
 }) {
   return (
     <div className={styles.card}>
-      <div className={styles.image_wrapper}>
-        <img
-          src={imageSrc}
-          alt={name}
-          className={styles.profile_image}
-        />
-        <div className={styles.image_overlay}>
-          <h2 className={styles.overlay_name}>{name}</h2>
-          <p className={styles.overlay_subtitle}>{subtitle}</p>
+    <div className={styles.container}>
+      {/* The light blue background "blob" */}
+      <div className={styles.bgShape}></div>
+
+      <div className={styles.cardContent}>
+        <div className={styles.imageContainer}>
+          <img src={imageSrc} alt={name} className={styles.heroImage} />
+        </div>
+
+        {/* The text container that sits "in front" */}
+        <div className={styles.textBanner}>
+          <h2 className={styles.name}>{name}</h2>
+          <p className={styles.title}>{subtitle}</p>
         </div>
       </div>
+    </div>
       <div className={styles.content}>
         <p className={styles.description}>{highlightText(description, highlightWords)}</p>
       </div>
