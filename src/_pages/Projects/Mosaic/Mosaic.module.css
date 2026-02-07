@@ -170,6 +170,12 @@
   width: 100%;
 }
 
+/* UX/UI: images fit container width 100% (videos keep original size) */
+.ux_section_container img {
+  width: 100%;
+  max-width: 100%;
+}
+
 .connects_section {
   width: 100%;
   padding: var(--space-extra-regular) var(--block-gap);
@@ -330,6 +336,9 @@
 @media (min-width: 600px) {
   .classnames_image {
     max-width: 420px;
+  }
+  .ux_section_container .classnames_image {
+    max-width: 100%;
   }
   .connects_row {
     gap: var(--space-extra-regular);
