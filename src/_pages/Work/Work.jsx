@@ -48,7 +48,7 @@ function Work() {
             project_title={item.project_title}
             project_description={item.project_description}
             project_image_src={item.project_image_src}
-            project_tags={item.project_tags}
+            project_roles={item.project_roles ?? (item.id === "Mosaic" ? ["Frontend Developer", "UX/UI Designer"] : item.Role ? item.Role.split(/[|,]/).map((r) => r.trim()).filter(Boolean) : [])}
             project_link={item.project_link}
           />
         ))}

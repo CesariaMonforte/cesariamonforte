@@ -9,7 +9,7 @@ function ProjectCard({
   project_title,
   project_description,
   project_image_src,
-  project_tags,
+  project_roles,
   project_link,
 }) {
   return (
@@ -30,7 +30,7 @@ function ProjectCard({
               {project_description}
             </p>
             <div className={styles.project_card_horizontal_tags}>
-              <Tag tags={project_tags} type="highlighted" />
+              <Tag tags={project_roles} type="highlighted" />
             </div>
             <div className={styles.project_card_horizontal_button_container}>
               <RegButton
@@ -58,7 +58,7 @@ function ProjectCard({
               {project_description}
             </p>
             <div className={styles.project_card_horizontal_tags}>
-              <Tag tags={project_tags} type="highlighted" />
+              <Tag tags={project_roles} type="highlighted" />
             </div>
             <div className={styles.project_card_horizontal_button_container}>
               <RegButton

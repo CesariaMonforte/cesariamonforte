@@ -5,7 +5,7 @@
   padding: var(--space-small);
   justify-content: center;
   align-items: center;
-  min-width: 0;
+  min-width: max-content;
   border-radius: var(--space-small);
   /* border: 2px solid var(--primary-500); */
   box-shadow: var(--box-shadow-white);
@@ -19,10 +19,6 @@
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-regular);
   text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-    
 }
 
 .tag_regular_text {
