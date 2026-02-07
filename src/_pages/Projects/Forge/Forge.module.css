@@ -166,6 +166,13 @@
   color: var(--black-500);
 }
 
+.view_button_wrapper{
+   display: flex;
+  justify-content: flex-end;
+  width: 100%;
+ 
+}
+
 @media (min-width: 900px) {
   .page_container {
     padding: var(--page-padding-desktop);

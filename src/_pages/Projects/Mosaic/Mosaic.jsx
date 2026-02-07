@@ -238,6 +238,9 @@ const handleCode = () => {
                 </video>
               </div>
             </div>
+             <div className={styles.view_study_wrapper}>
+            <RegButton button_text="Explore WebApp" type="secondary" onClick="/" />
+          </div>
           </section>
 
           <SectionCard
@@ -253,6 +256,9 @@ const handleCode = () => {
             section_image_src={"/Mosaic_LoFi.png"}
             section_description="After defining the problem and solution, we replaced confusing *Lorem ipsum* placeholder text with real content in the initial prototype to improve clarity and usability during testing."
           />
+           <div className={styles.view_study_wrapper}>
+            <RegButton button_text="View Low Fidelity Prototype" type="secondary" onClick="/" />
+          </div>
           <div className={styles.section_container}>
             <div className={styles.major_challenges_column}>
               <SectionDescriptionBox title="Usability Testing" items={UsabilityTesting} />
@@ -264,14 +270,29 @@ const handleCode = () => {
                 alt="Classnames - A simple JavaScript utility for conditionally joining classNames together."
               />
             </div>
+            
           </div>
-
+           <div className={styles.view_study_wrapper}>
+            <RegButton button_text="View User Research Report" type="secondary" onClick="/" />
+          </div>
           <SectionCard
             type="horizontal"
             section_title="High - Fidelity Prototype"
+            section_image_src={"/Mosaic_HiFi.png"}
+            section_description="People change, processes change and understanding of the visual representation may change. With that in mind, further testing was conducted to reach this final goal."
+          />
+           <div className={styles.view_study_wrapper}>
+            <RegButton button_text="View High Fidelity Prototype" type="secondary" onClick="/" />
+          </div>
+          <SectionCard
+            type="horizontal"
+            section_title="Styleguide"
             section_image_src={"/Mosaic_Styleguide.png"}
             section_description="People change, processes change and understanding of the visual representation may change. With that in mind, further testing was conducted to reach this final goal."
           />
+           <div className={styles.view_study_wrapper}>
+            <RegButton button_text="Explore Styleguide" type="secondary" onClick="/" />
+          </div>
           <div className={styles.major_challenges_column}>
             <SectionDescriptionBox title="The Reflection" items={MosaicReflection} />
           </div>
@@ -304,7 +325,7 @@ const handleCode = () => {
             </video>
           </div>
           <div className={styles.view_study_wrapper}>
-            <RegButton button_text="View Full Login Flow" type="primary" onClick="/" />
+            <RegButton button_text="View Full Login Flow" type="secondary" onClick="/" />
           </div>
         </div>
       </div>
@@ -336,7 +357,7 @@ const handleCode = () => {
             </video>
           </div>
           <div className={styles.view_study_wrapper}>
-            <RegButton button_text="View Full Dashboard" type="primary" onClick="/" />
+            <RegButton button_text="View Full Dashboard" type="secondary" onClick="/" />
           </div>
         </div>
       </div>

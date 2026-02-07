@@ -70,7 +70,7 @@ function Forge() {
   ];
 
   const biggestChallenge = [
-    "Students struggled to connect with the AI simulation when outcomes felt static or overly serious; we needed to introduce playful rewards and clearer feedback loops.",
+    "Negative engagement with the AI simulation led to the need for integrate gamification to improve awareness and user engagement.",
   ];
 
   const gamificationTakeaways = [
@@ -93,16 +93,7 @@ function Forge() {
             className={style.wide_image}
           />
           <SectionDescriptionBox title="" items={forgeBackbone} />
-        </section>
-
-        {/* Who Forge is for */}
-        <section className={style.wide_persona_section}>
-         <SectionCard
-            type="horizontal"
-            section_title="Who Forge is for"
-            section_image_src={"/Forge_UserPersona's.png"}
-            section_description="Forge is for high school and early college students who are curious about skilled trades but don’t know where to start."
-          />
+          
         </section>
 
         {/* Conducting Survey Research */}
@@ -117,10 +108,13 @@ function Forge() {
               </div>
             ))}
           </div>
-          <div className={style.cta_button_wrapper}>
-            <RegButton type="secondary" button_text="View user research report" onClick="/" />
+         <div className={style.view_button_wrapper}>
+            <RegButton button_text="View  survey" type="secondary" onClick="/" />
           </div>
         </section>
+
+      
+        
 
         {/* How Forge connects to the users */}
         <section className={style.connects_section}>
@@ -145,6 +139,7 @@ function Forge() {
                 className={style.phone_mockup}
               />
             </div>
+            
           </div>
 
           <div className={style.connects_row}>
@@ -157,41 +152,54 @@ function Forge() {
               />
             </div>
           </div>
+          
         </section>
 
         {/* competitive analysis */}
         <section className={style.wide_section}>
-          <h2 className={style.section_heading}>Competitive Analysis</h2>
-          <img
-            src="/Forge_CompetitiveAnalysis.png"
-            alt="Forge competitive analysis"
-            className={style.wide_image}
+            <SectionCard
+            type="horizontal"
+            section_title="Competitive Analysis"
+            section_image_src={"/Forge_CompetitiveAnalysis.png"}
+            section_description="Similar trade-career platforms were identified and analyzed to understand their audiences, strengths, weaknesses, and features that could improve Forge’s user experience."
           />
-          <SectionDescriptionBox
-            title=""
-            items={["We conducted a competitive analysis to understand the market and identify opportunities for Forge."]}
-          />
+          <div className={style.view_button_wrapper}>
+            <RegButton button_text="View Full Competitive Analysis" type="secondary" onClick="/" />
+          </div>
         </section>
+      {/* Who Forge is for */}
+        <section className={style.wide_persona_section}>
+         <SectionCard
+            type="horizontal"
+            section_title="Who Forge is for?"
+            section_image_src={"/Forge_UserPersona's.png"}
+            section_description="Forge is for high school and early college students who are curious about skilled trades but don’t know where to start."
+          />
+           <div className={style.view_button_wrapper}>
+            <RegButton button_text="View  User Research Report" type="secondary" onClick="/" />
+          </div>
+        </section>
+        
 
         {/* User Flow */}
         <section className={style.wide_section}>
-          <h2 className={style.section_heading}>User Flow</h2>
-          <img
-            src="/Forge_UserFlow.png"
-            alt="Forge user flow diagram"
-            className={style.wide_image}
+           <SectionCard
+            type="horizontal"
+            section_title="User Flow"
+            section_image_src={"/Forge_UserFlow.png"}
+            section_description="User flows were designed to ensure intuitive navigation, with a strong focus on essential interactions within the navigation bar for easy access."
           />
         </section>
 
         {/* Low‑Fidelity Prototype */}
         <section className={style.wide_section}>
-          <h2 className={style.section_heading}>Low‑Fidelity Prototype</h2>
-          <img
-            src="/Forge_LowFi.png"
-            alt="Forge low‑fidelity wireframes"
-            className={style.wide_image}
+            <SectionCard
+            type="horizontal"
+            section_title="Low - Fidelity Prototype"
+            section_image_src={"/Forge_LowFi.png"}
+            section_description="After defining technical and human needs, initial wireframes were created and tested, with results guiding usability improvements for high school users."
           />
-          <div className={style.cta_button_wrapper}>
+          <div className={style.view_button_wrapper}>
             <RegButton type="secondary" button_text="View full Lo‑Fi prototype" onClick="/" />
           </div>
         </section>
@@ -212,8 +220,8 @@ function Forge() {
               <SectionDescriptionBox title="What didn’t work?" items={usabilityWhatDidnt} />
             </div>
           </div>
-          <div className={style.cta_button_wrapper}>
-            <RegButton type="secondary" button_text="View full testing report" onClick="/" />
+          <div className={style.view_button_wrapper}>
+            <RegButton type="secondary" button_text="View user research report" onClick="/" />
           </div>
         </section>
 
@@ -224,41 +232,49 @@ function Forge() {
 
         {/* Gamification */}
         <div className={style.section_single}>
-          <SectionDescriptionBox title="Gamification of AI Career Simulation" items={gamificationTakeaways} />
+           <SectionCard
+            type="horizontal"
+            section_title="Gamification of AI Career Simulation"
+            section_image_src={"/Forge_GamificationPath.png"}
+            section_description="This study defines the AI simulation gamification flow, identifying when users receive information and badges to support engagement."
+          />
         </div>
 
         {/* High‑Fidelity Prototype */}
         <section className={style.wide_section}>
-          <h2 className={style.section_heading}>High‑Fidelity Prototype</h2>
-          <img
-            src="/Forge_HiFi.png"
-            alt="Forge high‑fidelity screens"
-            className={style.wide_image}
+           <SectionCard
+            type="horizontal"
+            section_title="High‑Fidelity Prototype"
+            section_image_src={"/Forge_HiFi.png"}
+            section_description="Forge combines visuals and experience, using a cohesive color palette, logotype, typography, imagery, and symbolism to create a unified user experience."
           />
+         
         </section>
 
         {/* Landing Page */}
         <section className={style.wide_section}>
-          <h2 className={style.section_heading}>Landing Page</h2>
-          <img
-            src="/Forge_Landing.png"
-            alt="Forge marketing landing page"
-            className={style.wide_image}
+              <SectionCard
+            type="horizontal"
+            section_title="Landing Page"
+            section_image_src={"/Forge_Landing.png"}
+            section_description="Forge combines visuals and experience, using a cohesive color palette, logotype, typography, imagery, and symbolism to create a unified user experience."
           />
-          <div className={style.cta_button_wrapper}>
+        
+          <div className={style.view_button_wrapper}>
             <RegButton type="secondary" button_text="View landing page" onClick="/" />
           </div>
         </section>
 
         {/* Styleguide */}
         <section className={style.wide_section}>
-          <h2 className={style.section_heading}>Styleguide</h2>
-          <img
-            src="/Forge_Styleguide.png"
-            alt="Forge brand styleguide"
-            className={style.wide_image}
+              <SectionCard
+            type="horizontal"
+            section_title="Styleguide"
+            section_image_src={"/Forge_Styleguide.png"}
+            section_description="Forge aligns visuals and experience by using a cohesive color palette, logotype, typography, imagery, and symbolism to create a unified user experience."
           />
-          <div className={style.cta_button_wrapper}>
+        
+          <div className={style.view_button_wrapper}>
             <RegButton type="secondary" button_text="View styleguide" onClick="/" />
           </div>
         </section>

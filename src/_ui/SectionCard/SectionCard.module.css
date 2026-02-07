@@ -31,8 +31,8 @@
 }
 
 .section_card_image {
-    width: 50%;
-    max-width: 50%;
+    width: 100%;
+  
 }
 
 .section_card_content_vertical {
@@ -54,8 +54,8 @@
     flex-direction: row-reverse;
   }
   .section_card_image {
-    width: 50%;
-    max-width: 50%;
+    width: 100%;
+
   }
   .section_card_text {
     width: 50%;
