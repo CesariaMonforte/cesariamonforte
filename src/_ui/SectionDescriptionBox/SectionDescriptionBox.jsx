@@ -1,10 +1,10 @@
 import styles from "./SectionDescriptionBox.module.css";
 
-function SectionDescriptionBox({ title, items }) {
+function SectionDescriptionBox({ title, items, fillHeight }) {
   const itemList = Array.isArray(items) ? items : [];
 
   return (
-    <div className={styles.section_description_box}>
+    <div className={`${styles.section_description_box} ${fillHeight ? styles.section_description_box_fill_height : ""}`}>
       {title && (
         <h2 className={styles.section_description_box_header}>{title}</h2>
       )}

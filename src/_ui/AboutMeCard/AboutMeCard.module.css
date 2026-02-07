@@ -61,27 +61,29 @@
 /* THIS IS THE FIX: The overlapping banner */
 .textBanner {
   position: absolute;
-  bottom: -20px; /* Pulls it down off the image */
-  left: -20px;   /* Pulls it left off the image */
-  background-color: var( --primary-50); /* Same as bg color to blend */
-  padding: var(--space-regular);
-  border-radius: 25px;
-  z-index: 10;   /* High z-index to stay in front */
-  max-width: 80%;
+  bottom: -20px;
+  left: -20px;
+  background-color: var(--primary-50);
+  padding: var(--space-small);
+  border-radius: var(--space-regular);
+  z-index: 10;
+  max-width: 70%;
+  text-align: left;
 }
 
 .name {
   margin: 0;
-  font-size: 1.5rem;
-  color: var (--primary-900); /* Darker blue */
-  font-weight: bold;
+  font-size: var(--font-size-regular);
+  color: var(--primary-900);
+  font-weight: var(--font-weight-bold);
+  text-align: left;
 }
 
 .title {
-  margin: 5px 0 0 0;
-  font-size: 0.9rem;
-  color: var(--primary-900); 
-  opacity: 0.8;
+  margin: var(--space-extra-small) 0 0 0;
+  font-size: var(--font-size-small);
+  color: var(--primary-900);
+  text-align: left;
 }
 
 .image_overlay {
@@ -160,6 +162,16 @@
   .card {
     max-width: var(--page-max-width);
   }
+  .textBanner {
+    padding: var(--space-regular);
+    max-width: 80%;
+  }
+  .name {
+    font-size: var(--font-size-extra-medium);
+  }
+  .title {
+    font-size: var(--font-size-medium);
+  }
   .image_wrapper {
     width: 48%;
     max-width: 520px;
@@ -184,6 +196,17 @@
 }
 
 @media (max-width: 480px) {
+  .textBanner {
+    padding: var(--space-extra-small);
+    max-width: 65%;
+    border-radius: var(--space-small);
+  }
+  .name {
+    font-size: var(--font-size-small);
+  }
+  .title {
+    font-size: var(--font-size-extra-small);
+  }
   .image_wrapper {
     min-height: 200px;
   }
@@ -191,9 +214,6 @@
     font-size: var(--font-size-regular);
   }
   .overlay_subtitle {
-    font-size: var(--font-size-small);
-  }
-  .description {
     font-size: var(--font-size-small);
   }
   .description {

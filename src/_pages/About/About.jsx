@@ -64,6 +64,15 @@ function About() {
         <h3 className={styles.connect_heading}>Connect with me</h3>
         <p className={styles.connect_subtext}>Let's collaborate or chat — I'd love to hear from you!</p>
         <div className={styles.connect_links}>
+          <a
+            href="/Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.connect_link}
+            aria-label="View resume"
+          >
+            View Resume
+          </a>
           {SOCIAL_LINKS.map((link) => (
             <a
               key={link.icon}

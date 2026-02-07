@@ -13,6 +13,7 @@ function Footer() {
             <a href="/">Home</a>
             <a href="/Work">Work</a>
             <a href="/About">About</a>
+            <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
           </nav>
 
           <div className={styles.connection_links}>
