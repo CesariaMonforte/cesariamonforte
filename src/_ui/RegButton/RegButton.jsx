@@ -1,7 +1,7 @@
 import styles from "./RegButton.module.css";
 import { useNavigate, Link } from "react-router-dom";
 
-function RegButton({ button_text, onclick, onClick, type }) {
+function RegButton({ button_text, icon, onclick, onClick, type }) {
   const navigate = useNavigate();
   const handler = onClick ?? onclick;
   const isNavToPath = typeof handler === "string";
@@ -25,6 +25,12 @@ function RegButton({ button_text, onclick, onClick, type }) {
   };
 
   if (type === "primary") {
+    const content = (
+      <>
+        {button_text}
+        {icon}
+      </>
+    );
     if (isExternalLink) {
       return (
         <a
@@ -33,14 +39,14 @@ function RegButton({ button_text, onclick, onClick, type }) {
           rel="noopener noreferrer"
           className={styles.button_reg}
         >
-          {button_text}
+          {content}
         </a>
       );
     }
     if (isInternalLink) {
       return (
         <Link to={handler} className={styles.button_reg}>
-          {button_text}
+          {content}
         </Link>
       );
     }
@@ -52,12 +58,18 @@ function RegButton({ button_text, onclick, onClick, type }) {
         onKeyDown={(e) => e.key === "Enter" && handlePrimaryClick(e)}
         className={styles.button_reg}
       >
-        {button_text}
+        {content}
       </div>
     );
   }
 
   if (type === "secondary") {
+    const content = (
+      <>
+        {button_text}
+        {icon}
+      </>
+    );
     if (isExternalLink) {
       return (
         <a
@@ -66,14 +78,14 @@ function RegButton({ button_text, onclick, onClick, type }) {
           rel="noopener noreferrer"
           className={styles.button_secondary_reg}
         >
-          {button_text}
+          {content}
         </a>
       );
     }
     if (isInternalLink) {
       return (
         <Link to={handler} className={styles.button_secondary_reg}>
-          {button_text}
+          {content}
         </Link>
       );
     }
@@ -85,7 +97,7 @@ function RegButton({ button_text, onclick, onClick, type }) {
         onKeyDown={(e) => e.key === "Enter" && handleSecondaryClick(e)}
         className={styles.button_secondary_reg}
       >
-        {button_text}
+        {content}
       </div>
     );
   }

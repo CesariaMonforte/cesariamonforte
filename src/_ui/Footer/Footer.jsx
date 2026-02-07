@@ -16,10 +16,16 @@ function Footer() {
           </nav>
 
           <div className={styles.connection_links}>
-            <img src="/GitHub.svg" alt="GitHub" className={styles.connection} />
-            <img src="/Instagram.svg" alt="Instagram" className={styles.connection} />
-            <img src="/LinkedIn.svg" alt="LinkedIn" className={styles.connection} />
-            <img src="/TikTok.svg" alt="TikTok" className={styles.connection} />
+            <a href="https://github.com/CesariaMonforte" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <img src="/GitHub.svg" alt="" className={styles.connection} />
+            </a>
+           
+            <a href="https://www.linkedin.com/in/cesariamonforte/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <img src="/LinkedIn.svg" alt="" className={styles.connection} />
+            </a>
+            <a href="https://www.tiktok.com/@Lifeascesaria" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+              <img src="/TikTok.svg" alt="" className={styles.connection} />
+            </a>
           </div>
 
           <p className={styles.copyright}>All rights reserved © 2024</p>
