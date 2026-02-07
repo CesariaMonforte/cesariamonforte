@@ -19,7 +19,7 @@ function SectionCard({
           {section_title}
          </h1>
          <p className={styles.section_card_description}>{section_description}</p>
-         <img className={styles.section_card_image}src={section_image_src} alt={section_title}/>
+         <img className={styles.section_card_image} src={section_image_src} alt={section_title} />
         </div>
       )}
 

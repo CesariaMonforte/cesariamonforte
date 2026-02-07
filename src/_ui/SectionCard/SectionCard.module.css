@@ -14,7 +14,7 @@
 }
 
 .section_card_title {
-   font-size: var(--font-size-large);
+  font-size: var(--font-size-medium);
   font-weight: var(--font-weight-medium);
   color: var(--primary-500);
   margin: 0 0 var(--space-extra-small);
@@ -61,7 +61,7 @@
     width: 50%;
   }
   .section_card_title {
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-medium);
   }
 }
 

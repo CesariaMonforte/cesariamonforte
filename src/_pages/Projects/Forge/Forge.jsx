@@ -96,18 +96,13 @@ function Forge() {
         </section>
 
         {/* Who Forge is for */}
-        <section className={style.two_column_section}>
-          <h2 className={style.section_heading}>Who Forge Is For</h2>
-          <div className={style.two_column_section_inner}>
-            <SectionDescriptionBox title="" items={forgeAudience} />
-            <div className={style.phone_mockup_wrapper}>
-              <img
-                src="/Forge_Audience.png"
-                alt="Primary audience for Forge"
-                className={style.phone_mockup}
-              />
-            </div>
-          </div>
+        <section className={style.wide_persona_section}>
+         <SectionCard
+            type="horizontal"
+            section_title="Who Forge is for"
+            section_image_src={"/Forge_UserPersona's.png"}
+            section_description="Forge is for high school and early college students who are curious about skilled trades but don’t know where to start."
+          />
         </section>
 
         {/* Conducting Survey Research */}
@@ -164,10 +159,19 @@ function Forge() {
           </div>
         </section>
 
-        {/* Experience pillars */}
-        <div className={style.section_single}>
-          <SectionDescriptionBox title="Experience Pillars" items={forgeExperiencePillars} />
-        </div>
+        {/* competitive analysis */}
+        <section className={style.wide_section}>
+          <h2 className={style.section_heading}>Competitive Analysis</h2>
+          <img
+            src="/Forge_CompetitiveAnalysis.png"
+            alt="Forge competitive analysis"
+            className={style.wide_image}
+          />
+          <SectionDescriptionBox
+            title=""
+            items={["We conducted a competitive analysis to understand the market and identify opportunities for Forge."]}
+          />
+        </section>
 
         {/* User Flow */}
         <section className={style.wide_section}>
