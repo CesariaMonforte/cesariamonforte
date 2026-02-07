@@ -36,7 +36,7 @@
 .filter_container {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: var(--space-small);
   justify-content: center;
   align-items: center;
@@ -48,7 +48,6 @@
   flex: 0 1 auto;
   min-width: 0;
   width: auto;
-  max-width: 24%;
 }
 
 .projects_container {
@@ -104,13 +103,16 @@
   .page_container {
     padding: var(--space-small);
   }
+  .section_title_container {
+    padding: var(--space-small) 0;
+    gap: var(--space-small);
+  }
   .section_title {
     font-size: var(--font-size-regular);
   }
   .filter_container {
+    width: 100%;
+    justify-content: flex-start;
     gap: var(--space-extra-small);
-  }
-  .filter_container > * {
-    max-width: 23%;
   }
 }

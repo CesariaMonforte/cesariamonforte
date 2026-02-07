@@ -1,5 +1,14 @@
 /* Mobile first. Uses index.css variables only */
-.tag_regular_container,
+.tag_regular_container {
+  display: flex;
+  padding: var(--space-small);
+  justify-content: center;
+  align-items: center;
+  min-width: max-content;
+  border-radius: var(--space-small);
+  box-shadow: var(--box-shadow-white);
+}
+
 .tag_highlighted_container {
   display: flex;
   padding: var(--space-small);
@@ -7,11 +16,8 @@
   align-items: center;
   min-width: max-content;
   border-radius: var(--space-small);
-  /* border: 2px solid var(--primary-500); */
   box-shadow: var(--box-shadow-white);
-  
- 
-
+  background-color: var(--primary-50);
 }
 
 .tag_regular_text,

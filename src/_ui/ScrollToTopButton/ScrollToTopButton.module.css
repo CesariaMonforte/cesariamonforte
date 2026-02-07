@@ -1,0 +1,42 @@
+.scroll_button {
+  position: fixed;
+  right: var(--space-regular);
+  bottom: var(--space-large);
+  z-index: 40;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-500);
+  color: var(--white);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: var(--box-shadow-primary-medium);
+  transition: transform 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.scroll_button:hover {
+  background-color: var(--primary-600);
+  transform: translateY(-2px);
+}
+
+.scroll_button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  .scroll_button {
+    right: var(--space-regular);
+    bottom: var(--space-regular);
+    width: 44px;
+    height: 44px;
+  }
+}

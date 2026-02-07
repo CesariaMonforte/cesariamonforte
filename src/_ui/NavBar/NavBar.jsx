@@ -17,7 +17,7 @@ function NavBar() {
 
   return (
     <div className={styles.navbar}>
-      <Link to="/" className={styles.logo_container} onClick={closeMenu}>
+      <Link to="/" className={styles.logo_container} onClick={closeMenu} data-cursor="name">
         <img src="/Logo.svg" alt="logo" className={styles.logo} />
         <span className={styles.logo_text}>Cesaria Monforte</span>
       </Link>

@@ -30,6 +30,35 @@ function About() {
         <AboutMeCard imageSrc="/AboutMe_Profile.png" />
       </div>
 
+      <section className={styles.connect_section}>
+        <h3 className={styles.connect_heading}>Connect with me</h3>
+        <p className={styles.connect_subtext}>Let's collaborate or chat — I'd love to hear from you!</p>
+        <div className={styles.connect_links}>
+          <a
+            href="/Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.connect_link}
+            aria-label="View resume"
+          >
+            View Resume
+          </a>
+          {SOCIAL_LINKS.map((link) => (
+            <a
+              key={link.icon}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.connect_link}
+              aria-label={link.label}
+            >
+              <img src={`/${link.icon}.svg`} alt="" className={styles.connect_icon} />
+              <span>{link.label}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+
       <section className={styles.life_beyond_section}>
         <h3 className={styles.life_beyond_heading}>Life beyond design and code</h3>
         <div className={styles.life_beyond_gallery}>
@@ -57,35 +86,6 @@ function About() {
               />
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className={styles.connect_section}>
-        <h3 className={styles.connect_heading}>Connect with me</h3>
-        <p className={styles.connect_subtext}>Let's collaborate or chat — I'd love to hear from you!</p>
-        <div className={styles.connect_links}>
-          <a
-            href="/Resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.connect_link}
-            aria-label="View resume"
-          >
-            View Resume
-          </a>
-          {SOCIAL_LINKS.map((link) => (
-            <a
-              key={link.icon}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.connect_link}
-              aria-label={link.label}
-            >
-              <img src={`/${link.icon}.svg`} alt="" className={styles.connect_icon} />
-              <span>{link.label}</span>
-            </a>
-          ))}
         </div>
       </section>
 

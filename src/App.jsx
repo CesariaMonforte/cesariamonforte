@@ -12,6 +12,7 @@ import Tannacious from "./_pages/Projects/Tannacious/Tannacious";
 import ParisToRomeBrochure from "./_pages/Projects/ParisToRomeBrochure/ParisToRomeBrochure";
 import PageLoader from "./_ui/PageLoader/PageLoader";
 import CustomCursor from "./_ui/CustomCursor/CustomCursor";
+import ScrollToTopButton from "./_ui/ScrollToTopButton/ScrollToTopButton";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -35,6 +36,7 @@ function AppContent() {
     <>
       {loading && <PageLoader />}
       <ScrollToTop />
+      <ScrollToTopButton />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Work" element={<Work />} />

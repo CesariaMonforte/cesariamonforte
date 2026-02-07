@@ -219,7 +219,7 @@ const handleCode = () => {
             items={[]}
           />
           <section className={styles.connects_section}>
-            <div className={styles.connects_row}>
+            <div className={`${styles.connects_row} ${styles.connects_row_reverse}`}>
               <p className={styles.connects_label}>AI Generated customizable project briefs</p>
               <div className={`${styles.placeholder_mockup} ${styles.connects_mockup}`}>
                 <video autoPlay muted playsInline loop preload="auto">

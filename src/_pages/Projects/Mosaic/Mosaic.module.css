@@ -17,28 +17,34 @@
 
 .filter_section {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: var(--block-gap);
+  flex-wrap: wrap;
+  gap: var(--space-regular);
   width: 100%;
-  padding: var(--block-gap) 0;
+  padding: var(--block-gap);
+  border: 2px solid var(--primary-50);
+  border-radius: var(--space-regular);
+  box-sizing: border-box;
 }
 
-.filter_label {
-  font-size: var(--font-size-small);
+.filter_section .filter_label {
+  font-size: var(--font-size-regular);
   font-weight: var(--font-weight-bold);
   color: var(--primary-900);
   margin: 0;
+  flex-shrink: 0;
+  text-align: left;
 }
 
 .filter_container {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  flex: 1;
   gap: var(--space-small);
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  max-width: 100%;
   min-width: 0;
 }
 
@@ -201,7 +207,8 @@
   font-size: var(--font-size-regular);
   font-weight: var(--font-weight-medium);
   color: var(--primary-900);
-  text-align: left;
+  text-align: center;
+  flex: 1;
 }
 
 .connects_row {
@@ -209,7 +216,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-extra-regular);
+  gap: var(--space-regular);
 }
 
 .connects_row_reverse {
@@ -402,8 +409,17 @@
   .page_container {
     padding: var(--space-small);
   }
-  .filter_label {
-    font-size: var(--font-size-extra-small);
+  .filter_section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .filter_section .filter_label {
+    font-size: var(--font-size-small);
+  }
+  .filter_container {
+    width: 100%;
+    justify-content: flex-start;
+    gap: var(--space-extra-small);
   }
   .case_study_coming_soon_header {
     font-size: var(--font-size-regular);

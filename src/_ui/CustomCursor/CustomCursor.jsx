@@ -5,6 +5,7 @@ function CustomCursor() {
   const [position, setPosition] = useState({ x: -100, y: -100 });
   const [trailing, setTrailing] = useState({ x: -100, y: -100 });
   const [isHovering, setIsHovering] = useState(false);
+  const [isNameHover, setIsNameHover] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
   const handleMouseMove = useCallback((e) => {
@@ -22,7 +23,9 @@ function CustomCursor() {
 
   const handleMouseOver = useCallback((e) => {
     const target = e.target;
+    const nameLink = target.closest("[data-cursor='name']");
     const interactive = target.closest("a, button, [role='button'], input, [onclick]");
+    setIsNameHover(!!nameLink);
     setIsHovering(!!interactive);
   }, []);
 
@@ -72,7 +75,7 @@ function CustomCursor() {
   return (
     <>
       <div
-        className={`${styles.cursor} ${isVisible ? styles.visible : ""} ${isHovering ? styles.hover : ""}`}
+        className={`${styles.cursor} ${isVisible ? styles.visible : ""} ${isHovering ? styles.hover : ""} ${isNameHover ? styles.name_hover : ""}`}
         style={{
           left: position.x,
           top: position.y,
@@ -80,7 +83,7 @@ function CustomCursor() {
         aria-hidden
       />
       <div
-        className={`${styles.cursor_trail} ${isVisible ? styles.visible : ""} ${isHovering ? styles.hover : ""}`}
+        className={`${styles.cursor_trail} ${isVisible ? styles.visible : ""} ${isHovering ? styles.hover : ""} ${isNameHover ? styles.name_hover : ""}`}
         style={{
           left: trailing.x,
           top: trailing.y,
