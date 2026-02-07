@@ -135,12 +135,12 @@ function Home() {
         <AboutMeCard imageSrc="/AboutMe_Profile.png" />
       </div>
 
-      <div ref={featuredRef} className={styles.section_title_container}>
+      <div ref={featuredRef} className={`${styles.section_title_container} ${styles.featured_work_heading}`}>
         <h2 className={styles.section_title}>Featured Work</h2>
       </div>
 
-      <div ref={filterRef} className={styles.section_title_container}>
-        <h2 className={styles.section_filter_text}>Select a category above</h2>
+      <div ref={filterRef} className={styles.filter_row}>
+        <p className={styles.filter_label}>Select a category</p>
         <div className={styles.filter_container}>
           {FILTER_OPTIONS.map((option) => (
             <Tag

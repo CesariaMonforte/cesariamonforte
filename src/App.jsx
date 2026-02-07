@@ -11,6 +11,7 @@ import Brewly from "./_pages/Projects/Brewly/Brewly";
 import Tannacious from "./_pages/Projects/Tannacious/Tannacious";
 import ParisToRomeBrochure from "./_pages/Projects/ParisToRomeBrochure/ParisToRomeBrochure";
 import PageLoader from "./_ui/PageLoader/PageLoader";
+import CustomCursor from "./_ui/CustomCursor/CustomCursor";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -51,6 +52,7 @@ function AppContent() {
 function App() {
   return (
     <BrowserRouter>
+      <CustomCursor />
       <AppContent />
     </BrowserRouter>
   );

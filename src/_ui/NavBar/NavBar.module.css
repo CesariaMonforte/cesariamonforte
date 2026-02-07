@@ -135,9 +135,12 @@
 /* Update this part in your CSS */
 .logo_container {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   align-items: center;
   gap: var(--space-small);
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 .logo_text {
   font-size: var(--font-size-regular);

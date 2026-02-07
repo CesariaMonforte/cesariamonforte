@@ -1,12 +1,11 @@
 import styles from "./NavBar.module.css";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import RegButton from "../RegButton/RegButton";
 import LinkButton from "../LinkButton/LinkButton";
 
 function NavBar() {
-  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const closeMenu = () => setIsMenuOpen(false);
@@ -18,10 +17,10 @@ function NavBar() {
 
   return (
     <div className={styles.navbar}>
-      <div className={styles.logo_container} onClick={() => { navigate("/"); closeMenu(); }}>
+      <Link to="/" className={styles.logo_container} onClick={closeMenu}>
         <img src="/Logo.svg" alt="logo" className={styles.logo} />
-        <h2 className={styles.logo_text}>Cesaria Monforte</h2>
-      </div>
+        <span className={styles.logo_text}>Cesaria Monforte</span>
+      </Link>
 
       <button
         type="button"
