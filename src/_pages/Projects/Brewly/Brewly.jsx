@@ -73,11 +73,11 @@ useEffect(() => {
     },
   ];
 
-  const project_major_challenges = [
-    "Functionality for performing the four CRUD operations: create, delete, retrieve, and update.",
-    "Finding a free open source API that contains range of parameters to integrate into Brewly",
-    "Navigation between the different views and fetching data from an external API.",
-    "Developed using React’s component-based structure, that is modular and scalable."
+  const project_focus_features = [
+    "Beer Discovery: Browse beers from the Brew Buddy API with images and details.",
+    "Collections: Create and manage custom collections to organize saved beers.",
+    "Search & Filter: Find beers by name, ABV, or IBU with a filter dropdown.",
+    "Beer Details: View specs (ABV, IBU), descriptions, and add reviews."
   ];
 
   const project_brewbuddy_api_integration = [
@@ -85,45 +85,34 @@ useEffect(() => {
    
   ];
 
-  const project_api_fetching_and_beer_card_integration = ["Centralize API logic in a service layer","Normalize API responses (translations, nulls) so the UI always gets a consistent shape","Use `try/catch` + loading/error state so the app never fails silently."];
+  const project_create_collections = ["Users create collections from the Collections page or when saving a beer.","Each collection has a name and stores beer IDs and names.","Data is persisted in `localStorage` as JSON."];
  
 //End Goals
 const project_end_goals = ["A complete user journey from onboarding and age verification through discovery, search, collections, and profile.","Reliable API integration with loading and error states and consistent data shape across the app.","Reusable UI components (buttons, cards, modals, inputs, navigation) that keep the interface consistent and maintainable.","Persistent user data (collections and reviews) via LocalStorage so choices survive page refreshes."];
 
   //Search and Filter Functionality
-  const project_search_and_filter_functionality = ["Separate controlled input (`searchTerm`) from “committed” query (`searchQuery`) so filtering runs on Enter, not every keystroke.","Get `filteredBeers` from state so the list stays in sync without extra fetches.","Use `try/catch` + loading/error state so the app never fails silently."];
+  const project_search_and_filter_functionality = ["Beers are fetched on mount, then filtered client-side based on the selected filter (name, ABV, or IBU) and search query.","Search runs when the user presses Enter.","Guard against duplicates and case-insensitive duplicate collection names."];
 
   const search_and_filter_functionality_code_snippets = [
     {
       label: "SearchPage.jsx",
-      code: `// SearchPage.jsx — Filter state and logic
-const [filterOption, setFilterOption] = useState("name");
-const [searchTerm, setSearchTerm] = useState("");
+      code: `const [filterOption, setFilterOption] = useState("name");
 const [searchQuery, setSearchQuery] = useState("");
 
 
 const filteredBeers = beers.filter((beer) => {
-   const query = searchQuery.toLowerCase();
-   if (filterOption === "name") return beer.name.toLowerCase().includes(query);
-   if (filterOption === "abv") return beer.abv?.toString().includes(query);
-   if (filterOption === "ibu") return beer.ibu?.toString().includes(query);
-   return true;
+    const query = searchQuery.toLowerCase();
+    if (filterOption === "name") return beer.name.toLowerCase().includes(query);
+    if (filterOption === "abv") return beer.abv?.toString().includes(query);
+    if (filterOption === "ibu") return beer.ibu?.toString().includes(query);
+    return true;
 });
 
 
 const handleKeyDown = (e) => {
-   if (e.key === "Enter") setSearchQuery(searchTerm);
+    if (e.key === "Enter") setSearchQuery(searchTerm);
 };
-
-
-// Search component receives value, onChange, onKeyDown, onFilterChange
-<Search
-   value={searchTerm}
-   onChange={setSearchTerm}
-   placeholder='Search beers...'
-   onKeyDown={handleKeyDown}
-   onFilterChange={setFilterOption}
-/>;`  },
+`  },
   ];
 
 
@@ -131,52 +120,35 @@ const handleKeyDown = (e) => {
 
   const project_creating_and_storing_beer_collections = ["Implemented `localStorage` to persist beer collections across sessions.","Created a dedicated `collectionsReducer` to handle CRUD operations on collections.","Use functional `setState` so you always work with the latest list.","Guard against duplicates and case-insensitive duplicate collection names."];
 
-  const creating_and_storing_beer_collections_code_snippets = [
+  const project_create_collections_code_snippets = [
     {
       label: "Feed.jsx",
       code: `const handleSaveNewCollection = () => {
-   if (!newCollectionName.trim() || !selectedBeer) return;
-   const trimmedName = newCollectionName.trim();
-   setCollections((prev) => {
-       const existing = prev.find(
-           (c) => c.collectionName.toLowerCase() === trimmedName.toLowerCase(),
-       );
-       let updatedCollections;
-       if (existing) {
-           if (!existing.beers.some((b) => b.id === selectedBeer.id)) {
-               existing.beers.push({
-                   id: selectedBeer.id,
-                   name: selectedBeer.name,
-                   image: selectedBeer.image,
-                   tagline: selectedBeer.tagline,
-                   brewery: selectedBeer.brewery,
-               });
-           }
-           updatedCollections = [...prev];
-       } else {
-           updatedCollections = [
-               ...prev,
-               {
-                   collectionName: trimmedName,
-                   beers: [
-                       {
-                           id: selectedBeer.id,
-                           name: selectedBeer.name,
-                           image: selectedBeer.image,
-                           tagline: selectedBeer.tagline,
-                           brewery: selectedBeer.brewery,
-                       },
-                   ],
-               },
-           ];
-       }
-       localStorage.setItem("collections", JSON.stringify(updatedCollections));
-       return updatedCollections;
-   });
-   setNewCollectionName("");
-   handleCloseModal();
-};
-`,
+    if (!newCollectionName.trim()) return;
+
+
+    const trimmedName = newCollectionName.trim();
+    const existingCollections = JSON.parse(localStorage.getItem("collections") || "[]");
+
+
+    const exists = existingCollections.some(
+        (col) => col.collectionName.toLowerCase() === trimmedName.toLowerCase()
+    );
+
+
+    if (exists) {
+        setConfirmationMessage(\`A collection with the name "\${trimmedName}" already exists.\`);
+        setShowConfirmation(true);
+        return;
+    }
+
+
+    const newCollection = { collectionName: trimmedName, beers: [] };
+    const updated = [...existingCollections, newCollection];
+    localStorage.setItem("collections", JSON.stringify(updated));
+    setCollections(updated);
+    handleCloseModal();
+};`,
     },
   ];
 
@@ -217,12 +189,42 @@ const handleKeyDown = (e) => {
     },
   ];
 
-  // Project reflection
-  const project_reflection = [
-    "Modular Designing is essential for reusability. Splitting our UI into logical and reusable components is crucial for maintainability. It allows for easier updates, and promotes a clear project structure. It ensures that any changes to the UI are reflected consistently throughout the application.",
-    "Error Handling and UX go hand in hand. Paying careful attention to error states and user experience is vital. Robust error handling ensures a smooth and intuitive user experience. It involves anticipating potential issues and providing clear feedback to users when they occur.",
-    "API Fetching optimization. Implementing efficient API fetching techniques, such as caching and debouncing, significantly improves performance and responsiveness. It reduces unnecessary network requests, making the application faster and more user-friendly.",
-    "SCSS Management. Organizing SCSS files efficiently, utilizing variables, mixins, and nesting, streamlines styling. It promotes consistency, reduces redundancy, and simplifies maintenance, allowing for quick and easy updates to the application's visual design.",
+  // Project Adressing Challenges
+  const project_adressing_challenges = [
+    "Checking if the collection exists before its created and implementing conversion to lowercase for checking.",
+    "Search only runs when the user is ready and clicks enter therefore improving performance and making the interaction feel deliberate and controlled.",
+    
+  ];
+
+  const project_add_to_collections = ["From a beer's detail page, users tap the favorite button to open a modal.","They can add the beer to an existing collection or create a new one.","A checkmark indicates which collections already contain the beer.","The same action removes the beer if it's already in that collection."];
+  const adding_to_collections_code_snippets = [
+    {
+      label: "BeerCard.jsx",
+      code: `const handleAddToExistingCollection = (collectionName) => {
+    if (!selectedBeer) return;
+
+
+    setCollections((prev) => {
+        const updatedCollections = prev.map((col) => {
+            if (col.collectionName === collectionName) {
+                const beerExists = col.beers.some((b) => b.id === selectedBeer.id);
+                return beerExists
+                    ? { ...col, beers: col.beers.filter((b) => b.id !== selectedBeer.id) }
+                    : { ...col, beers: [...col.beers, { id: selectedBeer.id, name: selectedBeer.name }] };
+            }
+            return col;
+        });
+        localStorage.setItem("collections", JSON.stringify(updatedCollections));
+        return updatedCollections;
+    });
+};`,
+    },
+  ];
+
+  const project_challenges = [
+    "Making sure there are no duplicate collections and checking case sensitivity.",
+    "Filtering beers on every keystroke caused unnecessary re-renders and made the search experience feel jumpy.",
+   
   ];
 
   return (
@@ -231,7 +233,7 @@ const handleKeyDown = (e) => {
       <ProjectHero project={project} />
         <div className={styles.project_overview_container}>
             <div className={styles.project_overview_content}>
-            <SectionDescriptionBox title={"Major Challenges"} items={project_major_challenges} />
+            <SectionDescriptionBox title={"Focus Features"} items={project_focus_features} />
             <SectionDescriptionBox title={"BrewBuddy - API Integration"} items={project_brewbuddy_api_integration} />
            
             </div>
@@ -239,36 +241,38 @@ const handleKeyDown = (e) => {
             <img className={styles.brewly_api_image} src={"/Brewly_Api.png"} alt={"BrewBuddy - API Integration"} />
             </div>
         </div>
-            <div className={styles.project_goals_container}>
-          <SectionDescriptionBox title={"End Goals"} items={project_end_goals} />
-        </div>
+     
 
-        {/* API Fetching and Beer Card Integration */}
+        {/*Create Collections */}
         <div className={`${styles.project_api_fetching_and_beer_card_integration_video_container} ${styles.brewly_video_section}`}>
           {/* <h2 className={styles.project_api_fetching_and_beer_card_integration_video_title}>Video Demonstration</h2> */}
           <div className={`${styles.placeholder_mockup} ${styles.brewly_video_mockup}`}>
             <video autoPlay muted playsInline loop preload="auto">
-              <source src="/Brewly_APIandBeerCard.mp4" type="video/mp4" />
+              <source src="/Brewly_CreateCollection.mp4" type="video/mp4" />
             </video>
           </div>
           <div className={styles.project_api_fetching_and_beer_card_integration_video_button_container}>
             <RegButton
               type="secondary"
               button_text="Explore WebApp"
-              onclick={"/"}
+              onclick="https://app-brewly.vercel.app/"
             />
           </div>
         </div>
 
         <div className={styles.project_API_Fetching_container}>
-          <SectionDescriptionBox title={"API Fetching and Beer Card Integration"} items={project_api_fetching_and_beer_card_integration} />
-          <CodeSnippetBox tabs={project_code_snippets} />
+          <SectionDescriptionBox title={"Create Collections"} items={project_create_collections} />
+          <CodeSnippetBox tabs={project_create_collections_code_snippets} />
         </div>
-      
+        {/* Add to Collections */}
+        <div className={styles.project_API_Fetching_container}>
+          <SectionDescriptionBox title={"Add to Collections"} items={project_add_to_collections} />
+          <CodeSnippetBox tabs={adding_to_collections_code_snippets} />
+        </div>
     
 
 
-        {/* Search and Filter Functionality */}
+        {/* Search and Filter  */}
         <div className={`${styles.project_api_fetching_and_beer_card_integration_video_container} ${styles.brewly_video_section}`}>
           {/* <h2 className={styles.project_api_fetching_and_beer_card_integration_video_title}>Video Demonstration</h2> */}
           <div className={`${styles.placeholder_mockup} ${styles.brewly_video_mockup}`}>
@@ -280,35 +284,13 @@ const handleKeyDown = (e) => {
             <RegButton
               type="secondary"
               button_text="Explore demo"
-              onclick={"/"}
+              onclick="https://app-brewly.vercel.app/"
             />
           </div>
         </div>
         <div className={styles.project_API_Fetching_container}>
         <CodeSnippetBox tabs={search_and_filter_functionality_code_snippets} />
-          <SectionDescriptionBox title={"Search and Filter Functionality"} items={project_search_and_filter_functionality} />   
-        </div>
-
-{/* Creating and Storing Beer Collections */}
-<div className={`${styles.project_api_fetching_and_beer_card_integration_video_container} ${styles.brewly_video_section}`}>
-       
-          <div className={`${styles.placeholder_mockup} ${styles.brewly_video_mockup}`}>
-            <video autoPlay muted playsInline loop preload="auto">
-              <source src="/Brewly_CreateCollection.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div className={styles.project_api_fetching_and_beer_card_integration_video_button_container}>
-            <RegButton
-              type="secondary"
-              button_text="Explore demo"
-              onclick={"/"}
-            />
-          </div>
-        </div>
-        <div className={styles.project_API_Fetching_container}>
-       
-          <SectionDescriptionBox title={"Creating and Storing Beer Collections"} items={project_creating_and_storing_beer_collections} />   
-          <CodeSnippetBox tabs={creating_and_storing_beer_collections_code_snippets} />
+          <SectionDescriptionBox title={"Search & Filter"} items={project_search_and_filter_functionality} />   
         </div>
 
         {/* Modal Components */}
@@ -323,7 +305,7 @@ const handleKeyDown = (e) => {
             <RegButton
               type="secondary"
               button_text="Explore demo"
-              onclick={"/"}
+              onclick="https://app-brewly.vercel.app/"
             />
           </div>
         </div>
@@ -339,10 +321,13 @@ const handleKeyDown = (e) => {
 
           <div className={styles.project_components_container}><h2 className={styles.project_components_title}>Components</h2><img className={styles.project_components_image} src="/Brewly_Components.png" alt="Brewly Components" /></div>
         </div>
-
-        {/* Reflection */}
+        {/* Challenges */}
+        <div className={styles.project_goals_container}>
+          <SectionDescriptionBox title={"Challenges"} items={project_challenges} />
+        </div>
+        {/* Solutions */}
         <div className={styles.project_reflection_container}>
-          <SectionDescriptionBox title={"The Reflection"} items={project_reflection} />
+          <SectionDescriptionBox title={"Adressing Challenges"} items={project_adressing_challenges} />
         </div>
 
       <div className="footer_section">
