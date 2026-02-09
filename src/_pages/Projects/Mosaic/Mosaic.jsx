@@ -18,10 +18,10 @@ function Mosaic() {
   const project = _cardData.find((p) => p.id === "Mosaic");
   const [activeFilter, setActiveFilter] = useState("Frontend Development");
 
-  const majorChallenges = [
-    "Build the App using React component-based structure that is modular and scalable",
-    "Manage form fields and modal visibility with useState.",
-    "Integrate validation before submit and show feedback via PopUp","Eliminate Javascript component code redundancy by incorporating CSS",
+  const FocusFeatures = [
+    "Create Profile: Form to set first name, last name, username, interests, about me, location, avatar, and social links. Data is validated and saved to localStorage.",
+    "DescriptionBox: Reusable component for project descriptions with multiple style variants via `classnames` (primary, secondary, conditions).",
+    "Validation & Popups:  Incomplete profile popup when required fields are missing; save confirmation when profile is successfully created.",
   ];
 
 
@@ -119,77 +119,154 @@ return <div className={DescriptionClasses}>...</div>;
   ];
 
   const ProfileCreation = [
-    "LocalStorage update once to avoid redundancy",
-    "Use functional `setState` so you always work with the latest list.",
-    " Guard against duplicates and case-insensitive duplicate collection names.",
+    "Users create their profile from the Create Profile page.",
+    "The form collects first name, last name, username, interests (selected via InterestChip), about me, location, and avatar.",
+    "All fields are required before save."," Data is persisted in `localStorage` as JSON.",
   
   ];
   const ProfileCreationCodeSnippet = [
     {
-      label: "SignIn.js",
-      code: `const [Email, setEmail] = useState("");
-const [showIncompleteProfilePopup, setShowIncompleteProfilePopup] =
-   useState(false);
-
-
-const handleCode = () => {
-   if (!Email) {
-       setShowIncompleteProfilePopup(true);
-       return;
-   } else {
-       router.replace("/SignIn/VerificationCode");
-   }
-};
-`,
-    },{
-      label: "CreateProfile.js",
+      label: "CreateProfile/page.js",
       code: `const handleSave = () => {
-   if (
-       !firstName ||
-       !lastName ||
-       !username ||
-       !aboutMe ||
-       !location ||
-       selectedInterests.length === 0 ||
-       !selectedAvatar
-   ) {
-       setShowIncompleteProfilePopup(true);
-       return;
-   } else {
-       saveProfileData();
-       setShowSavePopup(true);
-   }
+    if (
+        !firstName ||
+        !lastName ||
+        !username ||
+        !aboutMe ||
+        !location ||
+        selectedInterests.length === 0 ||
+        !selectedAvatar
+    ) {
+        setShowIncompleteProfilePopup(true);
+        return;
+    } else {
+        saveProfileData();
+        setShowSavePopup(true);
+    }
 };
 
-      `
+
+const saveProfileData = () => {
+    const profileData = {
+        firstName,
+        lastName,
+        username,
+        aboutMe,
+        location,
+        interests: selectedInterests,
+        avatar: selectedAvatar,
+        socialMedia: {},
+    };
+    localStorage.setItem("userProfile", JSON.stringify(profileData));
+};
+
+const handleInterestClick = (interest) => {
+    setSelectedInterests((prev) => {
+        if (prev.includes(interest)) {
+            return prev.filter((item) => item !== interest);
+        } else {
+            return [...prev, interest];
+        }
+    });
+};
+
+
+`,
     }
   ];
-  const EndGoals = [
-    "Persistent profile data via LocalStorage so the user’s Mosaic survives page refreshes..",
-    "Reusable UI components (StatusBar, Button, PopUp, SingleInput, InterestChip, etc.) that keep the interface consistent and maintainable.",
-    " Client-side validation so users see clear messages (e.g. “Please fill out all fields”) before data is saved or navigation happens.",
+
+  const DescriptionBoxDescription = [
+    "DescriptionBox is a reusable component that displays title, description, optional icon, subtitle, and second description.",
+    "It uses classnames to apply different styles based on the useCase.","Use cases are primary, secondary or conditions.","Used in Portfolio Page",
   ];
 
-  const Reflection = [
-    "Using libraries to keep code consistent and efficient : When i used conditional styling via `classnames` , it kept components such as the  Button and DescriptionBox simple and predictable; adding new variants (e.g. `terciary`, `warning`) was straightforward. It reduced supported in reusability. However a key thing that made an impact was naming convention which supported inp providing a cross-functional team.",
-    "State and validation:Using `useState` for form fields and popup visibility, and validating before submit, gave clear feedback (“Please fill out all fields”) and kept invalid data from being saved or causing navigation. ",
+  const DescriptionBoxCodeSnippet = [
+    { 
+      label: "DescriptionBox.js",
+      code: `
+      import classNames from "classnames";
+import styles from "./Description_Box.module.css";
+
+
+function DescriptionBox({
+    title,
+    description,
+    useCase,
+    icon,
+    subtitle,
+    description2,
+}) {
+    const DescriptionClasses = classNames(styles.project_primary, {
+        [styles.conditions]: useCase === "conditions",
+        [styles.project_secondary]: useCase === "secondary",
+    });
+
+
+    return (
+        <div className={DescriptionClasses}>
+            <h1 className={styles.description_heading}>
+                {icon && <span className={styles.icon}>{icon}</span>}
+                {title}
+            </h1>
+            <p className={styles.description_body}>{description}</p>
+            {subtitle && (
+                <h2 className={styles.description_subtitle}>{subtitle}</h2>
+            )}
+            {description2 && (
+                <p className={styles.description_body}>{description2}</p>
+            )}
+        </div>
+    );
+} `
+  },{
+    label: "FishFriends/page.js",
+    code: `
+    <DescriptionBox
+    title='Description'
+    description='Dashboard Overview – Quick access to tank conditions...'
+    useCase='secondary'
+/>
+<DescriptionBox
+    title='Roles'
+    description='UX Designer, UI Designer, Researcher'
+    useCase='secondary'
+/>
+<DescriptionBox
+    title='Tools Used'
+    description='Figma, Adobe Illustrator, User Testing'
+    useCase='secondary'
+/>
+  `
+  }
+];
+
+  // Missing variable definitions
+  const mosaic_backbone = [
+    "Time–consuming research for portfolio project ideas. ",
+    "Finding projects that correlate to your goals and skills required.",
+  ];
+  const UsabilityTesting = [];
+  const MosaicReflection = [
+    "Using “Lorem ipsum” initially was a key mistake, as it hindered usability testing—users couldn’t relate to Mosaic’s function. Providing factual content is essential in UX research.",
+    "Creating Mosaic taught me that small details—like placement, color, and sizing greatly impact user experience, and focusing on them makes larger tasks easier for users.",
+    "While creating Mosaic, team ideas often differed, but keeping the user as the main focus helped me collaborate effectively and prioritize user needs.",
+   
+  ];
+  const classnamesDescription = [];
+  const EndGoals = [];
+  const Reflection = [];
+
+  const challenges=[
+    "Description boxes which are similar but with minor differences needed to be created but i did not want to be redundant with creating multiple similar components. ",
+    "Making sure that all the fields have data before it is saved for validation.",
+   
   ];
 
-  const classnamesDescription = [
-    "Used throughout Mosaic to integrate readable code and support reusability through minor changes in styling.",
+  const addressingChallenges=[
+    "Used Classnames to change styling for description boxes therefore one component used in multiple use cases.",
+    "Used Classnames to change styling for description boxes therefore one component used in multiple use cases.",
+   
   ];
-
-  const mosaic_backbone =[
-    "Time–consuming research for portfolio project ideas ",
-    "Finding projects that correlate to your goals and skills required "]
- const UsabilityTesting=[
-    "User feedback noted hidden features, unclear save states, and confusing terminology.",
-    "Users found the design clear, navigation intuitive, and visuals engaging yet easy on the eyes.","Key changes included reorganizing features, standardizing terminology, and improving save-state visibility with condition-based popups."]
-   const MosaicReflection=[
-    "Start with a base thats factual to get factual results: Using “Lorem ipsum” initially was a key mistake, as it hindered usability testing—users couldn’t relate to Mosaic’s function. Providing factual content is essential in UX research.",
-    "Small Decisions have a big impact on UX: Creating Mosaic taught me that small details—like placement, color, and sizing—greatly impact user experience, and focusing on them makes larger tasks easier for users.","Collaboration involves cohesiveness: While creating Mosaic, team ideas often differed, but keeping the user as the main focus helped me collaborate effectively and prioritize user needs."]
-  
-
   return (
     <div className={styles.page_container}>
       <NavBar />
@@ -239,7 +316,7 @@ const handleCode = () => {
               </div>
             </div>
              <div className={styles.view_study_wrapper}>
-            <RegButton button_text="Explore WebApp" type="secondary" onClick="/" />
+            <RegButton button_text="Explore WebApp" type="secondary" onClick="https://mosaic-app-nu.vercel.app/" />
           </div>
           </section>
 
@@ -257,7 +334,11 @@ const handleCode = () => {
             section_description="After defining the problem and solution, we replaced confusing *Lorem ipsum* placeholder text with real content in the initial prototype to improve clarity and usability during testing."
           />
            <div className={styles.view_study_wrapper}>
-            <RegButton button_text="View Low Fidelity Prototype" type="secondary" onClick="/" />
+            <RegButton
+              button_text="View Low Fidelity Prototype"
+              type="secondary"
+              onClick="https://www.figma.com/design/deU1qqMotAqD9kQ35jNCY6/A4---App-MockUp?node-id=969-8651&t=85X46nfxhxeREA8d-1"
+            />
           </div>
           <div className={styles.section_container}>
             <div className={styles.major_challenges_column}>
@@ -273,7 +354,11 @@ const handleCode = () => {
             
           </div>
            <div className={styles.view_study_wrapper}>
-            <RegButton button_text="View User Research Report" type="secondary" onClick="/" />
+            <RegButton
+              button_text="View User Research Report"
+              type="secondary"
+              onClick="https://www.figma.com/deck/WLwshbz6vNPx3JrNOTrLin"
+            />
           </div>
           <SectionCard
             type="horizontal"
@@ -282,7 +367,11 @@ const handleCode = () => {
             section_description="People change, processes change and understanding of the visual representation may change. With that in mind, further testing was conducted to reach this final goal."
           />
            <div className={styles.view_study_wrapper}>
-            <RegButton button_text="View High Fidelity Prototype" type="secondary" onClick="/" />
+            <RegButton
+              button_text="View High Fidelity Prototype"
+              type="secondary"
+              onClick="https://www.figma.com/design/deU1qqMotAqD9kQ35jNCY6/A4---App-MockUp?node-id=969-8651&t=85X46nfxhxeREA8d-1"
+            />
           </div>
           <SectionCard
             type="horizontal"
@@ -291,7 +380,11 @@ const handleCode = () => {
             section_description="People change, processes change and understanding of the visual representation may change. With that in mind, further testing was conducted to reach this final goal."
           />
            <div className={styles.view_study_wrapper}>
-            <RegButton button_text="Explore Styleguide" type="secondary" onClick="/" />
+            <RegButton
+              button_text="Explore Styleguide"
+              type="secondary"
+              onClick="https://mosaicstyleguide.vercel.app/"
+            />
           </div>
           <div className={styles.major_challenges_column}>
             <SectionDescriptionBox title="The Reflection" items={MosaicReflection} />
@@ -299,10 +392,10 @@ const handleCode = () => {
         </div>
       ) : (
         <>
-      {/* Major Challenges and classnames - Utility library */}
+      {/* Focus Features and classnames - Utility library */}
       <div className={styles.section_container}>
         <div className={styles.major_challenges_column}>
-          <SectionDescriptionBox title="Major Challenges" items={majorChallenges} />
+          <SectionDescriptionBox title="Focus Features" items={FocusFeatures} />
           <div className={styles.classnames_section}>
             <SectionDescriptionBox title="Classnames - Utility library" items={classnamesDescription} />
           </div>
@@ -318,51 +411,51 @@ const handleCode = () => {
       {/* Dynamic Classnames in Action */}
       <div className={styles.standalone_section_blue}>
         <div className={styles.standalone_section}>
-          <h2 className={styles.section_heading}>Login Flow in Action</h2>
+          {/* <h2 className={styles.section_heading}>Create Profile</h2> */}
           <div className={`${styles.placeholder_mockup} ${styles.connects_mockup}`}>
             <video autoPlay muted playsInline loop preload="auto">
               <source src="/login.mp4" type="video/mp4" />
             </video>
           </div>
           <div className={styles.view_study_wrapper}>
-            <RegButton button_text="View Full Login Flow" type="secondary" onClick="/" />
+            <RegButton button_text="View Full Login Flow" type="secondary" onClick="https://mosaic-app-nu.vercel.app/" />
           </div>
         </div>
       </div>
 
-      {/* Dynamic Styling and State Management */}
-      <div className={styles.section_container_reverse}>
-        <CodeSnippetBox tabs={FormAndStateCodeSnippet} />
-        <SectionDescriptionBox
-          title="Form Validation and State Management"
-          items={FormAndState}
-        />
-      </div>
-      {/* Profile Creation and Local Storage */}
+      {/* Create Profile */}
       <div className={styles.section_container_reverse}>
         <CodeSnippetBox tabs={ProfileCreationCodeSnippet} />
         <SectionDescriptionBox
-          title="Profile Creation and Local Storage"
+          title="Create Profile"
           items={ProfileCreation}
         />
       </div>
+    
 
       {/* Dashboard View in Action */}
       <div className={styles.standalone_section_blue}>
         <div className={styles.standalone_section}>
-          <h2 className={styles.section_heading}>Dashboard View in Action</h2>
+          {/* <h2 className={styles.section_heading}>Dashboard View in Action</h2> */}
           <div className={`${styles.placeholder_mockup} ${styles.connects_mockup}`}>
             <video autoPlay muted playsInline loop preload="auto">
               <source src="/Mosaic_DashboardToQuestionnaire.mp4" type="video/mp4" />
             </video>
           </div>
           <div className={styles.view_study_wrapper}>
-            <RegButton button_text="View Full Dashboard" type="secondary" onClick="/" />
+            <RegButton button_text="View Full Dashboard" type="secondary" onClick="https://mosaic-app-nu.vercel.app/" />
           </div>
         </div>
       </div>
 
-    
+      {/* Description Box */}
+      <div className={styles.section_container_reverse}>
+        <CodeSnippetBox tabs={DescriptionBoxCodeSnippet} />
+        <SectionDescriptionBox
+          title="Description Box"
+          items={DescriptionBoxDescription}
+        />
+      </div>
 
  
 
@@ -378,12 +471,12 @@ const handleCode = () => {
 
       {/* User Flows */}
       <div className={styles.section_single}>
-        <SectionDescriptionBox title="End Goals" items={EndGoals} />
+        <SectionDescriptionBox title="Challenges" items={challenges} />
       </div>
 
       {/* The Final Result */}
       <div className={styles.section_single}>
-        <SectionDescriptionBox title="Reflection" items={Reflection} />
+        <SectionDescriptionBox title="Adressing Challenges" items={addressingChallenges} />
       </div>
         </>
       )}

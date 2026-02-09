@@ -34,9 +34,8 @@
     "project_tags": ["HTML", "CSS", "JavaScript", "Next.js", "React", "Classnames", "Figma", "FigJam", "Adobe Photoshop", "Adobe Illustrator"],
     "project_link": "/Projects/Mosaic/Mosaic",
     "project_links": [
-      { "label": "View Full WebApp", "url": "#", "external": true },
-      { "label": "View Github Repository", "url": "#", "external": true },
-      { "label": "View Documentation", "url": "#", "external": true }
+      { "label": "View Full WebApp", "url": "https://mosaic-app-nu.vercel.app/", "external": true },
+      { "label": "View Github Repository", "url": "https://github.com/brunaguarizo/mosaic_app", "external": true }
     ]
   },
   {
