@@ -122,7 +122,7 @@ const handleKeyDown = (e) => {
 
   const project_create_collections_code_snippets = [
     {
-      label: "Feed.jsx",
+      label: "Collections.jsx",
       code: `const handleSaveNewCollection = () => {
     if (!newCollectionName.trim()) return;
 
@@ -199,7 +199,7 @@ const handleKeyDown = (e) => {
   const project_add_to_collections = ["From a beer's detail page, users tap the favorite button to open a modal.","They can add the beer to an existing collection or create a new one.","A checkmark indicates which collections already contain the beer.","The same action removes the beer if it's already in that collection."];
   const adding_to_collections_code_snippets = [
     {
-      label: "BeerCard.jsx",
+      label: "BeerInfo.jsx",
       code: `const handleAddToExistingCollection = (collectionName) => {
     if (!selectedBeer) return;
 
