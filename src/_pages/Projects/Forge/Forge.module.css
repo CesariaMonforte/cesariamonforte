@@ -47,21 +47,38 @@
 
 .connects_section {
   width: 100%;
-  padding: var(--space-extra-regular) var(--block-gap);
-  border-radius: var(--space-regular);
-  background-color: var(--primary-50);
+  padding: var(--space-extra-regular) 0;
+  border-radius: 0;
+  background-color: transparent;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: var(--space-extra-regular);
+  align-items: center;
 }
 
 .connects_row {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  gap: var(--space-extra-regular);
+  justify-content: center;
+  gap: var(--space-regular);
+}
+
+.connects_row_blue {
+  width: 100%;
+  padding: var(--space-extra-regular) var(--block-gap);
+  border-radius: var(--space-regular);
+  background-color: var(--primary-50);
+  box-sizing: border-box;
+}
+
+.connects_row_white {
+  width: 100%;
+  padding: var(--space-extra-regular) var(--block-gap);
+  border-radius: var(--space-regular);
+  background-color: var(--white);
+  box-sizing: border-box;
 }
 
 .connects_row_reverse {
@@ -74,6 +91,7 @@
   font-weight: var(--font-weight-medium);
   color: var(--primary-900);
   text-align: left;
+  max-width: 260px;
 }
 
 .phone_mockup_wrapper {

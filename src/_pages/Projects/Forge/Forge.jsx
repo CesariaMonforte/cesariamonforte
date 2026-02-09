@@ -122,7 +122,9 @@ function Forge() {
         {/* How Forge connects to the users */}
         <section className={style.connects_section}>
           <h2 className={style.section_heading}>How Forge Connects to the Users</h2>
-          <div className={style.connects_row}>
+
+          {/* 1. Blue background */}
+          <div className={`${style.connects_row} ${style.connects_row_blue}`}>
             <p className={style.connects_label}>AI‑powered career simulation</p>
             <div className={style.phone_mockup_wrapper}>
               <video
@@ -138,7 +140,8 @@ function Forge() {
             </div>
           </div>
 
-          <div className={`${style.connects_row} ${style.connects_row_reverse}`}>
+          {/* 2. White background */}
+          <div className={`${style.connects_row} ${style.connects_row_reverse} ${style.connects_row_white}`}>
             <p className={style.connects_label}>Explore careers and rewards</p>
             <div className={style.phone_mockup_wrapper}>
               <video
@@ -155,7 +158,8 @@ function Forge() {
             
           </div>
 
-          <div className={style.connects_row}>
+          {/* 3. Blue background */}
+          <div className={`${style.connects_row} ${style.connects_row_blue}`}>
             <p className={style.connects_label}>Career map and stages</p>
             <div className={style.phone_mockup_wrapper}>
               <video
