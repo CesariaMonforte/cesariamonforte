@@ -125,22 +125,32 @@ function Forge() {
           <div className={style.connects_row}>
             <p className={style.connects_label}>AI‑powered career simulation</p>
             <div className={style.phone_mockup_wrapper}>
-              <img
-                src="/Forge_Simulation.png"
-                alt="Forge AI career simulation screen"
+              <video
                 className={style.phone_mockup}
-              />
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
+              >
+                <source src="/Forge_AICareerSimulation.mp4" type="video/mp4" />
+              </video>
             </div>
           </div>
 
           <div className={`${style.connects_row} ${style.connects_row_reverse}`}>
             <p className={style.connects_label}>Explore careers and rewards</p>
             <div className={style.phone_mockup_wrapper}>
-              <img
-                src="/Forge_Rewards.png"
-                alt="Forge rewards and explore careers screens"
+              <video
                 className={style.phone_mockup}
-              />
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
+              >
+                <source src="/Forge_RewardsSystem.mp4" type="video/mp4" />
+              </video>
             </div>
             
           </div>
@@ -148,11 +158,16 @@ function Forge() {
           <div className={style.connects_row}>
             <p className={style.connects_label}>Career map and stages</p>
             <div className={style.phone_mockup_wrapper}>
-              <img
-                src="/Forge_CareerMap.png"
-                alt="Forge career map screen"
+              <video
                 className={style.phone_mockup}
-              />
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
+              >
+                <source src="/Forge_CareerMap.mp4" type="video/mp4" />
+              </video>
             </div>
           </div>
           

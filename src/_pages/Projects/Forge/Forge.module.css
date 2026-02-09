@@ -79,6 +79,10 @@
 .phone_mockup_wrapper {
   width: 230px;
   max-width: 40vw;
+  border-radius: 37px;
+  overflow: hidden;
+  background-color: var(--primary-100);
+  box-shadow: var(--box-shadow-white);
 }
 
 .phone_mockup {

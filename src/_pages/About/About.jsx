@@ -30,6 +30,12 @@ function About() {
         <AboutMeCard imageSrc="/AboutMe_Profile.png" />
       </div>
 
+      <div className={styles.under_construction_container}>
+        <h1 className={styles.under_construction_text}>
+          thanks for scrolling - please note this site is still under construction
+        </h1>
+      </div>
+
       <section className={styles.connect_section}>
         <h3 className={styles.connect_heading}>Connect with me</h3>
         <p className={styles.connect_subtext}>Let's collaborate or chat — I'd love to hear from you!</p>

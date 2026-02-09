@@ -11,6 +11,7 @@ import CodeSnippetBox from "../../../_ui/CodeSnippetBox/CodeSnippetBox";
 import RegButton from "../../../_ui/RegButton/RegButton";
 import Tag from "../../../_ui/Tag/Tag";
 import SectionCard from "../../../_ui/SectionCard/SectionCard";
+import ScrollReveal from "../../../_ui/ScrollReveal/ScrollReveal";
 
 const MOSAIC_FILTER_OPTIONS = ["Frontend Development", "UX/UI"];
 
@@ -273,211 +274,228 @@ function DescriptionBox({
       <ProjectHero project={project} />
 
       {/* Filter */}
-      <div className={styles.filter_section}>
-        <p className={styles.filter_label}>Select a category</p>
-        <div className={styles.filter_container}>
-          {MOSAIC_FILTER_OPTIONS.map((option) => (
-            <Tag
-              key={option}
-              tags={[option]}
-              type={activeFilter === option ? "filter_active" : "filter_regular"}
-              onClick={setActiveFilter}
-            />
-          ))}
+      <ScrollReveal>
+        <div className={styles.filter_section}>
+          <p className={styles.filter_label}>Select a category</p>
+          <div className={styles.filter_container}>
+            {MOSAIC_FILTER_OPTIONS.map((option) => (
+              <Tag
+                key={option}
+                tags={[option]}
+                type={activeFilter === option ? "filter_active" : "filter_regular"}
+                onClick={setActiveFilter}
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      </ScrollReveal>
 
       {activeFilter === "UX/UI" ? (
-        <div className={styles.ux_section_container}>
-          <SectionDescriptionBox title={"The Backbone Behind Mosaic"} items={mosaic_backbone} />
+        <ScrollReveal>
+          <div className={styles.ux_section_container}>
+            <SectionDescriptionBox title={"The Backbone Behind Mosaic"} items={mosaic_backbone} />
 
-          <SectionDescriptionBox
-            title={"How Mosaic connects with users"}
-            items={[]}
-          />
-          <section className={styles.connects_section}>
-            <div className={`${styles.connects_row} ${styles.connects_row_reverse}`}>
-              <p className={styles.connects_label}>AI Generated customizable project briefs</p>
-              <div className={`${styles.placeholder_mockup} ${styles.connects_mockup}`}>
-                <video autoPlay muted playsInline loop preload="auto">
-                  <source src="/login.mp4" type="video/mp4" />
-                </video>
-              </div>
-            </div>
-          </section>
-
-          <section className={styles.connects_section_plain}>
-            <div className={`${styles.connects_row} ${styles.connects_row_reverse}`}>
-              <p className={styles.connects_label}>Projects Tracking Dashboard</p>
-              <div className={`${styles.placeholder_mockup} ${styles.connects_mockup}`}>
-                <video autoPlay muted playsInline loop preload="auto">
-                  <source src="/Mosaic_DashboardToQuestionnaire.mp4" type="video/mp4" />
-                </video>
-              </div>
-            </div>
-             <div className={styles.view_study_wrapper}>
-            <RegButton button_text="Explore WebApp" type="secondary" onClick="https://mosaic-app-nu.vercel.app/" />
-          </div>
-          </section>
-
-          <SectionCard
-            type="horizontal"
-            section_title="Who is mosaic for?"
-            section_image_src={"/Mosaic_Persona's.png"}
-            section_description="Mosaic is for current college students and transitions professionals who are currently at the stage of building valuable projects."
-          />
-          <SectionCard type="horizontal" section_title="User Flow" section_image_src={"/Mosaic_UserFlow.png"} />
-          <SectionCard
-            type="horizontal"
-            section_title="Low- Fidelity Prototype"
-            section_image_src={"/Mosaic_LoFi.png"}
-            section_description="After defining the problem and solution, we replaced confusing *Lorem ipsum* placeholder text with real content in the initial prototype to improve clarity and usability during testing."
-          />
-           <div className={styles.view_study_wrapper}>
-            <RegButton
-              button_text="View Low Fidelity Prototype"
-              type="secondary"
-              onClick="https://www.figma.com/design/deU1qqMotAqD9kQ35jNCY6/A4---App-MockUp?node-id=969-8651&t=85X46nfxhxeREA8d-1"
+            <SectionDescriptionBox
+              title={"How Mosaic connects with users"}
+              items={[]}
             />
-          </div>
-          <div className={styles.section_container}>
-            <div className={styles.major_challenges_column}>
-              <SectionDescriptionBox title="Usability Testing" items={UsabilityTesting} />
+            <section className={styles.connects_section}>
+              <div className={`${styles.connects_row} ${styles.connects_row_reverse}`}>
+                <p className={styles.connects_label}>AI Generated customizable project briefs</p>
+                <div className={`${styles.placeholder_mockup} ${styles.connects_mockup}`}>
+                  <video autoPlay muted playsInline loop preload="auto">
+                    <source src="/login.mp4" type="video/mp4" />
+                  </video>
+                </div>
+              </div>
+            </section>
+
+            <section className={styles.connects_section_plain}>
+              <div className={`${styles.connects_row} ${styles.connects_row_reverse}`}>
+                <p className={styles.connects_label}>Projects Tracking Dashboard</p>
+                <div className={`${styles.placeholder_mockup} ${styles.connects_mockup}`}>
+                  <video autoPlay muted playsInline loop preload="auto">
+                    <source src="/Mosaic_DashboardToQuestionnaire.mp4" type="video/mp4" />
+                  </video>
+                </div>
+              </div>
+              <div className={styles.view_study_wrapper}>
+              <RegButton button_text="Explore WebApp" type="secondary" onClick="https://mosaic-app-nu.vercel.app/" />
             </div>
-            <div className={styles.classnames_image_wrapper}>
-              <img
-                className={styles.classnames_image}
-                src="/Mosaic_UsabilityTesting.png"
-                alt="Classnames - A simple JavaScript utility for conditionally joining classNames together."
+            </section>
+
+            <SectionCard
+              type="horizontal"
+              section_title="Who is mosaic for?"
+              section_image_src={"/Mosaic_Persona's.png"}
+              section_description="Mosaic is for current college students and transitions professionals who are currently at the stage of building valuable projects."
+            />
+            <SectionCard type="horizontal" section_title="User Flow" section_image_src={"/Mosaic_UserFlow.png"} />
+            <SectionCard
+              type="horizontal"
+              section_title="Low- Fidelity Prototype"
+              section_image_src={"/Mosaic_LoFi.png"}
+              section_description="After defining the problem and solution, we replaced confusing *Lorem ipsum* placeholder text with real content in the initial prototype to improve clarity and usability during testing."
+            />
+            <div className={styles.view_study_wrapper}>
+              <RegButton
+                button_text="View Low Fidelity Prototype"
+                type="secondary"
+                onClick="https://www.figma.com/design/deU1qqMotAqD9kQ35jNCY6/A4---App-MockUp?node-id=969-8651&t=85X46nfxhxeREA8d-1"
               />
             </div>
-            
-          </div>
-           <div className={styles.view_study_wrapper}>
-            <RegButton
-              button_text="View User Research Report"
-              type="secondary"
-              onClick="https://www.figma.com/deck/WLwshbz6vNPx3JrNOTrLin"
+            <div className={styles.section_container}>
+              <div className={styles.major_challenges_column}>
+                <SectionDescriptionBox title="Usability Testing" items={UsabilityTesting} />
+              </div>
+              <div className={styles.classnames_image_wrapper}>
+                <img
+                  className={styles.classnames_image}
+                  src="/Mosaic_UsabilityTesting.png"
+                  alt="Classnames - A simple JavaScript utility for conditionally joining classNames together."
+                />
+              </div>
+              
+            </div>
+            <div className={styles.view_study_wrapper}>
+              <RegButton
+                button_text="View User Research Report"
+                type="secondary"
+                onClick="https://www.figma.com/deck/WLwshbz6vNPx3JrNOTrLin"
+              />
+            </div>
+            <SectionCard
+              type="horizontal"
+              section_title="High - Fidelity Prototype"
+              section_image_src={"/Mosaic_HiFi.png"}
+              section_description="People change, processes change and understanding of the visual representation may change. With that in mind, further testing was conducted to reach this final goal."
             />
-          </div>
-          <SectionCard
-            type="horizontal"
-            section_title="High - Fidelity Prototype"
-            section_image_src={"/Mosaic_HiFi.png"}
-            section_description="People change, processes change and understanding of the visual representation may change. With that in mind, further testing was conducted to reach this final goal."
-          />
-           <div className={styles.view_study_wrapper}>
-            <RegButton
-              button_text="View High Fidelity Prototype"
-              type="secondary"
-              onClick="https://www.figma.com/design/deU1qqMotAqD9kQ35jNCY6/A4---App-MockUp?node-id=969-8651&t=85X46nfxhxeREA8d-1"
+            <div className={styles.view_study_wrapper}>
+              <RegButton
+                button_text="View High Fidelity Prototype"
+                type="secondary"
+                onClick="https://www.figma.com/design/deU1qqMotAqD9kQ35jNCY6/A4---App-MockUp?node-id=969-8651&t=85X46nfxhxeREA8d-1"
+              />
+            </div>
+            <SectionCard
+              type="horizontal"
+              section_title="Styleguide"
+              section_image_src={"/Mosaic_Styleguide.png"}
+              section_description="People change, processes change and understanding of the visual representation may change. With that in mind, further testing was conducted to reach this final goal."
             />
+            <div className={styles.view_study_wrapper}>
+              <RegButton
+                button_text="Explore Styleguide"
+                type="secondary"
+                onClick="https://mosaicstyleguide.vercel.app/"
+              />
+            </div>
+            <div className={styles.major_challenges_column}>
+              <SectionDescriptionBox title="The Reflection" items={MosaicReflection} />
+            </div>
           </div>
-          <SectionCard
-            type="horizontal"
-            section_title="Styleguide"
-            section_image_src={"/Mosaic_Styleguide.png"}
-            section_description="People change, processes change and understanding of the visual representation may change. With that in mind, further testing was conducted to reach this final goal."
-          />
-           <div className={styles.view_study_wrapper}>
-            <RegButton
-              button_text="Explore Styleguide"
-              type="secondary"
-              onClick="https://mosaicstyleguide.vercel.app/"
-            />
-          </div>
-          <div className={styles.major_challenges_column}>
-            <SectionDescriptionBox title="The Reflection" items={MosaicReflection} />
-          </div>
-        </div>
+        </ScrollReveal>
       ) : (
         <>
       {/* Focus Features and classnames - Utility library */}
-      <div className={styles.section_container}>
-        <div className={styles.major_challenges_column}>
-          <SectionDescriptionBox title="Focus Features" items={FocusFeatures} />
-          <div className={styles.classnames_section}>
-            <SectionDescriptionBox title="Classnames - Utility library" items={classnamesDescription} />
+      <ScrollReveal>
+        <div className={styles.section_container}>
+          <div className={styles.major_challenges_column}>
+            <SectionDescriptionBox title="Focus Features" items={FocusFeatures} />
+            <div className={styles.classnames_section}>
+              <SectionDescriptionBox title="Classnames - Utility library" items={classnamesDescription} />
+            </div>
+          </div>
+          <div className={styles.classnames_image_wrapper}>
+            <img
+              className={styles.classnames_image}
+              src="/ClassNames_Image.png"
+              alt="Classnames - A simple JavaScript utility for conditionally joining classNames together."
+            />
           </div>
         </div>
-        <div className={styles.classnames_image_wrapper}>
-          <img
-            className={styles.classnames_image}
-            src="/ClassNames_Image.png"
-            alt="Classnames - A simple JavaScript utility for conditionally joining classNames together."
-          />
-        </div>
-      </div>
+      </ScrollReveal>
+
       {/* Dynamic Classnames in Action */}
-      <div className={styles.standalone_section_blue}>
-        <div className={styles.standalone_section}>
-          {/* <h2 className={styles.section_heading}>Create Profile</h2> */}
-          <div className={`${styles.placeholder_mockup} ${styles.connects_mockup}`}>
-            <video autoPlay muted playsInline loop preload="auto">
-              <source src="/login.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div className={styles.view_study_wrapper}>
-            <RegButton button_text="View Full Login Flow" type="secondary" onClick="https://mosaic-app-nu.vercel.app/" />
+      <ScrollReveal>
+        <div className={styles.standalone_section_blue}>
+          <div className={styles.standalone_section}>
+            <div className={`${styles.placeholder_mockup} ${styles.connects_mockup}`}>
+              <video autoPlay muted playsInline loop preload="auto">
+                <source src="/login.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div className={styles.view_study_wrapper}>
+              <RegButton button_text="View Full Login Flow" type="secondary" onClick="https://mosaic-app-nu.vercel.app/" />
+            </div>
           </div>
         </div>
-      </div>
+      </ScrollReveal>
 
       {/* Create Profile */}
-      <div className={styles.section_container_reverse}>
-        <CodeSnippetBox tabs={ProfileCreationCodeSnippet} />
-        <SectionDescriptionBox
-          title="Create Profile"
-          items={ProfileCreation}
-        />
-      </div>
+      <ScrollReveal>
+        <div className={styles.section_container_reverse}>
+          <CodeSnippetBox tabs={ProfileCreationCodeSnippet} />
+          <SectionDescriptionBox
+            title="Create Profile"
+            items={ProfileCreation}
+          />
+        </div>
+      </ScrollReveal>
     
 
       {/* Dashboard View in Action */}
-      <div className={styles.standalone_section_blue}>
-        <div className={styles.standalone_section}>
-          {/* <h2 className={styles.section_heading}>Dashboard View in Action</h2> */}
-          <div className={`${styles.placeholder_mockup} ${styles.connects_mockup}`}>
-            <video autoPlay muted playsInline loop preload="auto">
-              <source src="/Mosaic_DashboardToQuestionnaire.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div className={styles.view_study_wrapper}>
-            <RegButton button_text="View Full Dashboard" type="secondary" onClick="https://mosaic-app-nu.vercel.app/" />
+      <ScrollReveal>
+        <div className={styles.standalone_section_blue}>
+          <div className={styles.standalone_section}>
+            <div className={`${styles.placeholder_mockup} ${styles.connects_mockup}`}>
+              <video autoPlay muted playsInline loop preload="auto">
+                <source src="/Mosaic_DashboardToQuestionnaire.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div className={styles.view_study_wrapper}>
+              <RegButton button_text="View Full Dashboard" type="secondary" onClick="https://mosaic-app-nu.vercel.app/" />
+            </div>
           </div>
         </div>
-      </div>
+      </ScrollReveal>
 
       {/* Description Box */}
-      <div className={styles.section_container_reverse}>
-        <CodeSnippetBox tabs={DescriptionBoxCodeSnippet} />
-        <SectionDescriptionBox
-          title="Description Box"
-          items={DescriptionBoxDescription}
-        />
-      </div>
-
- 
+      <ScrollReveal>
+        <div className={styles.section_container_reverse}>
+          <CodeSnippetBox tabs={DescriptionBoxCodeSnippet} />
+          <SectionDescriptionBox
+            title="Description Box"
+            items={DescriptionBoxDescription}
+          />
+        </div>
+      </ScrollReveal>
 
       {/* Components */}
-      <div className={styles.standalone_section}>
-        <h2 className={styles.section_heading}>Components</h2>
-        <img
-          className={styles.components_image}
-          src="/Mosaic_Components.png"
-          alt="Dynamic Styling with Classnames Utility"
-        />
-      </div>
+      <ScrollReveal>
+        <div className={styles.standalone_section}>
+          <h2 className={styles.section_heading}>Components</h2>
+          <img
+            className={styles.components_image}
+            src="/Mosaic_Components.png"
+            alt="Dynamic Styling with Classnames Utility"
+          />
+        </div>
+      </ScrollReveal>
 
       {/* User Flows */}
-      <div className={styles.section_single}>
-        <SectionDescriptionBox title="Challenges" items={challenges} />
-      </div>
+      <ScrollReveal>
+        <div className={styles.section_single}>
+          <SectionDescriptionBox title="Challenges" items={challenges} />
+        </div>
+      </ScrollReveal>
 
       {/* The Final Result */}
-      <div className={styles.section_single}>
-        <SectionDescriptionBox title="Adressing Challenges" items={addressingChallenges} />
-      </div>
+      <ScrollReveal>
+        <div className={styles.section_single}>
+          <SectionDescriptionBox title="Adressing Challenges" items={addressingChallenges} />
+        </div>
+      </ScrollReveal>
         </>
       )}
 

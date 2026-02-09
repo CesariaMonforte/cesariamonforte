@@ -8,6 +8,7 @@ import SectionDescriptionBox from "../../../_ui/SectionDescriptionBox/SectionDes
 import _cardData from "../../../_cardData/_cardData.json";
 import CodeSnippetBox from "../../../_ui/CodeSnippetBox/CodeSnippetBox";
 import RegButton from "../../../_ui/RegButton/RegButton";
+import ScrollReveal from "../../../_ui/ScrollReveal/ScrollReveal";
 
 function Brewly() {
   const project = _cardData.find((p) => p.id === "Brewly");
@@ -231,104 +232,129 @@ const handleKeyDown = (e) => {
     <div className={styles.page_container}>
       <NavBar />
       <ProjectHero project={project} />
-        <div className={styles.project_overview_container}>
-            <div className={styles.project_overview_content}>
-            <SectionDescriptionBox title={"Focus Features"} items={project_focus_features} />
-            <SectionDescriptionBox title={"BrewBuddy - API Integration"} items={project_brewbuddy_api_integration} />
-           
-            </div>
-            <div className={styles.project_overview_content}>
-            <img className={styles.brewly_api_image} src={"/Brewly_Api.png"} alt={"BrewBuddy - API Integration"} />
-            </div>
-        </div>
+        <ScrollReveal>
+          <div className={styles.project_overview_container}>
+              <div className={styles.project_overview_content}>
+              <SectionDescriptionBox title={"Focus Features"} items={project_focus_features} />
+              <SectionDescriptionBox title={"BrewBuddy - API Integration"} items={project_brewbuddy_api_integration} />
+            
+              </div>
+              <div className={styles.project_overview_content}>
+              <img className={styles.brewly_api_image} src={"/Brewly_Api.png"} alt={"BrewBuddy - API Integration"} />
+              </div>
+          </div>
+        </ScrollReveal>
      
 
         {/*Create Collections */}
-        <div className={`${styles.project_api_fetching_and_beer_card_integration_video_container} ${styles.brewly_video_section}`}>
-          {/* <h2 className={styles.project_api_fetching_and_beer_card_integration_video_title}>Video Demonstration</h2> */}
-          <div className={`${styles.placeholder_mockup} ${styles.brewly_video_mockup}`}>
-            <video autoPlay muted playsInline loop preload="auto">
-              <source src="/Brewly_CreateCollection.mp4" type="video/mp4" />
-            </video>
+        <ScrollReveal>
+          <div className={`${styles.project_api_fetching_and_beer_card_integration_video_container} ${styles.brewly_video_section}`}>
+            <div className={`${styles.placeholder_mockup} ${styles.brewly_video_mockup}`}>
+              <video autoPlay muted playsInline loop preload="auto">
+                <source src="/Brewly_CreateCollection.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div className={styles.project_api_fetching_and_beer_card_integration_video_button_container}>
+              <RegButton
+                type="secondary"
+                button_text="Explore WebApp"
+                onclick="https://app-brewly.vercel.app/"
+              />
+            </div>
           </div>
-          <div className={styles.project_api_fetching_and_beer_card_integration_video_button_container}>
-            <RegButton
-              type="secondary"
-              button_text="Explore WebApp"
-              onclick="https://app-brewly.vercel.app/"
-            />
-          </div>
-        </div>
+        </ScrollReveal>
 
-        <div className={styles.project_API_Fetching_container}>
-          <SectionDescriptionBox title={"Create Collections"} items={project_create_collections} />
-          <CodeSnippetBox tabs={project_create_collections_code_snippets} />
-        </div>
+        <ScrollReveal>
+          <div className={styles.project_API_Fetching_container}>
+            <SectionDescriptionBox title={"Create Collections"} items={project_create_collections} />
+            <CodeSnippetBox tabs={project_create_collections_code_snippets} />
+          </div>
+        </ScrollReveal>
+
         {/* Add to Collections */}
-        <div className={styles.project_API_Fetching_container}>
-          <SectionDescriptionBox title={"Add to Collections"} items={project_add_to_collections} />
-          <CodeSnippetBox tabs={adding_to_collections_code_snippets} />
-        </div>
+        <ScrollReveal>
+          <div className={styles.project_API_Fetching_container}>
+            <SectionDescriptionBox title={"Add to Collections"} items={project_add_to_collections} />
+            <CodeSnippetBox tabs={adding_to_collections_code_snippets} />
+          </div>
+        </ScrollReveal>
     
 
 
         {/* Search and Filter  */}
-        <div className={`${styles.project_api_fetching_and_beer_card_integration_video_container} ${styles.brewly_video_section}`}>
-          {/* <h2 className={styles.project_api_fetching_and_beer_card_integration_video_title}>Video Demonstration</h2> */}
-          <div className={`${styles.placeholder_mockup} ${styles.brewly_video_mockup}`}>
-            <video autoPlay muted playsInline loop preload="auto">
-              <source src="/Brewly_SearchAndFilter.mp4" type="video/mp4" />
-            </video>
+        <ScrollReveal>
+          <div className={`${styles.project_api_fetching_and_beer_card_integration_video_container} ${styles.brewly_video_section}`}>
+            <div className={`${styles.placeholder_mockup} ${styles.brewly_video_mockup}`}>
+              <video autoPlay muted playsInline loop preload="auto">
+                <source src="/Brewly_SearchAndFilter.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div className={styles.project_api_fetching_and_beer_card_integration_video_button_container}>
+              <RegButton
+                type="secondary"
+                button_text="Explore demo"
+                onclick="https://app-brewly.vercel.app/"
+              />
+            </div>
           </div>
-          <div className={styles.project_api_fetching_and_beer_card_integration_video_button_container}>
-            <RegButton
-              type="secondary"
-              button_text="Explore demo"
-              onclick="https://app-brewly.vercel.app/"
-            />
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <div className={styles.project_API_Fetching_container}>
+          <CodeSnippetBox tabs={search_and_filter_functionality_code_snippets} />
+            <SectionDescriptionBox title={"Search & Filter"} items={project_search_and_filter_functionality} />   
           </div>
-        </div>
-        <div className={styles.project_API_Fetching_container}>
-        <CodeSnippetBox tabs={search_and_filter_functionality_code_snippets} />
-          <SectionDescriptionBox title={"Search & Filter"} items={project_search_and_filter_functionality} />   
-        </div>
+        </ScrollReveal>
 
         {/* Modal Components */}
-        <div className={`${styles.project_api_fetching_and_beer_card_integration_video_container} ${styles.brewly_video_section}`}>
-         
-          <div className={`${styles.placeholder_mockup} ${styles.brewly_video_mockup}`}>
-            <video autoPlay muted playsInline loop preload="auto">
-              <source src="/Brewly_ModalView.mp4" type="video/mp4" />
-            </video>
+        <ScrollReveal>
+          <div className={`${styles.project_api_fetching_and_beer_card_integration_video_container} ${styles.brewly_video_section}`}>
+          
+            <div className={`${styles.placeholder_mockup} ${styles.brewly_video_mockup}`}>
+              <video autoPlay muted playsInline loop preload="auto">
+                <source src="/Brewly_ModalView.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div className={styles.project_api_fetching_and_beer_card_integration_video_button_container}>
+              <RegButton
+                type="secondary"
+                button_text="Explore demo"
+                onclick="https://app-brewly.vercel.app/"
+              />
+            </div>
           </div>
-          <div className={styles.project_api_fetching_and_beer_card_integration_video_button_container}>
-            <RegButton
-              type="secondary"
-              button_text="Explore demo"
-              onclick="https://app-brewly.vercel.app/"
-            />
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <div className={styles.project_API_Fetching_container}>
+          <CodeSnippetBox tabs={modal_components_code_snippets} />
+            <SectionDescriptionBox title={"Modal Components"} items={project_modal_components} />
+
           </div>
-        </div>
-        <div className={styles.project_API_Fetching_container}>
-        <CodeSnippetBox tabs={modal_components_code_snippets} />
-          <SectionDescriptionBox title={"Modal Components"} items={project_modal_components} />
+        </ScrollReveal>
 
-        </div>
+        <ScrollReveal>
+          <div className={styles.project_architecture_and_components_container}>
+            <div className={styles.project_architecture_container}><h2 className={styles.project_architecture_title}>Architecture</h2>
+            <img className={styles.project_architecture_image} src="/Brewly_Architecture.png" alt="Brewly Architecture" /></div>
 
-        <div className={styles.project_architecture_and_components_container}>
-          <div className={styles.project_architecture_container}><h2 className={styles.project_architecture_title}>Architecture</h2>
-          <img className={styles.project_architecture_image} src="/Brewly_Architecture.png" alt="Brewly Architecture" /></div>
+            <div className={styles.project_components_container}><h2 className={styles.project_components_title}>Components</h2><img className={styles.project_components_image} src="/Brewly_Components.png" alt="Brewly Components" /></div>
+          </div>
+        </ScrollReveal>
 
-          <div className={styles.project_components_container}><h2 className={styles.project_components_title}>Components</h2><img className={styles.project_components_image} src="/Brewly_Components.png" alt="Brewly Components" /></div>
-        </div>
         {/* Challenges */}
-        <div className={styles.project_goals_container}>
-          <SectionDescriptionBox title={"Challenges"} items={project_challenges} />
-        </div>
+        <ScrollReveal>
+          <div className={styles.project_goals_container}>
+            <SectionDescriptionBox title={"Challenges"} items={project_challenges} />
+          </div>
+        </ScrollReveal>
+
         {/* Solutions */}
-        <div className={styles.project_reflection_container}>
-          <SectionDescriptionBox title={"Adressing Challenges"} items={project_adressing_challenges} />
-        </div>
+        <ScrollReveal>
+          <div className={styles.project_reflection_container}>
+            <SectionDescriptionBox title={"Adressing Challenges"} items={project_adressing_challenges} />
+          </div>
+        </ScrollReveal>
 
       <div className="footer_section">
         <ProjectPageNav currentProjectId="Brewly" projects={_cardData} />
