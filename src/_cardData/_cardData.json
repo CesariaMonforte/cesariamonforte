@@ -78,6 +78,10 @@
     "project_image_src": "/Forge_Cover.png",
     "project_hero_src": "/Forge_Hero.png",
     "project_tags": ["Figma", "Figjam", "Adobe Illustrator"],
-    "project_link": "/Projects/Forge/Forge"
+    "project_link": "/Projects/Forge/Forge",
+    "project_links": [
+      { "label": "View Landing Page", "url": "https://www.forgecareers.ca/", "external": true },
+      { "label": "View Blog", "url": "https://www.forgecareers.ca/blog", "external": true }
+    ]
   }
 ]

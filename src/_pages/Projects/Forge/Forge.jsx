@@ -14,11 +14,10 @@ function Forge() {
   const project = _cardData.find((p) => p.id === "Forge");
 
   const forgeBackbone = [
-    "Students have limited exposure to skilled trades careers beyond short job descriptions.",
-    "Most existing tools focus on job search, not on helping students experience what a trade actually feels like day to day.",
-    "Guidance counsellors need a simple way to show how skills, salary, and training paths change over time in skilled trades.",
-    "Background research combined labour‑market reports, classroom interviews, and competitor audits to surface the core awareness gap around skilled trades.",
-    "Early discovery sessions focused on understanding how students currently hear about trades careers and where guidance breaks down.",
+    "Stigma and Misconceptions Around Trade Careers",
+    "Late Exposure to Trade Career Pathways",
+    "Complex and Overwhelming Trade Career Information",
+    "Lack of Engaging and Guided Exploration",
   ];
 
   const forgeAudience = [
@@ -52,9 +51,9 @@ function Forge() {
   ];
 
   const forgeReflection = [
-    "Clarity over complexity: stripping UI and copy back to the essentials made it easier for students to compare paths.",
-    "Designing with educators in mind changed the IA – sessions needed to fit into 10–15 minute classroom blocks.",
-    "Future iterations will focus on adding more localized pathways (union vs non‑union, regional programs) without overloading the interface.",
+    "Gamification is subjective and takes time to master:Integrating gamification in Forge was challenging due to time constraints, team size, and evolving user testing. ",
+    "Collaboration and the importance of asking questions: Facing my limited backend knowledge, I learned to ask questions and understand integration limits, improving both the app experience and the overall process.",
+    
   ];
 
   const usabilityWhatWorked = [
@@ -109,7 +108,11 @@ function Forge() {
             ))}
           </div>
          <div className={style.view_button_wrapper}>
-            <RegButton button_text="View  survey" type="secondary" onClick="/" />
+            <RegButton
+              button_text="View survey"
+              type="secondary"
+              onClick="https://docs.google.com/forms/d/e/1FAIpQLSe0QAYT08wSSV6ldgdtkvUlvAZIRqr8iSGJc-9OGONhrKWrSg/viewform?usp=publish-editor"
+            />
           </div>
         </section>
 
@@ -164,7 +167,11 @@ function Forge() {
             section_description="Similar trade-career platforms were identified and analyzed to understand their audiences, strengths, weaknesses, and features that could improve Forge’s user experience."
           />
           <div className={style.view_button_wrapper}>
-            <RegButton button_text="View Full Competitive Analysis" type="secondary" onClick="/" />
+            <RegButton
+              button_text="View Full Competitive Analysis"
+              type="secondary"
+              onClick="https://docs.google.com/spreadsheets/d/1omj14jA1ioDrimYKsneCsO76D0EpJdACD75_rqFzWes/edit?usp=sharing"
+            />
           </div>
         </section>
       {/* Who Forge is for */}
@@ -176,7 +183,11 @@ function Forge() {
             section_description="Forge is for high school and early college students who are curious about skilled trades but don’t know where to start."
           />
            <div className={style.view_button_wrapper}>
-            <RegButton button_text="View  User Research Report" type="secondary" onClick="/" />
+            <RegButton
+              button_text="View User Research Report"
+              type="secondary"
+              onClick="https://docs.google.com/document/d/1rx5m_0iTsk1TUV9N3KJe2e_bMqo7XnFZlmtHl_rpwL0/edit?usp=sharing"
+            />
           </div>
         </section>
         
@@ -199,9 +210,7 @@ function Forge() {
             section_image_src={"/Forge_LowFi.png"}
             section_description="After defining technical and human needs, initial wireframes were created and tested, with results guiding usability improvements for high school users."
           />
-          <div className={style.view_button_wrapper}>
-            <RegButton type="secondary" button_text="View full Lo‑Fi prototype" onClick="/" />
-          </div>
+         
         </section>
 
         {/* Usability Testing */}
@@ -221,7 +230,11 @@ function Forge() {
             </div>
           </div>
           <div className={style.view_button_wrapper}>
-            <RegButton type="secondary" button_text="View user research report" onClick="/" />
+            <RegButton
+              type="secondary"
+              button_text="View user research report"
+              onClick="https://docs.google.com/document/d/1rx5m_0iTsk1TUV9N3KJe2e_bMqo7XnFZlmtHl_rpwL0/edit?usp=sharing"
+            />
           </div>
         </section>
 
@@ -261,7 +274,11 @@ function Forge() {
           />
         
           <div className={style.view_button_wrapper}>
-            <RegButton type="secondary" button_text="View landing page" onClick="/" />
+            <RegButton
+              type="secondary"
+              button_text="View landing page"
+              onClick="https://www.forgecareers.ca/"
+            />
           </div>
         </section>
 
@@ -275,7 +292,11 @@ function Forge() {
           />
         
           <div className={style.view_button_wrapper}>
-            <RegButton type="secondary" button_text="View styleguide" onClick="/" />
+            <RegButton
+              type="secondary"
+              button_text="View styleguide"
+              onClick="https://www.figma.com/proto/wjKad59FcjjUYrbksNSFto/Forge---App-MockUp?node-id=979-7383&t=j2a4H3sgP5vxxVYJ-1"
+            />
           </div>
         </section>
 
