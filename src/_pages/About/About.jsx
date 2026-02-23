@@ -6,7 +6,7 @@ import NavBar from "../../_ui/NavBar/NavBar";
 import ConnectBanner from "../../_ui/ConnectBanner/ConnectBanner";
 import AboutMeCard from "../../_ui/AboutMeCard/AboutMeCard";
 import RegButton from "../../_ui/RegButton/RegButton";
-import Book from "../../_ui/Book/Book";
+import BookShelf from "../../_ui/BookShelf/BookShelf";
 
 function About() {
   const [galleryIndex, setGalleryIndex] = useState(0);
@@ -21,7 +21,7 @@ function About() {
       </div>
       <div className={styles.section_title_container}>
         <h2 className={styles.section_title}>Digital Library</h2>
-        <Book title={"The Design of Everyday Things"} author={"Don Norman"} />
+        <BookShelf />
       </div>
 
       <div className="footer_section">
