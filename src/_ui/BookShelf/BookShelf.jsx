@@ -13,6 +13,7 @@ function BookShelf() {
             author={book.author}
             imgspine={book.imgspine}
             imgcover={book.imgcover}
+            height={book.height}
           />
         ))}
       </div>

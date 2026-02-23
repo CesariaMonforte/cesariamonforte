@@ -2,12 +2,14 @@
   {
     "title": "The design of everyday things",
     "author": "Don Norman",
-    "cover": "The_Design_of_Everyday_Things.png"
+    "cover": "The_Design_of_Everyday_Things.png",
+    "height": 250
   },
   {
     "title": "It ends with us",
     "author": "Colleen Hoover",
-    "cover": "It_Ends_With_Us.png"
+    "cover": "It_Ends_With_Us.png",
+    "height": 240
   },
   {
     "title": "The Great Gatsby",
