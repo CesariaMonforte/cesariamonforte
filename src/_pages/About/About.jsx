@@ -21,7 +21,7 @@ function About() {
       </div>
       <div className={styles.section_title_container}>
         <h2 className={styles.section_title}>Digital Library</h2>
-        <Book />
+        <Book title={"The Design of Everyday Things"} author={"Don Norman"} />
       </div>
 
       <div className="footer_section">
