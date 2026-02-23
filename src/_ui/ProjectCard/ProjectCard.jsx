@@ -62,7 +62,7 @@ function ProjectCard({
             </div>
             <div className={styles.project_card_horizontal_button_container}>
               <RegButton
-                type="secondary"
+                type="primary"
                 button_text="View Project"
                 onclick={project_link}
               />
