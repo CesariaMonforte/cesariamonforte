@@ -6,6 +6,8 @@ function BookShelf() {
     <div className={styles.bookshelf}>
       <div className={styles.shelf}>
         <Book title={"The Design of Everyday Things"} author={"Don Norman"} />
+        <Book title={"The Design of Everyday Things"} author={"Don Norman"} />
+        <Book title={"The Design of Everyday Things"} author={"Don Norman"} />
       </div>
     </div>
   );
