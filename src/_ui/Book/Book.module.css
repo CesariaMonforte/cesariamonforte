@@ -20,3 +20,27 @@
   text-orientation: mixed;
   border-radius: var(--space-extra-small);
 }
+
+.cover {
+  position: absolute;
+  right: -6px;
+  width: 6px;
+  height: 250px;
+  bottom: 0;
+  border-radius: var(--space-extra-small);
+  background-color: var(--primary-700);
+}
+
+.title {
+  font-weight: var(--font-weight-bold);
+}
+
+.top {
+  position: absolute;
+  top: -6px;
+  left: 0px;
+  width: 100%;
+  height: 6px;
+  border-radius: var(--space-extra-small) var(--space-extra-small) 0 0;
+  background-color: var(--primary-700);
+}
