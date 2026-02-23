@@ -1,0 +1,22 @@
+.book {
+  position: relative;
+  width: 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.spine {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background-color: var(--primary-900);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--space-small) 0;
+  color: var(--white);
+  font-size: var(--font-size-small);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  border-radius: var(--space-extra-small);
+}
