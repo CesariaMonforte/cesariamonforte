@@ -1,0 +1,66 @@
+.book {
+  position: relative;
+  width: 50px;
+  height: 280px;
+  display: flex;
+  justify-content: flex-end;
+  transform: translateZ(0) rotateY(0);
+  transform-style: preserve-3d;
+}
+
+.spine {
+  position: relative;
+  width: 50px;
+  height: 250px;
+  background-color: var(--primary-900);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--space-small) 0;
+  color: var(--white);
+  font-size: var(--font-size-small);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  border-radius: var(--space-extra-small);
+  transform: rotateY(0) translateZ(0);
+}
+
+.cover {
+  position: absolute;
+  width: 190px;
+  height: 250px;
+  left: 50px;
+  top: 0px;
+  bottom: 0;
+  transform: rotateY(90deg) translateZ(0);
+  border-radius: var(--space-extra-small);
+  background-color: var(--primary-700);
+  transition: transform 1s;
+}
+
+.title {
+  font-weight: var(--font-weight-bold);
+}
+
+.top {
+  position: absolute;
+  top: -2px;
+  width: 50px;
+  height: 190px;
+  border-radius: var(--space-extra-small) var(--space-extra-small) 0 0;
+  transform: rotateX(90deg) translateZ(95px) translateY(-95px);
+  background-color: var(--primary-700);
+  background-size: var(--space-small);
+}
+
+.side {
+  border: 2px solid var(--primary-700);
+  border-radius: var(--space-extra-small);
+  transform-origin: center left;
+}
+
+.book:hover {
+  z-index: 1;
+  transform: rotateX(-25deg) rotateY(-40deg) rotateZ(-15deg) translateY(50px)
+    translateX(-30px);
+}

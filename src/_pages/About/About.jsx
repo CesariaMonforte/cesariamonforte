@@ -6,6 +6,7 @@ import NavBar from "../../_ui/NavBar/NavBar";
 import ConnectBanner from "../../_ui/ConnectBanner/ConnectBanner";
 import AboutMeCard from "../../_ui/AboutMeCard/AboutMeCard";
 import RegButton from "../../_ui/RegButton/RegButton";
+import BookShelf from "../../_ui/BookShelf/BookShelf";
 
 function About() {
   const [galleryIndex, setGalleryIndex] = useState(0);
@@ -19,7 +20,8 @@ function About() {
         <AboutMeCard imageSrc="/AboutMe_Profile.png" />
       </div>
       <div className={styles.section_title_container}>
-        <h2 className={styles.section_title}>Connect With me</h2>
+        <h2 className={styles.section_title}>Digital Library</h2>
+        <BookShelf />
       </div>
 
       <div className="footer_section">
