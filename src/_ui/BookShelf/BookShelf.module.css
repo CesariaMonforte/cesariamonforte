@@ -10,7 +10,6 @@
 .shelf {
   display: flex;
   flex-direction: row;
-  gap: var(--space-regular);
   align-items: flex-end;
   padding: var(--space-small);
 }
