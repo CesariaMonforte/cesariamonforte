@@ -14,8 +14,37 @@
   padding: var(--space-small);
 }
 
+/* Styling PopUp content */
+
 .bookDetails {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin-left: var(--space-small);
+  margin-bottom: var(--space-small);
+}
+.bookTitle {
+  font-size: var(--font-size-medium);
+  font-weight: bold;
+  color: var(--primary-700);
+  margin-bottom: var(--space-small);
+}
+
+.bookAuthor {
+  font-size: var(--font-size-small);
+  color: var(--primary-700);
+  margin-bottom: var(--space-small);
+}
+.bookDescription {
+  font-size: var(--font-size-small);
+  color: var(--primary-700);
+}
+
+.book3D {
+  width: 200px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-200);
+  border-radius: var(--space-small);
 }

@@ -35,8 +35,29 @@ function BookShelf() {
       {selectedBook && (
         <PopUp onClose={handleClosePopUp}>
           <div className={styles.bookDetails}>
-            <h2>{selectedBook.title}</h2>
-            <p>{selectedBook.author}</p>
+            <div className={styles.bookHeader}>
+              <h2 className={styles.bookTitle}>{selectedBook.title}</h2>
+              <p className={styles.bookAuthor}>{selectedBook.author}</p>
+              <div className={styles.book3D}>3D Interactive Book</div>
+            </div>
+            <div className={styles.bookDescription}>
+              <div>
+                <h3>Genre</h3>
+                <p>{selectedBook.genre}</p>
+              </div>
+              <div>
+                <h3>Status</h3>
+                <p>{selectedBook.status}</p>
+              </div>
+              <div>
+                <h3>Short Description</h3>
+                <p>{selectedBook.description}</p>
+              </div>
+              <div>
+                <h3>Why i read it/ want to read it</h3>
+                <p>{selectedBook.readreason}</p>
+              </div>
+            </div>
           </div>
         </PopUp>
       )}
