@@ -19,29 +19,47 @@
 .bookDetails {
   display: flex;
   flex-direction: row;
+  gap: var(--space-regular);
   margin-left: var(--space-small);
   margin-bottom: var(--space-small);
 }
+
+.bookDetails > * {
+  flex: 1;
+}
+
+.bookHeader {
+  display: flex;
+  flex-direction: column;
+}
+
 .bookTitle {
   font-size: var(--font-size-medium);
   font-weight: bold;
-  color: var(--primary-700);
-  margin-bottom: var(--space-small);
+  color: var(--primary-900);
+  margin-bottom: 0;
 }
 
 .bookAuthor {
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-regular);
+  color: var(--primary-900);
+  margin-bottom: var(--space-small);
+}
+.bookSubsectionTitle {
+  font-size: var(--font-size-regular);
+  color: var(--primary-900);
+  margin-bottom: var(--space-small);
+}
+
+.bookSubsectionContent {
+  font-size: var(--font-size-regular);
   color: var(--primary-700);
   margin-bottom: var(--space-small);
 }
-.bookDescription {
-  font-size: var(--font-size-small);
-  color: var(--primary-700);
-}
 
 .book3D {
-  width: 200px;
-  height: 300px;
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -41,21 +41,33 @@ function BookShelf() {
               <div className={styles.book3D}>3D Interactive Book</div>
             </div>
             <div className={styles.bookDescription}>
-              <div>
-                <h3>Genre</h3>
-                <p>{selectedBook.genre}</p>
+              <div className={styles.bookSubsection}>
+                <h3 className={styles.bookSubsectionTitle}>Genre</h3>
+                <p className={styles.bookSubsectionContent}>
+                  {selectedBook.genre}
+                </p>
               </div>
-              <div>
-                <h3>Status</h3>
-                <p>{selectedBook.status}</p>
+              <div className={styles.bookSubsection}>
+                <h3 className={styles.bookSubsectionTitle}>Status</h3>
+                <p className={styles.bookSubsectionContent}>
+                  {selectedBook.status}
+                </p>
               </div>
-              <div>
-                <h3>Short Description</h3>
-                <p>{selectedBook.description}</p>
+              <div className={styles.bookSubsection}>
+                <h3 className={styles.bookSubsectionTitle}>
+                  Short Description
+                </h3>
+                <p className={styles.bookSubsectionContent}>
+                  {selectedBook.description}
+                </p>
               </div>
-              <div>
-                <h3>Why i read it/ want to read it</h3>
-                <p>{selectedBook.readreason}</p>
+              <div className={styles.bookSubsection}>
+                <h3 className={styles.bookSubsectionTitle}>
+                  Why I read it / Want to read it
+                </h3>
+                <p className={styles.bookSubsectionContent}>
+                  {selectedBook.readreason}
+                </p>
               </div>
             </div>
           </div>
