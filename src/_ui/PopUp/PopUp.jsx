@@ -1,4 +1,4 @@
-import styles from "./PopUp.module.scss";
+import styles from "./PopUp.module.css";
 import RegButton from "../RegButton/RegButton";
 
 function PopUp({ children, onClose }) {
@@ -6,7 +6,9 @@ function PopUp({ children, onClose }) {
     <div className={styles.popup}>
       <div className={styles.popupContent}>
         {children}
-        <RegButton onClick={onClose}>Close</RegButton>
+        <RegButton type="primary" button_text="Close" onClick={onClose}>
+          Close
+        </RegButton>
       </div>
     </div>
   );

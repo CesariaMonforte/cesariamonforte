@@ -13,3 +13,9 @@
   align-items: flex-end;
   padding: var(--space-small);
 }
+
+.bookDetails {
+  display: flex;
+  flex-direction: column;
+  margin-left: var(--space-small);
+}
