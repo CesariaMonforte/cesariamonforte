@@ -2,9 +2,7 @@
   {
     "id": "Brewly",
     "type": "horizontal",
-    "categories": [
-      "Frontend Development"
-    ],
+    "categories": ["Frontend Development"],
     "project_title": "Brewly - Beer Catalog Web Application",
     "project_description": "A conceptual Canned Beverage brand inspired by contrast , resilient  moments.",
     "project_overview": "Brewly is a mobile-first web application prototype that helps users discover, track, and manage their favorite beers.",
@@ -45,10 +43,7 @@
   {
     "id": "Mosaic",
     "type": "horizontal",
-    "categories": [
-      "UX/UI",
-      "Frontend Development"
-    ],
+    "categories": ["UX/UI", "Frontend Development"],
     "project_title": "Mosaic - Portfolio Project Guidance and Generation Apps",
     "project_description": "Mosaic is a portfolio creation guidance support and organization mobile app.",
     "project_overview": "Mosaic is a portfolio creation guidance support and organization mobile app. It focuses on providing users with a platform to spark creativity through the generation of free portfolio project ideas and step by step guide on completing each portfolio project.",
@@ -86,9 +81,7 @@
   {
     "id": "Forge",
     "type": "horizontal",
-    "categories": [
-      "UX/UI"
-    ],
+    "categories": ["UX/UI"],
     "project_title": "Forge - Skills Trades Career Awareness and Simulation App",
     "project_description": "Skills Trades Career  Awarness and Simulation App",
     "project_overview": "Forge is a AI skilled trades career simulation app that empowers students through creating and enhances awareness of careers in skilled trades. It focuses on key aspects including career pathways, skills, finances and stages of skilled trades careers to support students in their decision making process.",
@@ -96,11 +89,7 @@
     "Duration": " February 2024 - May 2024",
     "project_image_src": "/Forge_Cover.png",
     "project_hero_src": "/Forge_Hero.png",
-    "project_tags": [
-      "Figma",
-      "Figjam",
-      "Adobe Illustrator"
-    ],
+    "project_tags": ["Figma", "Figjam", "Adobe Illustrator"],
     "project_link": "/Projects/Forge/Forge",
     "project_links": [
       {
@@ -114,5 +103,41 @@
         "external": true
       }
     ]
+  },
+  {
+    "id": "Paris to Rome Brochure",
+    "type": "horizontal",
+    "categories": ["Graphic Design"],
+    "project_title": "Paris to Rome Brochure - Travel Brochure Design",
+    "project_description": "Interactive and illustrated travel brochure exploring Paris and Rome.",
+    "project_overview": "An interactive brochure exploring layout, illustration, and typography for a Paris-to-Rome travel guide.",
+    "Role": "Graphic Designer | Illustrator",
+    "Duration": "June 2024",
+    "project_image_src": "ParisToRome_Cover.png",
+    "project_hero_src": "/ParisToRome_Hero.png",
+    "project_tags": ["Illustration", "Layout", "Adobe Illustrator", "InDesign"],
+    "project_link": "/Projects/ParisToRomeBrochure/ParisToRomeBrochure",
+    "project_links": [
+      {
+        "label": "View Flipbook",
+        "url": "https://heyzine.com/flip-book/77df553c09.htmls",
+        "external": true
+      }
+    ]
+  },
+  {
+    "id": "Tannacious",
+    "type": "horizontal",
+    "categories": ["Graphic Design"],
+    "project_title": "Tannacious - Packaging and Branding",
+    "project_description": "Packaging and branding work focused on adventurous, textured visuals.",
+    "project_overview": "Branding and packaging design for Tannacious, exploring dielines, imagery, and product mockups.",
+    "Role": "Graphic Designer",
+    "Duration": "August 2024",
+    "project_image_src": "Tannacious_Cover.png",
+    "project_hero_src": "/Tannacious_Hero.png",
+    "project_tags": ["Packaging", "Branding", "Adobe Illustrator", "Photoshop"],
+    "project_link": "/Projects/Tannacious/Tannacious",
+    "project_links": []
   }
 ]
