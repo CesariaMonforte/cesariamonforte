@@ -7,7 +7,6 @@
   width: 100%;
   max-width: var(--page-max-width);
   margin: 0 auto;
-  padding: var(--page-padding-mobile);
   text-align: left;
 }
 
@@ -42,7 +41,11 @@
 .tools_section {
   width: 100%;
   padding: var(--space-extra-regular);
-  background: linear-gradient(135deg, var(--primary-50) 0%, var(--primary-100) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--primary-50) 0%,
+    var(--primary-100) 100%
+  );
   border-radius: var(--space-medium);
   border: 2px solid var(--primary-200);
   box-sizing: border-box;
@@ -71,7 +74,9 @@
   font-weight: var(--font-weight-medium);
   border-radius: 50px;
   box-shadow: var(--box-shadow-primary-soft);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .tool_tag:hover {
@@ -176,7 +181,9 @@
   border: none;
   cursor: pointer;
   padding: 0;
-  transition: transform 0.2s ease, background 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
 }
 
 .gallery_dot {
@@ -236,7 +243,9 @@
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-bold);
   border-radius: var(--space-regular);
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 
 .connect_link:hover {
@@ -269,7 +278,8 @@
 
 @media (min-width: 900px) {
   .page_container {
-    padding: var(--page-padding-desktop);
+    padding-left: var(--page-padding-desktop);
+    padding-right: var(--page-padding-desktop);
   }
   .section_title {
     font-size: var(--font-size-large);
