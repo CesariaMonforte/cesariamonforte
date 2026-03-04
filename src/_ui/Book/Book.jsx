@@ -16,6 +16,16 @@ function Book({
   const [lastMousePosition, setLastMousePosition] = useState({ x: 0, y: 0 });
 
   const bookStyle = height ? { height: `${height}px` } : {};
+
+  const handleMouseMove = (e) => {
+    if (isDragging) {
+      const deltaX = e.clientX - lastMousePosition.x;
+      const deltaY = e.clientY - lastMousePosition.y;
+      setRotationY((prev) => prev + deltaX * 0.5);
+      setRotationX((prev) => prev - deltaY * 0.5);
+      setLastMousePosition({ x: e.clientX, y: e.clientY });
+    }
+  };
   return (
     <>
       {type === "shelf" && (
@@ -29,7 +39,7 @@ function Book({
         </div>
       )}
       {type === "full" && (
-        <div className={styles.fullBook}>
+        <div className={styles.fullBook} onMouseMove={handleMouseMove}>
           <div className={styles.front_full}></div>
           <div className={styles.side_full}></div>
           <div className={styles.back_full}></div>
