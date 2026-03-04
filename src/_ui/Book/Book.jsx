@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styles from "./Book.module.css";
 
 function Book({
@@ -9,6 +10,11 @@ function Book({
   height,
   type,
 }) {
+  const [rotationX, setRotationX] = useState(0);
+  const [rotationY, setRotationY] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [lastMousePosition, setLastMousePosition] = useState({ x: 0, y: 0 });
+
   const bookStyle = height ? { height: `${height}px` } : {};
   return (
     <>
