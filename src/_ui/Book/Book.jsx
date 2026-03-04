@@ -65,6 +65,8 @@ function Book({
           <div className={styles.side_full}></div>
           <div className={styles.back_full}></div>
           <div className={styles.pages_full}></div>
+          <div className={styles.top_full}></div>
+          <div className={styles.bottom_full}></div>
         </div>
       )}
     </>

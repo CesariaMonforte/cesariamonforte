@@ -100,6 +100,22 @@
 .pages_full {
   width: 50px;
   height: 280px;
-  background-color: white;
+  background-color: var(--white);
   transform: rotateY(90deg) translate3d(-15px, 0, 165px);
+}
+
+.top_full {
+  position: absolute;
+  width: 190px;
+  height: 50px;
+  background-color: var(--white);
+  transform: rotateX(90deg) translate3d(0, 15px, 305px);
+}
+
+.bottom_full {
+  position: absolute;
+  width: 190px;
+  height: 50px;
+  background-color: var(--white);
+  transform: rotateX(-90deg) translate3d(0, -15px, -25px);
 }
