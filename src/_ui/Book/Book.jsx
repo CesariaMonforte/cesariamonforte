@@ -22,7 +22,14 @@ function Book({
           <div className={`${styles.side} ${styles.cover}`}></div>
         </div>
       )}
-      {type === "full" && <div></div>}
+      {type === "full" && (
+        <div className={styles.fullBook}>
+          <div className={styles.front_full}></div>
+          <div className={styles.side_full}></div>
+          <div className={styles.back_full}></div>
+          <div className={styles.pages_full}></div>
+        </div>
+      )}
     </>
   );
 }
