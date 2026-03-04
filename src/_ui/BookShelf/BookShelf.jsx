@@ -27,6 +27,7 @@ function BookShelf() {
             imgcover={book.imgcover}
             height={book.height}
             onBookClick={() => handleBookClick(book)}
+            type="shelf"
           />
         ))}
       </div>
