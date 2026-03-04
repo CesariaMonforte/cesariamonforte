@@ -39,7 +39,9 @@ function BookShelf() {
             <div className={styles.bookHeader}>
               <h2 className={styles.bookTitle}>{selectedBook.title}</h2>
               <p className={styles.bookAuthor}>{selectedBook.author}</p>
-              <div className={styles.book3D}>3D Interactive Book</div>
+              <div className={styles.book3D}>
+                <Book type="full" />
+              </div>
             </div>
             <div className={styles.bookDescription}>
               <div className={styles.bookSubsection}>
