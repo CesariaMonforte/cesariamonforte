@@ -4,6 +4,7 @@ import styles from "./Book.module.css";
 function Book({
   imgspine,
   imgcover,
+  imgback,
   onBookClick,
   title,
   author,
