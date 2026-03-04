@@ -26,6 +26,21 @@ function Book({
       setLastMousePosition({ x: e.clientX, y: e.clientY });
     }
   };
+
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setLastMousePosition({ x: e.clientX, y: e.clientY });
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const fullBookStyle = {
+    transform: `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`,
+    cursor: isDragging ? "grabbing" : "grab",
+  };
+
   return (
     <>
       {type === "shelf" && (
@@ -39,7 +54,13 @@ function Book({
         </div>
       )}
       {type === "full" && (
-        <div className={styles.fullBook} onMouseMove={handleMouseMove}>
+        <div
+          className={styles.fullBook}
+          style={{ ...fullBookStyle, ...bookStyle }}
+          onMouseMove={handleMouseMove}
+          onMouseDown={handleMouseDown}
+          onMouseUp={handleMouseUp}
+        >
           <div className={styles.front_full}></div>
           <div className={styles.side_full}></div>
           <div className={styles.back_full}></div>

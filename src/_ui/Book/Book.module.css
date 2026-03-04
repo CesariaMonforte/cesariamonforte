@@ -94,11 +94,12 @@
   width: 50px;
   height: 280px;
   background-color: var(--primary-900);
-  transform: rotateY(90deg) translate3d(0, 0, 35px);
+  transform: rotateY(90deg) translate3d(-15px, 0, -28px);
 }
 
 .pages_full {
   width: 50px;
   height: 280px;
-  transform: rotateY(90deg) translate3d(0, 0, 15px);
+  background-color: white;
+  transform: rotateY(90deg) translate3d(-15px, 0, 165px);
 }
