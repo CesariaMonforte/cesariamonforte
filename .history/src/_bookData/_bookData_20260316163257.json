@@ -15,7 +15,7 @@
         "cover": "It_Ends_With_Us.png",
         "height": 240,
         "description": "The Design of Everyday Things is a book by Don Norman that explores the principles of design and how they can be applied to create user-friendly products. The book covers topics such as affordances, signifiers, feedback, and constraints, and provides insights into how to design products that are intuitive and easy to use.",
-        "genre": "Fiction",
+        "genre": "Design",
         "status": "To be Read",
         "readreason": "I want to learn more about user experience design."
     },
@@ -25,8 +25,9 @@
         "cover": "The_Great_Gatsby.png",
         "height": 240,
         "description": "The Design of Everyday Things is a book by Don Norman that explores the principles of design and how they can be applied to create user-friendly products. The book covers topics such as affordances, signifiers, feedback, and constraints, and provides insights into how to design products that are intuitive and easy to use.",
-        "genre": "Fiction",
+        "genre": "Design",
         "status": "To be Read",
         "readreason": "I want to learn more about user experience design."
+    },
     }
 ]
