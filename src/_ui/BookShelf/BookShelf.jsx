@@ -50,6 +50,7 @@ function BookShelf() {
                                 <Book
                                     type='full'
                                     height={selectedBook.height}
+                                    imgcover={selectedBook.cover}
                                 />
                             </div>
                         </div>
