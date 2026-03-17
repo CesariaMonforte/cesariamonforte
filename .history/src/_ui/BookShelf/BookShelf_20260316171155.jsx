@@ -24,7 +24,7 @@ function BookShelf() {
                         title={book.title}
                         author={book.author}
                         imgspine={book.imgspine}
-                        imgcover={book.cover}
+                        imgcover={book.imgcover}
                         height={book.height}
                         onBookClick={() => handleBookClick(book)}
                         type='shelf'
@@ -43,14 +43,9 @@ function BookShelf() {
                             <p className={styles.bookAuthor}>
                                 {selectedBook.author}
                             </p>
-                            <p className={styles.bookInstructions}>
-                                Click and drag to rotate the book
-                            </p>
                             <div className={styles.book3D}>
-                                <Book
-                                    type='full'
-                                    height={selectedBook.height}
-                                />
+                                <p>Click and drag to rotate the book</p>
+                                <Book type='full' />
                             </div>
                         </div>
                         <div className={styles.bookDescription}>
