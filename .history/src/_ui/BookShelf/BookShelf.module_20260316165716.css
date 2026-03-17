@@ -13,7 +13,8 @@
     flex-direction: row;
     align-items: flex-end;
     padding: var(--space-small);
-    min-height: 300px;
+    height: 300px;
+    min-height: 200px;
 }
 
 /* Styling PopUp content */
@@ -65,12 +66,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary-50);
+    background-color: var(--primary-200);
     border-radius: var(--space-small);
-}
-
-.bookInstructions {
-    font-size: var(--font-size-small);
-    color: var(--primary-900);
-    margin-bottom: var(--space-small);
 }

@@ -5,15 +5,13 @@
     flex-direction: row;
     padding: var(--space-regular);
     border-radius: var(--space-medium);
-    align-items: flex-end;
 }
 
 .shelf {
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+
     padding: var(--space-small);
-    min-height: 300px;
 }
 
 /* Styling PopUp content */
@@ -65,12 +63,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary-50);
+    background-color: var(--primary-200);
     border-radius: var(--space-small);
-}
-
-.bookInstructions {
-    font-size: var(--font-size-small);
-    color: var(--primary-900);
-    margin-bottom: var(--space-small);
 }

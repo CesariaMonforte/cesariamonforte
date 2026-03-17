@@ -24,7 +24,7 @@ function BookShelf() {
                         title={book.title}
                         author={book.author}
                         imgspine={book.imgspine}
-                        imgcover={book.cover}
+                        imgcover={book.imgcover}
                         height={book.height}
                         onBookClick={() => handleBookClick(book)}
                         type='shelf'
@@ -50,7 +50,6 @@ function BookShelf() {
                                 <Book
                                     type='full'
                                     height={selectedBook.height}
-                                    imgcover={selectedBook.cover}
                                 />
                             </div>
                         </div>

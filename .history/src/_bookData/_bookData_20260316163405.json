@@ -2,7 +2,7 @@
     {
         "title": "The design of everyday things",
         "author": "Don Norman",
-        "cover": "The_Design_of everyday_things_cover.jpg",
+        "cover": "The_Design_of_Everyday_Things.png",
         "height": 250,
         "description": "The Design of Everyday Things is a book by Don Norman that explores the principles of design and how they can be applied to create user-friendly products. The book covers topics such as affordances, signifiers, feedback, and constraints, and provides insights into how to design products that are intuitive and easy to use.",
         "genre": "Design",
@@ -12,7 +12,7 @@
     {
         "title": "It ends with us",
         "author": "Colleen Hoover",
-        "cover": "It_Ends_With_Us_Cover.jpg",
+        "cover": "It_Ends_With_Us.png",
         "height": 240,
         "description": "The Design of Everyday Things is a book by Don Norman that explores the principles of design and how they can be applied to create user-friendly products. The book covers topics such as affordances, signifiers, feedback, and constraints, and provides insights into how to design products that are intuitive and easy to use.",
         "genre": "Fiction",
@@ -22,7 +22,7 @@
     {
         "title": "The Great Gatsby",
         "author": "F. Scott Fitzgerald",
-        "cover": "The_Great_Gatsby_Cover.jpeg",
+        "cover": "The_Great_Gatsby.png",
         "height": 240,
         "description": "The Design of Everyday Things is a book by Don Norman that explores the principles of design and how they can be applied to create user-friendly products. The book covers topics such as affordances, signifiers, feedback, and constraints, and provides insights into how to design products that are intuitive and easy to use.",
         "genre": "Fiction",

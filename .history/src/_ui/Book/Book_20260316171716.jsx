@@ -11,8 +11,8 @@ function Book({
     height,
     type,
 }) {
-    const [rotationX, setRotationX] = useState(15);
-    const [rotationY, setRotationY] = useState(-25);
+    const [rotationX, setRotationX] = useState(0);
+    const [rotationY, setRotationY] = useState(0);
     const [isDragging, setIsDragging] = useState(false);
     const [lastMousePosition, setLastMousePosition] = useState({ x: 0, y: 0 });
 
@@ -62,9 +62,8 @@ function Book({
                             imgcover
                                 ? {
                                       backgroundImage: `url(/${encodeURI(imgcover)})`,
-                                      backgroundSize: "contain",
+                                      backgroundSize: "cover",
                                       backgroundPosition: "center",
-                                      backgroundRepeat: "no-repeat",
                                   }
                                 : {}
                         }></div>
@@ -77,18 +76,7 @@ function Book({
                     onMouseMove={handleMouseMove}
                     onMouseDown={handleMouseDown}
                     onMouseUp={handleMouseUp}>
-                    <div
-                        className={styles.front_full}
-                        style={
-                            imgcover
-                                ? {
-                                      backgroundImage: `url(/${encodeURI(imgcover)})`,
-                                      backgroundSize: "contain",
-                                      backgroundPosition: "center",
-                                      backgroundRepeat: "no-repeat",
-                                  }
-                                : {}
-                        }></div>
+                    <div className={styles.front_full}></div>
                     <div className={styles.side_full}></div>
                     <div className={styles.back_full}></div>
                     <div className={styles.pages_full}></div>
