@@ -28,9 +28,9 @@
 .cover {
   position: absolute;
   width: 190px;
-  height: 250px;
+  height: 100%;
   left: 50px;
-  top: 0px;
+  top: 0;
   bottom: 0;
   transform: rotateY(90deg) translateZ(0);
   border-radius: var(--space-extra-small);

@@ -5,15 +5,13 @@
     flex-direction: row;
     padding: var(--space-regular);
     border-radius: var(--space-medium);
-    align-items: flex-end;
 }
 
 .shelf {
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+
     padding: var(--space-small);
-    min-height: 300px;
 }
 
 /* Styling PopUp content */

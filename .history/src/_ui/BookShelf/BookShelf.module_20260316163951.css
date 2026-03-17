@@ -9,11 +9,10 @@
 }
 
 .shelf {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     align-items: flex-end;
-    padding: var(--space-small);
-    min-height: 300px;
+    padding: var(--space-small); */
 }
 
 /* Styling PopUp content */

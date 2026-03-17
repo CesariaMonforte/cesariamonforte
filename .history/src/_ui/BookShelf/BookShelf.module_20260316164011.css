@@ -11,9 +11,10 @@
 .shelf {
     display: flex;
     flex-direction: row;
+    gap: var(--space-small);
+    /* flex-direction: row;
     align-items: flex-end;
-    padding: var(--space-small);
-    min-height: 300px;
+    padding: var(--space-small); */
 }
 
 /* Styling PopUp content */

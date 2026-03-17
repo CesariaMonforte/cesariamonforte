@@ -13,7 +13,6 @@
     flex-direction: row;
     align-items: flex-end;
     padding: var(--space-small);
-    min-height: 300px;
 }
 
 /* Styling PopUp content */

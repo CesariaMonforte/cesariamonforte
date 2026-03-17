@@ -47,8 +47,7 @@ function Book({
             {type === "shelf" && (
                 <div
                     className={styles.book}
-                    onClick={onBookClick}
-                    style={bookStyle}>
+                    onClick={onBookClick}>
                     <div
                         className={`${styles.side} ${styles.spine}`}
                         style={bookStyle}>
