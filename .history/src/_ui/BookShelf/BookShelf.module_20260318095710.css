@@ -60,7 +60,7 @@
 }
 
 .book3D {
-    height: 50vh;
+    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -75,11 +75,21 @@
     margin-bottom: var(--space-small);
 }
 
+/* 
 @media (max-width: 768px) {
     .bookDetails {
         flex-direction: column;
         gap: var(--space-regular);
         margin-left: 0;
+    }
+
+    .bookDetails > * {
+        flex: none;
+    }
+
+    .book3D {
+        min-height: 280px;
+        max-height: 320px;
     }
 }
 
@@ -87,4 +97,9 @@
     .bookTitle {
         font-size: var(--font-size-regular);
     }
-}
+
+    .book3D {
+        min-height: 220px;
+        max-height: 280px;
+    }
+} */

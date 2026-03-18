@@ -60,7 +60,7 @@
 }
 
 .book3D {
-    height: 50vh;
+    height: 60%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -81,10 +81,18 @@
         gap: var(--space-regular);
         margin-left: 0;
     }
+
+    .book3D {
+    }
 }
 
 @media (max-width: 480px) {
     .bookTitle {
         font-size: var(--font-size-regular);
+    }
+
+    .book3D {
+        min-height: 220px;
+        max-height: 280px;
     }
 }

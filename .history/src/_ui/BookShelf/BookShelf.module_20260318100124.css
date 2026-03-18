@@ -87,4 +87,9 @@
     .bookTitle {
         font-size: var(--font-size-regular);
     }
+
+    .book3D {
+        min-height: 220px;
+        max-height: 280px;
+    }
 }
