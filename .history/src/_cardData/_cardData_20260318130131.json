@@ -1,0 +1,153 @@
+[
+    {
+        "id": "Brewly",
+        "type": "horizontal",
+        "categories": ["Frontend Development"],
+        "project_title": "Brewly - Beer Catalog Web Application",
+        "project_description": "A conceptual Canned Beverage brand inspired by contrast , resilient  moments.",
+        "project_overview": "Brewly is a mobile-first web application prototype that helps users discover, track, and manage their favorite beers.",
+        "Role": "Frontend Developer | UI Designer",
+        "Duration": "October 2025 - November 2025",
+        "project_image_src": "Brewly_Cover.png",
+        "project_hero_src": "/Brewly_Hero.png",
+        "project_tags": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Vite",
+            "Visual Studio Code",
+            "Node.js",
+            "RestAPI",
+            "ReactRouter"
+        ],
+        "project_link": "/Projects/Brewly/Brewly",
+        "project_links": [
+            {
+                "label": "View Full WebApp",
+                "url": "https://app-brewly.vercel.app/",
+                "external": true
+            },
+            {
+                "label": "View Github Repository",
+                "url": "https://github.com/app-brewly/app-brewly",
+                "external": true
+            },
+            {
+                "label": "View Documentation",
+                "url": "https://github.com/app-brewly/app-brewly/blob/main/README.md",
+                "external": true
+            }
+        ]
+    },
+    {
+        "id": "Mosaic",
+        "type": "horizontal",
+        "categories": ["UX/UI", "Frontend Development"],
+        "project_title": "Mosaic - Portfolio Project Guidance and Generation Apps",
+        "project_description": "Mosaic is a portfolio creation guidance support and organization mobile app.",
+        "project_overview": "Mosaic is a portfolio creation guidance support and organization mobile app. It focuses on providing users with a platform to spark creativity through the generation of free portfolio project ideas and step by step guide on completing each portfolio project.",
+        "Role": "Frontend Developer | UX/UI Designer",
+        "Team": "3 Designers | 2 Developers",
+        "Duration": "February 2024 - May 2024.",
+        "project_image_src": "Mosaic_Cover.png",
+        "project_hero_src": "/Mosaic_Hero.png",
+        "project_tags": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Next.js",
+            "React",
+            "Classnames",
+            "Figma",
+            "FigJam",
+            "Adobe Photoshop",
+            "Adobe Illustrator"
+        ],
+        "project_link": "/Projects/Mosaic/Mosaic",
+        "project_links": [
+            {
+                "label": "View Full WebApp",
+                "url": "https://mosaic-app-nu.vercel.app/",
+                "external": true
+            },
+            {
+                "label": "View Github Repository",
+                "url": "https://github.com/brunaguarizo/mosaic_app",
+                "external": true
+            }
+        ]
+    },
+    {
+        "id": "Forge",
+        "type": "horizontal",
+        "categories": ["UX/UI"],
+        "project_title": "Forge - Skills Trades Career Awareness and Simulation App",
+        "project_description": "Skills Trades Career  Awarness and Simulation App",
+        "project_overview": "Forge is a AI skilled trades career simulation app that empowers students through creating and enhances awareness of careers in skilled trades. It focuses on key aspects including career pathways, skills, finances and stages of skilled trades careers to support students in their decision making process.",
+        "Role": " UX/UI Designer",
+        "Duration": " February 2024 - May 2024",
+        "project_image_src": "/Forge_Cover.png",
+        "project_hero_src": "/Forge_Hero.png",
+        "project_tags": ["Figma", "Figjam", "Adobe Illustrator"],
+        "project_link": "/Projects/Forge/Forge",
+        "project_links": [
+            {
+                "label": "View Landing Page",
+                "url": "https://www.forgecareers.ca/",
+                "external": true
+            },
+            {
+                "label": "View Blog",
+                "url": "https://www.forgecareers.ca/blog",
+                "external": true
+            }
+        ]
+    },
+    {
+        "id": "Paris to Rome Brochure",
+        "type": "horizontal",
+        "categories": ["Graphic Design"],
+        "project_title": "Paris to Rome Brochure - Travel Brochure Design",
+        "project_description": "Interactive and illustrated travel brochure exploring Paris and Rome.",
+        "project_overview": "An interactive brochure exploring layout, illustration, and typography for a Paris-to-Rome travel guide.",
+        "Role": "Graphic Designer | Illustrator",
+        "Duration": "June 2024",
+        "project_image_src": "ParisToRome_Cover.png",
+        "project_hero_src": "/ParisToRome_Hero.png",
+        "project_tags": [
+            "Illustration",
+            "Layout",
+            "Adobe Illustrator",
+            "InDesign"
+        ],
+        "project_link": "/Projects/ParisToRomeBrochure/ParisToRomeBrochure",
+        "project_links": [
+            {
+                "label": "View Flipbook",
+                "url": "https://heyzine.com/flip-book/77df553c09.htmls",
+                "external": true
+            }
+        ]
+    },
+    {
+        "id": "Tannacious",
+        "type": "horizontal",
+        "categories": ["Graphic Design"],
+        "project_title": "Tannacious - Packaging and Branding",
+        "project_description": "Packaging and branding work focused on adventurous, textured visuals.",
+        "project_overview": "Branding and packaging design for Tannacious, exploring dielines, imagery, and product mockups.",
+        "Role": "Graphic Designer",
+        "Duration": "August 2024",
+        "project_image_src": "Tannacious_Cover.png",
+        "project_hero_src": "/Tannacious_Hero.png",
+        "project_tags": [
+            "Packaging",
+            "Branding",
+            "Adobe Illustrator",
+            "Photoshop"
+        ],
+        "project_link": "/Projects/Tannacious/Tannacious",
+        "project_links": []
+    }
+]
