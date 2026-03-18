@@ -22,8 +22,8 @@
 
 @media (max-width: 768px) {
     .popupContent {
-        padding: 1.25rem;
-        max-height: 90%;
+        padding: var(--space-extra-regular);
+        max-height: var(--space-large);
         overflow-y: auto;
     }
 }
