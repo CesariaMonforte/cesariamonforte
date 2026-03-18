@@ -502,8 +502,8 @@ function DescriptionBox({
                         <div className={styles.section_container_reverse}>
                             <CodeSnippetBox
                                 tabs={[
-                                    ...ProfileCreationCodeSnippet,
-                                    ...PopUpCodeSnippet,
+                                    ProfileCreationCodeSnippet,
+                                    PopUpCodeSnippet,
                                 ]}
                             />
                             <SectionDescriptionBox

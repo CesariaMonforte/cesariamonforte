@@ -31,7 +31,7 @@ function Mosaic() {
         "Organize Validation logic in the same place location as submit handler so behaviour is predictable",
     ];
 
-    const PopUpCodeSnippet = [
+    const FormAndStateCodeSnippet = [
         {
             label: "PopUp.js",
             code: `
@@ -500,12 +500,7 @@ function DescriptionBox({
                     {/* Create Profile */}
                     <ScrollReveal>
                         <div className={styles.section_container_reverse}>
-                            <CodeSnippetBox
-                                tabs={[
-                                    ...ProfileCreationCodeSnippet,
-                                    ...PopUpCodeSnippet,
-                                ]}
-                            />
+                            <CodeSnippetBox tabs={ProfileCreationCodeSnippet} />
                             <SectionDescriptionBox
                                 title='Create Profile and Popups'
                                 items={ProfileCreation}
