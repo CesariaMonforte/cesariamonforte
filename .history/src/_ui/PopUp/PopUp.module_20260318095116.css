@@ -13,25 +13,25 @@
 
 .popupContent {
     background-color: white;
-    padding: var(--space-extra-regular);
-    border-radius: var(--space-small);
+    padding: 2rem;
+    border-radius: 8px;
     box-shadow: var(--box-shadow-white);
     max-width: 800px;
     width: 90%;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .popupContent {
         padding: 1.25rem;
-        max-height: 90%;
+        max-height: 90vh;
         overflow-y: auto;
     }
-}
+} */
 
 @media (max-width: 480px) {
     .popupContent {
-        padding: var(--space-regular);
+        padding: 1rem;
         width: 95%;
-        max-height: calc(100vh - 2 * var(--space-large));
+        max-height: 85vh;
     }
 }

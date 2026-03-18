@@ -84,7 +84,7 @@
 }
 
 @media (max-width: 480px) {
-    .bookTitle {
-        font-size: var(--font-size-regular);
+    .book3D {
+        height: 30vh;
     }
 }
