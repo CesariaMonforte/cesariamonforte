@@ -500,12 +500,7 @@ function DescriptionBox({
                     {/* Create Profile */}
                     <ScrollReveal>
                         <div className={styles.section_container_reverse}>
-                            <CodeSnippetBox
-                                tabs={[
-                                    ...ProfileCreationCodeSnippet,
-                                    ...FormAndStateCodeSnippet,
-                                ]}
-                            />
+                            <CodeSnippetBox tabs={ProfileCreationCodeSnippet} />
                             <SectionDescriptionBox
                                 title='Create Profile'
                                 items={ProfileCreation}
