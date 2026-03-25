@@ -20,8 +20,7 @@
     width: 90%;
     position: fixed;
     top: 50px;
-    bottom: 50px;
-    overflow: hidden;
+    left: 50%;
 }
 
 @media (max-width: 768px) {
