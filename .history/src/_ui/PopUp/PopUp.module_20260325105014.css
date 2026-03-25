@@ -18,16 +18,12 @@
     box-shadow: var(--box-shadow-white);
     max-width: 800px;
     width: 90%;
-    position: fixed;
-    top: 50px;
-    bottom: 50px;
-    overflow: hidden;
 }
 
 @media (max-width: 768px) {
     .popupContent {
         padding: var(--space-large);
-        max-height: 40rem;
+        max-height: 90%;
         overflow-y: auto;
     }
 }
@@ -35,8 +31,8 @@
 @media (max-width: 480px) {
     .popupContent {
         padding: var(--space-regular);
-        width: 95rem;
-        max-height: 40rem;
+        width: 95%;
+        max-height: rem;
         overflow-y: auto;
     }
 }

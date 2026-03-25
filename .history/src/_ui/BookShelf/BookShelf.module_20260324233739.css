@@ -19,11 +19,15 @@
 /* Styling PopUp content */
 
 .bookDetails {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: flex;
+    flex-direction: row;
     gap: var(--space-regular);
     margin-left: var(--space-small);
     margin-bottom: var(--space-small);
+}
+
+.bookDetails > * {
+    flex: 1;
 }
 
 .bookHeader {
@@ -75,7 +79,8 @@
 
 @media (max-width: 768px) {
     .bookDetails {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        gap: var(--space-regular);
         margin-left: 0;
     }
 }
